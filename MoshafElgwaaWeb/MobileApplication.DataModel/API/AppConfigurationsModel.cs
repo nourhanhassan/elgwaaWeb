@@ -11,7 +11,7 @@ namespace MobileApplication.DataModel
         public string CameraQuality { get; set; }
         public string MaxUploadHeight { get; set; }
         public string MaxUploadWidth { get; set; }
-        //
+     
 
 
     }
