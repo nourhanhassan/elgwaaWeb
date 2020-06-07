@@ -1,0 +1,53 @@
+﻿.loadedImage{
+    margin-left:5px;
+    width:100px !important;
+    display:none;
+}
+.fileUpload {
+}
+
+.lblUploadCheck {
+}
+
+.chbxUpload {
+}
+
+
+.btnNonBrowseUpload {
+}
+
+.spanUpload {
+
+
+}
+
+.clearUpload {
+}
+
+.clearUpload:hover {
+    cursor:pointer;
+}
+
+	.imageBox
+{
+    position: relative;
+    border:1px solid #aaa;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    cursor:move;
+	display:none;
+}
+
+.imageBox .thumbBox
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgb(102, 102, 102);
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.cropImageContainer {
+display:none;
+}

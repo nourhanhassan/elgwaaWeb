@@ -1,0 +1,140 @@
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\AutoMapper.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\EntityFramework.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\GenericEngine.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\MobileApplication.Context.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\Newtonsoft.Json.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.Adm.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Android.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Apple.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Blackberry.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Core.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Firefox.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.FirefoxOS.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Google.Chrome.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Google.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.Windows.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\PushSharp.WindowsPhone.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\QVEnterprise.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\QVRepository.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\System.Web.WebPages.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\MobileApplication.Context.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\EntityFramework.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\QVRepository.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\System.Web.WebPages.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csprojResolveAssemblyReference.cache
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.DataServiceArabicResource.resources
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csproj.GenerateResource.Cache
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\AutoMapper.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\EntityFramework.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\GenericEngine.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.Context.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\Newtonsoft.Json.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.Adm.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Android.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Apple.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Blackberry.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Core.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Firefox.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.FirefoxOS.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Google.Chrome.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Google.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Windows.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.WindowsPhone.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVEnterprise.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVRepository.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.Context.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\EntityFramework.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVRepository.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csprojResolveAssemblyReference.cache
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.DataServiceArabicResource.resources
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csproj.GenerateResource.Cache
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\AutoMapper.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\EntityFramework.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\GenericEngine.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.Context.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\Newtonsoft.Json.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.Adm.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Android.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Apple.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Blackberry.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Core.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Firefox.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.FirefoxOS.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Google.Chrome.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Google.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Windows.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.WindowsPhone.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVEnterprise.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVRepository.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.Context.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\EntityFramework.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVRepository.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csprojResolveAssemblyReference.cache
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.DataServiceArabicResource.resources
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csproj.GenerateResource.Cache
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataService.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\AutoMapper.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\EntityFramework.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\GenericEngine.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.Context.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\Newtonsoft.Json.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.Adm.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Amazon.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Android.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Apple.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Blackberry.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Core.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Firefox.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.FirefoxOS.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Google.Chrome.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Google.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.Windows.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\PushSharp.WindowsPhone.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVEnterprise.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVRepository.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.Context.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\MobileApplication.DataModel.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\EntityFramework.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\QVRepository.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csprojResolveAssemblyReference.cache
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.DataServiceArabicResource.resources
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.csproj.GenerateResource.Cache
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.DataService\obj\Debug\MobileApplication.DataService.pdb

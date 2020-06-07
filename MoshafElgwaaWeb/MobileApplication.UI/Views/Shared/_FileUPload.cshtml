@@ -1,0 +1,44 @@
+﻿@model MobileApplication.UI.InfraStructure.FileUploadModel
+
+
+<style>
+    .jFiler-input {
+        direction: rtl;
+    }
+</style>
+
+<input type="text" style="display:none" id="FilePath" ng-model="@Model.NgModel" />
+
+<script>
+
+    $('#@Model.Id:not(.fileuploaderapplied)').filer({
+
+        limit: 1,
+        maxSize: '@Model.Size',
+        extensions: '@Model.Ext'.split(','),
+        showThumbs: true,
+        changeInput: true,
+        templates: { removeConfirmation: false },
+        files: [
+       {
+           name: "{{@Model.NgModel}}",
+           size: 5453,
+           type: "image/jpg",
+           file: "http://dummyimage.com/720x480/f9f9f9/191a1a.jpg"
+       }],
+
+        uploadFile: {
+            url: "/JSPlugins/QVUploader/UploadFile.ashx",
+            data: { folder: '@Model.Path.Trim()' },
+            type: 'POST',
+            enctype: 'multipart/form-data',
+            success: function (data, el) {
+                var obj = eval(data);
+                $('#FilePath').val(obj[0].filename).trigger("input").trigger("change");
+                angular.element($('#FilePath')).triggerHandler('input');
+            },
+
+        },
+    });
+    $('#@Model.Id').addClass("fileuploaderapplied");
+</script>

@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BankAccountExists" xml:space="preserve">
+    <value>هذا الحساب البنكى موجود من قبل</value>
+  </data>
+  <data name="BankAcountNum" xml:space="preserve">
+    <value>حساب البنك غير صحيح .رقم الحساب مكون من 22 رقم مسبوق بحرفين</value>
+  </data>
+  <data name="BlockMessage" xml:space="preserve">
+    <value>الحساب محظور لمدة 15 دقيقة</value>
+  </data>
+  <data name="CharactersOnly200" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الحروف عن 200حرف و مسموح بكتابه حروف فقط .</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>اختر</value>
+  </data>
+  <data name="CodeExists" xml:space="preserve">
+    <value>هذا الكود موجود بالفعل</value>
+  </data>
+  <data name="CompareValidator" xml:space="preserve">
+    <value>غير مطابق</value>
+  </data>
+  <data name="countrycodevalid" xml:space="preserve">
+    <value>يجب إدخال كود بلد صحيح </value>
+  </data>
+  <data name="DateExists" xml:space="preserve">
+    <value>لا يمكن تغيير الحالة مرة أخري في نفس التاريخ</value>
+  </data>
+  <data name="DenaySpecialChar" xml:space="preserve">
+    <value>لا يسمح بإستخدام رموز خاصة</value>
+  </data>
+  <data name="DublicatedItem" xml:space="preserve">
+    <value>هذه البيانات تم إدخالها مسبقا</value>
+  </data>
+  <data name="DuplicatedVisitDate" xml:space="preserve">
+    <value>يوجد زيارة في نفس التاريخ</value>
+  </data>
+  <data name="DuplicatedVisitNo" xml:space="preserve">
+    <value>رقم الزيارة موجود بالفعل</value>
+  </data>
+  <data name="DuplicatedVisitType" xml:space="preserve">
+    <value>يوجد زيارة في نفس التاريخ</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>رجاء إدخال بريد إلكتروني صحيح</value>
+  </data>
+  <data name="EmailChar50" xml:space="preserve">
+    <value>رجاء إدخال بريد إلكتروني صحيح بحد اقصى 50 حرف </value>
+  </data>
+  <data name="EmailExists" xml:space="preserve">
+    <value>البريد الإلكترونى موجود بالفعل</value>
+  </data>
+  <data name="EmailLength" xml:space="preserve">
+    <value>عدد الحروف تجاوز العدد المسموح</value>
+  </data>
+  <data name="er" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="ExamExists" xml:space="preserve">
+    <value>هذا الفحص موجود من قبل</value>
+  </data>
+  <data name="FaceBook" xml:space="preserve">
+    <value>حساب فيس بوك غير صحيح</value>
+  </data>
+  <data name="GooglePlus" xml:space="preserve">
+    <value>حساب جوجل غير صحيح</value>
+  </data>
+  <data name="InValidImageSize" xml:space="preserve">
+    <value>ابعاد الصوره غير مطابقة</value>
+  </data>
+  <data name="KnowingClinicExists" xml:space="preserve">
+    <value>موجود بالفعل</value>
+  </data>
+  <data name="Length10" xml:space="preserve">
+    <value>يجب  أن لا يقل عدد الأرقام عن 10 أرقام</value>
+  </data>
+  <data name="Length15" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الأرقام عن 15 رقم</value>
+  </data>
+  <data name="Length150" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الحروف عن 150 حرف</value>
+  </data>
+  <data name="Length5" xml:space="preserve">
+    <value>يجب أن  لايقل عدد الحروف عن 5 احرف</value>
+  </data>
+  <data name="Length50" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الحروف عن 50حرف</value>
+  </data>
+  <data name="lettersandnumbersonly" xml:space="preserve">
+    <value>يجب أن لا يزيد عدد الحروف عن 200حرف و مسموح بكتابة حروف و  أرقام فقط .</value>
+  </data>
+  <data name="lettersnumbersspecialchar" xml:space="preserve">
+    <value> يجب  أن لا يزيد عدد الحروف عن 350حرف و غير مسموح بكتابه رموز خاصة ماعدا(: , - _)</value>
+  </data>
+  <data name="LoginNameExists" xml:space="preserve">
+    <value>اسم الدخول موجود من قبل</value>
+  </data>
+  <data name="MailBoxNo" xml:space="preserve">
+    <value> صندوق البريد 5 أرقام فقط</value>
+  </data>
+  <data name="MediaSize" xml:space="preserve">
+    <value>لا يمكن إختيار ملف أكبر من 500 ميجا</value>
+  </data>
+  <data name="MediaType" xml:space="preserve">
+    <value>نوع الملف غير صحيح</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>برجاء إدخال أرقام بحد أقصى 15 رقم و حد أدنى 10 أرقام</value>
+  </data>
+  <data name="MobileExists" xml:space="preserve">
+    <value>هذا الرقم مسجل بالفعل بالبرنامج نأمل التأكد من الرقم الصحيح</value>
+  </data>
+  <data name="NameExists" xml:space="preserve">
+    <value>هذا الاسم موجود من قبل</value>
+  </data>
+  <data name="NationalIdNo" xml:space="preserve">
+    <value>يقبل 10 ارقام فقط</value>
+  </data>
+  <data name="NationalIdNo2" xml:space="preserve">
+    <value>مسموح بإدخال بحد أقصى 20 حروف و ارقام فقط  </value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>لايوجد بيانات حاليا</value>
+  </data>
+  <data name="NumberOnlyExpectMinus" xml:space="preserve">
+    <value>يجب ادخال ارقام فقط ماعدا الصفر و رقم سالب</value>
+  </data>
+  <data name="NumberOnlyExpectMinuss" xml:space="preserve">
+    <value>يجب ادخال ارقام فقط ماعدا رقم سالب</value>
+  </data>
+  <data name="NumbersOnly" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط</value>
+  </data>
+  <data name="NumbersOnly10" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و يجب ان لا يزيد عدد الأرقام عن 10 رقم</value>
+  </data>
+  <data name="NumbersOnly15" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و يجب ان لا يزيد عدد الأرقام عن 15 رقم</value>
+  </data>
+  <data name="NumbersOnly2" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و أن لا تزيد عن رقمين</value>
+  </data>
+  <data name="NumbersOnly4" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و أن لا تزيد عن 4  أرقام</value>
+  </data>
+  <data name="NumbersOnly5" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و يجب ان لا يزيد عدد الأرقام عن 5 أرقام</value>
+  </data>
+  <data name="NumbersOnly50" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و يجب ان لا يزيد عدد الأرقام عن 50 رقم</value>
+  </data>
+  <data name="NumbersOnly7Digit" xml:space="preserve">
+    <value>رقم الملف غير صحيح</value>
+  </data>
+  <data name="NumbersOnly9" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و يجب ان لا يزيد عدد الأرقام عن 9 رقم</value>
+  </data>
+  <data name="NumbersOnlyTwoDigit" xml:space="preserve">
+    <value>الرجاء إدخال أرقام فقط ولا يزيد عن رقمين</value>
+  </data>
+  <data name="NumbersUpto30" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و يجب ان لا يزيد عدد الأرقام عن 30 رقم</value>
+  </data>
+  <data name="OrderExists" xml:space="preserve">
+    <value>هذا الترتيب موجود من قبل</value>
+  </data>
+  <data name="PaperFileNoExists" xml:space="preserve">
+    <value>هذا الرقم موجود بالفعل علي مستوي الفرع ،رجاء التأكد من الرقم الصحيح </value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>برجاء إدخال أرقام بحد أقصى 15 رقم و حد أدنى7 أرقام</value>
+  </data>
+  <data name="Phone2" xml:space="preserve">
+    <value>برجاء إدخال أرقام بحد أقصى 15 رقم و حد أدنى9 أرقام</value>
+  </data>
+  <data name="Phone9" xml:space="preserve">
+    <value>برجاء إدخال ارقام فقط ... وتكون 9 ارقام فقط</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>يجب  أن يتراوح رقم البورت مابين 0 و 65535</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>الرمز البريدي يجب أن يكون رقم مكون من 5 أرقام</value>
+  </data>
+  <data name="RecaptchaValidation" xml:space="preserve">
+    <value>رجاء المرور من اختبار التحقق من الهوية بشكل صحيح</value>
+  </data>
+  <data name="RegisterationNumberExists" xml:space="preserve">
+    <value>رقم التصريح موجود من قبل</value>
+  </data>
+  <data name="registrationNum" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الأرقام عن 11 رقم</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>لا يمكن ترك هذه الخانة فارغة</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>لا يمكنك ترك هذه الخانة فارغة</value>
+  </data>
+  <data name="RequiredFile" xml:space="preserve">
+    <value>يجب اختيار ملف السيرة الذاتية</value>
+  </data>
+  <data name="SafeString100" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 100 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString1000" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 1000 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString15" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 15 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString150" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 150 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString20" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 20 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString200" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 200 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString250" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 250 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString300" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 300 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString350" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 350 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString400" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 400 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString450" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 450 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString50" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 50 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString500" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 500 حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeString6" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 6حرف و غير مسموح بكتابة رموز غير آمنة</value>
+  </data>
+  <data name="SafeStringNoNum150" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 150 حرف و غير مسموح بكتابة رموز غير آمنة أو أرقام</value>
+  </data>
+  <data name="SmokingReasonExists" xml:space="preserve">
+    <value>هذا السبب موجود بالفعل</value>
+  </data>
+  <data name="SmokingTimeFromTo" xml:space="preserve">
+    <value>يجب ان تكون فترة التدخين من أقل من الي</value>
+  </data>
+  <data name="SmokingTypeExists" xml:space="preserve">
+    <value>هذا النوع موجودبالفعل </value>
+  </data>
+  <data name="SmokingUnitExists" xml:space="preserve">
+    <value>هذه الوحدة موجودة بالفعل</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>EmailChar50</value>
+  </data>
+  <data name="SyndromeExists" xml:space="preserve">
+    <value>هذا العرض مسجل بالفعل</value>
+  </data>
+  <data name="TermsAndConditionsRequired" xml:space="preserve">
+    <value>عفوا لابد من الموافقة على الشروط والاحكام لاتمام الحفظ</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>حساب تويتر غير صحيح</value>
+  </data>
+  <data name="UpdateDateError" xml:space="preserve">
+    <value>عفوا لا يمكن التعديل لهذا التاريخ الوحدات مشغولة</value>
+  </data>
+  <data name="ValidateMobile" xml:space="preserve">
+    <value>يجب  أن لا يزيد عن 13 رقم و لا يقل عن 10 أرقام</value>
+  </data>
+  <data name="ValidCommentRequired" xml:space="preserve">
+    <value>يجب أن لا تترك  التعليق فارغ . </value>
+  </data>
+  <data name="ValidComparerAreaddl" xml:space="preserve">
+    <value>يجب اختيار منطقة المسجد .</value>
+  </data>
+  <data name="ValidComparerCategoryddl" xml:space="preserve">
+    <value>يجب اختيار قسم للمقاله .</value>
+  </data>
+  <data name="ValidComparerPassword" xml:space="preserve">
+    <value>كلمه السر غير متطابقه .</value>
+  </data>
+  <data name="ValidComparerSatddl" xml:space="preserve">
+    <value>يجب اختيار قمر للقناه .</value>
+  </data>
+  <data name="ValidDecimal15Num" xml:space="preserve">
+    <value>يجب إدخال أرقام بحد أقصى 15 ارقام (13 أرقام صحيحة - 2 رقمين عشريين و العلامة العشرية )</value>
+  </data>
+  <data name="ValidDecimalNum" xml:space="preserve">
+    <value>يجب إدخال أرقام بحد أقصى 10 ارقام (7 أرقام صحيحة - 2 رقمين عشريين و العلامة العشرية ) </value>
+  </data>
+  <data name="ValidDecimalNum3" xml:space="preserve">
+    <value>يجب إدخال أرقام بحد أقصى 10 ارقام (7 أرقام صحيحة - 3 رقمين عشريين و العلامة العشرية )</value>
+  </data>
+  <data name="ValidDecimalNumWithoutZero" xml:space="preserve">
+    <value>يجب إدخال أرقام بحد أقصى 10 ارقام ولا يسمح بأصفار فقط (7 أرقام صحيحة - 2 رقمين عشريين و العلامة العشرية ) </value>
+  </data>
+  <data name="ValidDelete" xml:space="preserve">
+    <value>هل انت متاكد انك تريد الحذف ؟ .</value>
+  </data>
+  <data name="ValidEmailRequired" xml:space="preserve">
+    <value>يجب أن لا تترك  البريد الإلكتروني فارغ .</value>
+  </data>
+  <data name="ValidFailure" xml:space="preserve">
+    <value>لم تتم العمليه بنجاح .</value>
+  </data>
+  <data name="ValidJawal" xml:space="preserve">
+    <value>الرجاء  إدخال رقم جوال صحيح</value>
+  </data>
+  <data name="validLatitudeLongitiude" xml:space="preserve">
+    <value>الرجاء إدخال أرقام فقط .. بشكل صحيح مثال 31.205753</value>
+  </data>
+  <data name="ValidLoginName" xml:space="preserve">
+    <value> اسم دخول غير مسموح يجب ألا يحتوى على رموز خاصة أو فراغات</value>
+  </data>
+  <data name="ValidMapURL" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال https://www.google.com.eg/maps/@31.2527269,29.9749954,16z</value>
+  </data>
+  <data name="ValidNameRange" xml:space="preserve">
+    <value>يجب أن يكون عدد الحروف من 6 الى 150 حرف ولا يجب ادخال رموز خاصة </value>
+  </data>
+  <data name="ValidPassword" xml:space="preserve">
+    <value> كلمة السر يجب ان تكون بين 4 و 8 حروف أو أرقام و تشمل ما لا يقل عن رقم واحد</value>
+  </data>
+  <data name="ValidPhoneNo" xml:space="preserve">
+    <value>برجاء إدخال رقم هاتف صحيح</value>
+  </data>
+  <data name="validPhoneSaudiArabia" xml:space="preserve">
+    <value> يجب ادخال ارقام فقط و بشكل صحيح  00966xxxxxxxxxx</value>
+  </data>
+  <data name="ValidPositiveIntegerNumber" xml:space="preserve">
+    <value>يجب إدخال رقم صحيح موجب</value>
+  </data>
+  <data name="ValidPositiveNumber" xml:space="preserve">
+    <value>يجب إدخال رقم موجب</value>
+  </data>
+  <data name="ValidPrice" xml:space="preserve">
+    <value>يجب إدخال أرقام فقط و أن لا تزيد عن 10 أرقام</value>
+  </data>
+  <data name="ValidRegulaDetail" xml:space="preserve">
+    <value>غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegularDescriptionChannel" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 1000حرف أو يقل عن 240حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularDescriptionInterviewer" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 1000حرف أو يقل عن 240حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularDescriptionProgram" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 1000حرف أو يقل عن 240 حرف و غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegularEmail" xml:space="preserve">
+    <value>بريد إلكترونى غير صحيح .</value>
+  </data>
+  <data name="ValidRegularFullName100" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 100 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName150" xml:space="preserve">
+    <value>يجب أن لا يزيد عدد الحروف عن 150 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName150StringOnly" xml:space="preserve">
+    <value>يقبل حروف فقط ويجب ان لا يزيد عدد الحروف عن 150حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName20" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 20 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName200" xml:space="preserve">
+    <value>يجب أن لا يزيد عدد الحروف عن 200 حرف و غير مسموح بكتابة رموز خاصة.</value>
+  </data>
+  <data name="ValidRegularFullName22" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 22حرف و غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegularFullName250" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 250 حرف و غير مسموح بكتابه رموز خاصه.</value>
+  </data>
+  <data name="ValidRegularFullName400" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 400 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName450" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 450 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName50" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 50 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName50StringOnly" xml:space="preserve">
+    <value>يقبل حروف فقط ويجب ان لا يزيد عدد الحروف عن 50 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName6" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 6 احرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularFullName750" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 750 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularName10" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 10 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularName15" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 15 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularNameMax" xml:space="preserve">
+    <value>يجب إدخال حروف فقط و غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegularPhone" xml:space="preserve">
+    <value>يجب  أن لا يزيد عن 15 رقم و لا يقل عن 11 رقم .</value>
+  </data>
+  <data name="ValidRegularSummary" xml:space="preserve">
+    <value>غير مسموح بكتابه رموز خاصه </value>
+  </data>
+  <data name="ValidRegularSummary180" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 180 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularSummary200" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 200 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularSummary2000" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 2000 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularSummary300" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 300 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularSummary350" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 350 حرف و غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegularSummary500" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 500 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularSummary600" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 600 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegularSummary750" xml:space="preserve">
+    <value>يجب أن لا يزيد عدد الحروف عن  750حرف و غير مسموح بكتابة رموز خاصة</value>
+  </data>
+  <data name="ValidRegularSummaryProgram" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 120حرف أو يقل عن 80 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegulaTitler100" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 100حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegulaTitler150" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 150حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegulaTitler20" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 20 حرف و غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegulaTitler200" xml:space="preserve">
+    <value>يجب أن لا يزيد عدد الحروف عن 200حرف و غير مسموح بكتابة رموز خاصة.</value>
+  </data>
+  <data name="ValidRegulaTitler250" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 250 حرف و غير مسموح بكتابه رموز خاصه .</value>
+  </data>
+  <data name="ValidRegulaTitler40" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 40 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegulaTitler50" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 50 حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRegulaTitler500" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 500حرف و غير مسموح بكتابة رموز خاصة .</value>
+  </data>
+  <data name="ValidRepeatPassword" xml:space="preserve">
+    <value>كلمة المرور غير متطابقة</value>
+  </data>
+  <data name="ValidRequired" xml:space="preserve">
+    <value> يجب أن لا تترك الخانات فارغة</value>
+  </data>
+  <data name="ValidRequiredwithBR" xml:space="preserve">
+    <value>*</value>
+  </data>
+  <data name="ValidSafeString" xml:space="preserve">
+    <value>غير مسموح بكتابه رموز غير آمنة  </value>
+  </data>
+  <data name="ValidSuccess" xml:space="preserve">
+    <value>لقد تمت العمليه بنجاح .</value>
+  </data>
+  <data name="ValidSWFFile" xml:space="preserve">
+    <value>يجب إدخال ملف فلاش</value>
+  </data>
+  <data name="ValidTitleRequired" xml:space="preserve">
+    <value>يجب أن لا تترك  العنوان فارغ .</value>
+  </data>
+  <data name="ValidUnitPrice" xml:space="preserve">
+    <value>يجب  إدخال  أرقام فقط و أن لا تزيد عن 6 أرقام</value>
+  </data>
+  <data name="ValidUrl" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال http://www.mysite.com .</value>
+  </data>
+  <data name="ValidUrlFaceBook" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال http://www.facebook.com/pagename</value>
+  </data>
+  <data name="ValidUrlGooglePlus" xml:space="preserve">
+    <value>ادخل الرابط بشكل صحيح مثال http://plus.google.com/pagename</value>
+  </data>
+  <data name="ValidUrlInstagram" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال https://www.instagram.com/pagename</value>
+  </data>
+  <data name="ValidUrlTwitter" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال http://www.twitter.com/pagename</value>
+  </data>
+  <data name="ValidUrlYoutube" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال http://www.youtube.com/pagename</value>
+  </data>
+  <data name="ValidUrlYoutubeVideo" xml:space="preserve">
+    <value>إدخال الرابط بشكل صحيح مثال http://www.youtube.com/watch?v=videocode</value>
+  </data>
+  <data name="ValiedCivilNum" xml:space="preserve">
+    <value>برجاء  إدخال 10 أرقام فقط</value>
+  </data>
+  <data name="ValiedCurrency" xml:space="preserve">
+    <value>برجاء  إدخال سعر مناسب</value>
+  </data>
+  <data name="ValiedFAQOrder" xml:space="preserve">
+    <value>يجب أن لا يقل الرقم عن 1</value>
+  </data>
+  <data name="ValiedInt" xml:space="preserve">
+    <value>رقم غير صحيح </value>
+  </data>
+  <data name="Valiedmax150" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الحروف عن 150 حرف .</value>
+  </data>
+  <data name="Valiedmax20" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الخانات عن 20</value>
+  </data>
+  <data name="Valiedmax250" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الحروف عن 250 حرف .</value>
+  </data>
+  <data name="Valiedmax50" xml:space="preserve">
+    <value>يجب  أن لا يزيد عدد الحروف عن 50 حرف .</value>
+  </data>
+  <data name="ValiedNumber" xml:space="preserve">
+    <value>برجاء  إدخال رقم موجب</value>
+  </data>
+  <data name="ValiedPhoneType" xml:space="preserve">
+    <value>يجب اختيار نوع الهاتف.</value>
+  </data>
+  <data name="ValiedPortNo" xml:space="preserve">
+    <value>برجاء أن لا يقل عدد الأرقام عن 1  و أن لا يزيد عن 6 </value>
+  </data>
+  <data name="ValiedRange" xml:space="preserve">
+    <value>يجب  أن تكتب راقم لا يزيد عن 1024 ولا يقل عن 0</value>
+  </data>
+  <data name="ValiedRange10" xml:space="preserve">
+    <value>برجاء  إدخال رقم بين 0 إلى 10</value>
+  </data>
+  <data name="ValiedReq" xml:space="preserve">
+    <value>* يجب أن لا تترك هذه الخانة فارغة</value>
+  </data>
+  <data name="vrPhone" xml:space="preserve">
+    <value>برجاء إدخال  أرقام بحد أقصى 15رقم و حد أدنى 7رقم</value>
+  </data>
+  <data name="WrongOldPassword" xml:space="preserve">
+    <value>كلمة المرور القديمة غير صحيحة</value>
+  </data>
+  <data name="YouTube" xml:space="preserve">
+    <value>حساب يوتيوب غير صحيح</value>
+  </data>
+  <data name="SafeStringNoNum100" xml:space="preserve">
+    <value>يجب ان لا يزيد عدد الحروف عن 100 حرف و غير مسموح بكتابة رموز غير آمنة أو أرقام</value>
+  </data>
+</root>

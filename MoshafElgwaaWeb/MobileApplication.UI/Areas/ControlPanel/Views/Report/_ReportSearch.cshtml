@@ -1,0 +1,46 @@
+﻿@{
+    var Model = (MobileApplication.Areas.ControlPanel.Models.ReportSearhVM)ViewBag.ReportModel;
+}
+@{
+    Layout = "~/Views/Shared/_LayoutReport.cshtml";
+}
+
+
+<style>
+    .errorReportMsg {
+        margin: 5px 25px 5px 5px;
+        float: left;
+        margin-top: 0%;
+    }
+
+    .field-validation-error span {
+        display: block;
+        margin-top: 4px;
+        color: #a81515;
+        font-size: 11px !important;
+        font-weight: bold;
+    }
+</style>
+
+
+<div>
+
+    @if (Model.HasSearchCity)
+    {
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="ProjectSpecialityID" class="control-label">اسم المدينة </label>
+                <div class="errorReportMsg">
+                    @Html.ValidationMessageFor(model => Model.CityID)
+                </div>
+
+                @Html.DropDownListFor(model => Model.CityID, Deduction.InfraStructure.Globals.GetAllCities(), new { ng_model = "searchObject.CityID", @class = "form-control", id = "Name" })
+
+
+
+            </div>
+        </div>
+    }
+    
+</div>
+

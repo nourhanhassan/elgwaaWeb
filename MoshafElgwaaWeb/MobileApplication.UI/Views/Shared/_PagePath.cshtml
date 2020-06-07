@@ -1,0 +1,56 @@
+﻿@model MobileApplication.UI.InfraStructure.PagePath
+@{
+
+    var ParentPathArr = Model.ParentPath.Split(',');
+    var ParentURLsArr = Model.ParentURLs.Split(',');
+    Model.ParentPathDic = new Dictionary<string, string>();
+    var parentID=ViewBag.CurrentPage.ParentID;
+    if (parentID!=null)
+    {
+      while (parentID!=null)
+      {
+          var parentPage = new MobileApplication.DataService.CU_PageService().GetPageById(parentID);
+          Model.ParentPathDic.Add(parentPage.Name, "/ControlPanel/" + parentPage.URL + "/Default");
+          parentID = parentPage.ParentID;
+      }
+
+      Model.ParentPathDic.Add("الرئيسية", "/ControlPanel/DashBoard/Default");
+
+        
+    }
+    else
+    {
+        for (int i = 0; i < ParentURLsArr.Length; i++)
+        {
+            Model.ParentPathDic.Add(ParentPathArr[i], ParentURLsArr[i]);
+        }
+    }
+   
+
+
+    <ol class="breadcrumb">
+        @if (ViewBag.CurrentPage.ParentID != null)
+        {
+            for (int i = Model.ParentPathDic.Count-1; i>=0 ; i--)
+            {
+                 <li><a href="@Model.ParentPathDic.ElementAt(i).Value ">@Model.ParentPathDic.ElementAt(i).Key </a></li>
+            }
+        }
+        else
+        {
+             foreach (var path in Model.ParentPathDic)
+             {
+            <li><a href="@path.Value ">@path.Key </a></li>
+             }    
+        }
+       
+      @if (Model.ParentPathDic.FirstOrDefault().Key != "")
+      {
+
+          <li class='active'>@Model.PageTitle</li>
+      }
+    </ol>
+   <!-- <h1>@Model.PageTitle</h1> -->
+
+}
+

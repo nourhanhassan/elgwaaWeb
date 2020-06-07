@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>شركة التيسير الدولية</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+
+<!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie8.css">
+		<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+        
+	<![endif]-->
+
+</head>
+
+<body class="">
+<header class="navbar navbar-inverse navbar-fixed-top" role="banner"> <a id="rightmenu-trigger" class="tooltips" data-toggle="tooltip" data-placement="left" title="حرك القائمة" data-original-title="Toggle Sidebar"></a>
+  <div class="navbar-header pull-right"> <a class="navbar-brand" href="index.htm">بوابة شركة التيسير الدولية</a> </div>
+  <ul class="nav navbar-nav pull-left toolbar">
+    <li class="dropdown"> <a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><i class="fa fa-bell"></i><span class="badge">3</span></a>
+      <ul class="dropdown-menu notifications arrow">
+        <li class="dd-header clearfix"> <span>لديك عدد 3 تنبيهات</span> <span><a href="#">علمهم كلهم خلاص اتشافوا</a></span> </li>
+        <div class="scrollthis">
+          <li> <a href="#" class="active"> <span class="time">4 دقائق</span> <span class="msg">فيه حد جديد سجل</span> </a> </li>
+          <li> <a href="#" class="active"> <span class="time">20 دقيقة</span> <span class="msg"> حد قديم سابنا ومشي</span> </a> </li>
+          <li> <a href="#" class="active"> <span class="time">1 ساعة</span> <span class="msg"> السيرفر واقع</span> </a> </li>
+          <li> <a href="#"> <span class="time">2 ساعة</span> <span class="msg"> قاعدة البيانات على آخرها</span> </a> </li>
+          <li> <a href="#"> <span class="time">10 ساعات</span> <span class="msg">تم إستلام طلب جديد </span> </a> </li>
+          <li> <a href="#"> <span class="time">2 ساعة</span> <span class="msg"> قاعدة البيانات على آخرها</span> </a> </li>
+          <li> <a href="#"> <span class="time">10 ساعات</span> <span class="msg">تم إستلام طلب جديد </span> </a> </li>
+        </div>
+        <li class="dd-footer"><a href="#">اظهر كل التنبيهات</a></li>
+      </ul>
+    </li>
+    <li class="dropdown"> <a href="#" class="dropdown-toggle username" data-toggle="dropdown"><span class="hidden-xs">اسم المستخدم<i class="fa fa-caret-down"></i></span><img src="img/user.jpg" /></a>
+      <ul class="dropdown-menu userinfo arrow">
+        <li class="username"> <a href="#">
+          <div class="pull-left"><img src="img/user.jpg" /></div>
+          <div class="pull-right">
+            <h5>مرحبا أدمين</h5>
+            <small>اسم المستخدم <span>admin2751212121</span></small></div>
+          </a> </li>
+        <li class="userlinks">
+          <ul class="dropdown-menu">
+            <li><a href="#">تعديل الملف الشخصي <i class="pull-left fa fa-pencil"></i></a></li>
+            <li><a href="#">نوع الحساب <i class="pull-left fa fa-cog"></i></a></li>
+            <li><a href="#">مساعدة <i class="pull-left fa fa-question-circle"></i></a></li>
+            <li class="divider"></li>
+            <li><a href="#" class="text-right">تسجيل خروج <i class="pull-left fa fa-lock"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</header>
+<div id="page-container"> 
+  <!-- BEGIN SIDEBAR -->
+  <nav id="page-leftbar" role="navigation"> 
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul class="acc-menu" id="sidebar">
+      <li><a href="#"><i class="fa fa-home"></i><span>&nbsp;الرئيسية</span></a></li>
+      <li><a href="#"><i class="fa fa-bar-chart-o"></i><span>&nbsp;التقارير</span><span class="badge badge-success">1</span></a></li>
+      <li><a href="#"><i class="fa fa-cogs"></i> <span>&nbsp;الإعدادات</span></a>
+        <ul class="acc-menu">
+          <li><a href="#"><i class="fa fa-users"></i><span>&nbsp;موردين</span></a></li>
+          <li><a href="#"><i class="fa fa-users"></i><span>&nbsp;عملاء</span></a></li>
+          <li><a href="#"><i class="fa fa-users"></i><span>&nbsp;إستشاريين</span></a></li>
+          <li><a href="#"><i class="fa fa-users"></i><span>&nbsp;مقاولين</span></a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-wrench"></i> <span>&nbsp;مواد ومعدات</span></a></li>
+      <li><a href="#"><i class="fa fa-archive"></i> <span>&nbsp;المشاريع</span></a>
+        <ul class="acc-menu">
+          <li><a href="#"><i class="fa fa-folder-open"></i> <span>&nbsp;المشروع الأول</span></a>
+            <ul class="acc-menu">
+              <li><a href="#"><i class="fa fa-paperclip"></i> <span>&nbsp;المرفقات</span></a></li>
+              <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>&nbsp;التقارير</span></a></li>
+              <li><a href="#"><i class="fa fa-users"></i> <span>&nbsp;فريق العمل</span></a></li>
+              <li><a href="#"><i class="fa fa-location-arrow"> </i><span>&nbsp;المواقع</span></a></li>
+              <li><a href="#"><i class="fa fa-th-list"> </i><span>&nbsp;البنود</span></a></li>
+              <li><a href="#"><i class="fa fa-list"> </i><span>&nbsp;المراحل</span></a></li>
+              <li><a href="#"><i class="fa fa-cubes"> </i><span>&nbsp;الخامات</span></a></li>
+              <li><a href="#"><i class="fa fa-wrench"> </i><span>&nbsp;المعدات</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-folder-open"></i> <span>&nbsp;المشروع الأول</span></a>
+            <ul class="acc-menu">
+              <li><a href="#"><i class="fa fa-paperclip"></i> <span>&nbsp;المرفقات</span></a></li>
+              <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>&nbsp;التقارير</span></a></li>
+              <li><a href="#"><i class="fa fa-users"></i> <span>&nbsp;فريق العمل</span></a></li>
+              <li><a href="#"><i class="fa fa-location-arrow"> </i><span>&nbsp;المواقع</span></a></li>
+              <li><a href="#"><i class="fa fa-th-list"> </i><span>&nbsp;البنود</span></a></li>
+              <li><a href="#"><i class="fa fa-list"> </i><span>&nbsp;المراحل</span></a></li>
+              <li><a href="#"><i class="fa fa-cubes"> </i><span>&nbsp;الخامات</span></a></li>
+              <li><a href="#"><i class="fa fa-wrench"> </i><span>&nbsp;المعدات</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-folder-open"></i> <span>&nbsp;المشروع الأول</span></a>
+            <ul class="acc-menu">
+              <li><a href="#"><i class="fa fa-paperclip"></i> <span>&nbsp;المرفقات</span></a></li>
+              <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>&nbsp;التقارير</span></a></li>
+              <li><a href="#"><i class="fa fa-users"></i> <span>&nbsp;فريق العمل</span></a></li>
+              <li><a href="#"><i class="fa fa-location-arrow"> </i><span>&nbsp;المواقع</span></a></li>
+              <li><a href="#"><i class="fa fa-th-list"> </i><span>&nbsp;البنود</span></a></li>
+              <li><a href="#"><i class="fa fa-list"> </i><span>&nbsp;المراحل</span></a></li>
+              <li><a href="#"><i class="fa fa-cubes"> </i><span>&nbsp;الخامات</span></a></li>
+              <li><a href="#"><i class="fa fa-wrench"> </i><span>&nbsp;المعدات</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-folder-open"></i> <span>&nbsp;المشروع الأول</span></a>
+            <ul class="acc-menu">
+              <li><a href="#"><i class="fa fa-paperclip"></i> <span>&nbsp;المرفقات</span></a></li>
+              <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>&nbsp;التقارير</span></a></li>
+              <li><a href="#"><i class="fa fa-users"></i> <span>&nbsp;فريق العمل</span></a></li>
+              <li><a href="#"><i class="fa fa-location-arrow"> </i><span>&nbsp;المواقع</span></a></li>
+              <li><a href="#"><i class="fa fa-th-list"> </i><span>&nbsp;البنود</span></a></li>
+              <li><a href="#"><i class="fa fa-list"> </i><span>&nbsp;المراحل</span></a></li>
+              <li><a href="#"><i class="fa fa-cubes"> </i><span>&nbsp;الخامات</span></a></li>
+              <li><a href="#"><i class="fa fa-wrench"> </i><span>&nbsp;المعدات</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-folder-open"></i> <span>&nbsp;المشروع الأول</span></a>
+            <ul class="acc-menu">
+              <li><a href="#"><i class="fa fa-paperclip"></i> <span>&nbsp;المرفقات</span></a></li>
+              <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>&nbsp;التقارير</span></a></li>
+              <li><a href="#"><i class="fa fa-users"></i> <span>&nbsp;فريق العمل</span></a></li>
+              <li><a href="#"><i class="fa fa-location-arrow"> </i><span>&nbsp;المواقع</span></a></li>
+              <li><a href="#"><i class="fa fa-th-list"> </i><span>&nbsp;البنود</span></a></li>
+              <li><a href="#"><i class="fa fa-list"> </i><span>&nbsp;المراحل</span></a></li>
+              <li><a href="#"><i class="fa fa-cubes"> </i><span>&nbsp;الخامات</span></a></li>
+              <li><a href="#"><i class="fa fa-wrench"> </i><span>&nbsp;المعدات</span></a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-folder-open"></i> <span>&nbsp;المشروع الأول</span></a>
+            <ul class="acc-menu">
+              <li><a href="#"><i class="fa fa-paperclip"></i> <span>&nbsp;المرفقات</span></a></li>
+              <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>&nbsp;التقارير</span></a></li>
+              <li><a href="#"><i class="fa fa-users"></i> <span>&nbsp;فريق العمل</span></a></li>
+              <li><a href="#"><i class="fa fa-location-arrow"> </i><span>&nbsp;المواقع</span></a></li>
+              <li><a href="#"><i class="fa fa-th-list"> </i><span>&nbsp;البنود</span></a></li>
+              <li><a href="#"><i class="fa fa-list"> </i><span>&nbsp;المراحل</span></a></li>
+              <li><a href="#"><i class="fa fa-cubes"> </i><span>&nbsp;الخامات</span></a></li>
+              <li><a href="#"><i class="fa fa-wrench"> </i><span>&nbsp;المعدات</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- END SIDEBAR MENU --> 
+  </nav>
+  <div id="page-content">
+    <div id='wrap'>
+      <div id="page-heading">
+        <ol class="breadcrumb">
+          <li><a href="#">بوابة شركة التيسير الدولية</a></li>
+          <li><a href="#">الرئيسية</a></li>
+          <li class='active'>إدارة المشروع</li>
+        </ol>
+        <h1>إدارة المشروع</h1>
+        <div class="options dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <div class="btn-toolbar">
+            <button class="btn btn-default" id="daterangepicker2"> <i class="fa fa-calendar-o"></i> <span class="hidden-xs hidden-sm">4 فبراير 2015 - 15 ربيع الثاني 1436</span> <b class="caret"></b></button>
+          </div>
+          </a>
+          <div class="daterangepicker dropdown-menu opensleft">
+            <div class="ranges">
+              <ul>
+                <li>تاريخ اليوم</li>
+                <li>تاريخ آخر زيارة</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="panel panel-midnightblue">
+          <div class="panel-heading">
+            <h4>إضافة بند</h4>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-4 tree-col col-md-pull-8">
+                <ul class="panel-tasks">
+                  <li class="item-danger"> اسم المشروع
+                    <div class="options todooptions">
+                      <div class="btn-group">
+                        <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                      </div>
+                    </div>
+                    <ul class="panel-tasks">
+                      <li>بند رئيسي
+                        <div class="options todooptions">
+                          <div class="btn-group">
+                            <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                          </div>
+                        </div>
+                        <ul class="panel-tasks">
+                          <li>بند فرعي
+                            <div class="options todooptions">
+                              <div class="btn-group">
+                                <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                              </div>
+                            </div>
+                            <ul class="panel-tasks">
+                              <li>بند رابع</li>
+                              <li>بند رابع</li>
+                              <li>بند رابع</li>
+                              <li>بند رابع</li>
+                              <li>بند رابع</li>
+                            </ul>
+                          </li>
+                          <li>بند فرعي
+                            <div class="options todooptions">
+                              <div class="btn-group">
+                                <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                              </div>
+                            </div>
+                          </li>
+                          <li>بند فرعي
+                            <div class="options todooptions">
+                              <div class="btn-group">
+                                <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                              </div>
+                            </div>
+                          </li>
+                          <li>بند فرعي
+                            <div class="options todooptions">
+                              <div class="btn-group">
+                                <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                                <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>بند رئيسي
+                        <div class="options todooptions">
+                          <div class="btn-group">
+                            <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                          </div>
+                        </div>
+                      </li>
+                      <li>بند رئيسي
+                        <div class="options todooptions">
+                          <div class="btn-group">
+                            <button class="btn btn-default btn-xs" title="إضافة"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-default btn-xs" title="تعديل"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-default btn-xs" title="حذف"><i class="fa fa-times"></i></button>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-8 col-md-push-4">
+                <div class="panel panel-green">
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="col-sm-12"> <a class="btn btn-default"><i class="fa fa-plus"></i> <span>إستيراد بند</span></a> </div>
+                    </div>
+                    <br>
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <label for="input1" class="col-sm-3 control-label">اسم البند</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="input1" placeholder="اسم البند">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="selector1" class="col-sm-3 control-label">نوع البند</label>
+                        <div class="col-sm-6">
+                          <select name="selector1" id="selector1" class="form-control">
+                            <option>نوع البند</option>
+                            <option>بند فرعي</option>
+                            <option>بند رئيسي</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="input2" class="col-sm-3 control-label">الكمية</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="input2" placeholder="الكمية">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="input3" class="col-sm-3 control-label">المنفذ</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="input3" placeholder="المنفذ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="selector2" class="col-sm-3 control-label">الوحدة</label>
+                        <div class="col-sm-6">
+                          <select name="selector2" id="selector2" class="form-control">
+                            <option>اختر مما يلي</option>
+                            <option>اختر مما يلي</option>
+                            <option>اختر مما يلي</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="input4" class="col-sm-3 control-label">اسم المقاول</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" id="input4" placeholder="اسم المقاول">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="input5" class="col-sm-3 control-label">كود البند</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="input5" placeholder="كود البند">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="input6" class="col-sm-3 control-label">الكمية المتوقعة</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="input6" placeholder="الكمية المتوقعة">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="input7" class="col-sm-3 control-label">الكمية الفعلية</label>
+                        <div class="col-sm-3">
+                          <input type="text" class="form-control" id="input7" placeholder="الكمية الفعلية">
+                        </div>
+                      </div>
+                    </form>
+                    <div class="panel-footer">
+                      <div class="row">
+                        <div class="btn-toolbar pull-left">
+                          <button class="btn-default btn">إلغاء</button>
+                          <button class="btn-primary btn">حفظ</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/add panel--> 
+        
+      </div>
+    </div>
+    <!-- container --> 
+  </div>
+  <!--wrap --> 
+</div>
+<!-- page-content -->
+
+<footer role="contentinfo">
+  <div class="clearfix">
+    <ul class="list-unstyled list-inline pull-right">
+      <li>الحقوق محفوظة لشركة التيسير الدولية &copy; 2014  - تم التطوير بواسطة <a href="#">كيوفيجان</a></li>
+    </ul>
+    <button class="pull-left btn btn-inverse-alt btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
+  </div>
+</footer>
+</div>
+<!-- page-container --> 
+
+<script type='text/javascript' src='js/jquery-1.10.2.min.js'></script> 
+<script type='text/javascript' src='js/jqueryui-1.10.3.min.js'></script> 
+<script type='text/javascript' src='js/bootstrap.min.js'></script> 
+<script type='text/javascript' src='js/enquire.js'></script> 
+<script type='text/javascript' src='js/jquery.cookie.js'></script> 
+<script type='text/javascript' src='js/jquery.nicescroll.min.js'></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>  
+<script type='text/javascript' src='js/placeholdr.js'></script> 
+<script type='text/javascript' src='js/application.js'></script>
+</body>
+</html>

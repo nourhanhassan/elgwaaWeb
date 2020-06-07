@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QVMobileApplicationModelStoreContainer" CdmEntityContainer="QVMobileApplicationEntities">
+    <FunctionImportMapping FunctionImportName="TableRef" FunctionName="QVMobileApplicationModel.Store.TableRef">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="QVMobileApplicationModel.TableRef_Result">
+          <ScalarProperty Name="FK_TABLE_NAME" ColumnName="FK_TABLE_NAME" />
+          <ScalarProperty Name="FK_COLUMN_NAME" ColumnName="FK_COLUMN_NAME" />
+          <ScalarProperty Name="REFERENCED_TABLE_NAME" ColumnName="REFERENCED_TABLE_NAME" />
+          <ScalarProperty Name="REFERENCED_COLUMN_NAME" ColumnName="REFERENCED_COLUMN_NAME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="AppSetting">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.AppSetting">
+        <MappingFragment StoreEntitySet="AppSetting">
+          <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="KeyArabicName" ColumnName="KeyArabicName" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticleItemExplanation">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.ArticleItemExplanation">
+        <MappingFragment StoreEntitySet="ArticleItemExplanation">
+          <ScalarProperty Name="ItemExplanation" ColumnName="ItemExplanation" />
+          <ScalarProperty Name="ExplanationNumber" ColumnName="ExplanationNumber" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ayah">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Ayah">
+        <MappingFragment StoreEntitySet="Ayah">
+          <ScalarProperty Name="PageNum" ColumnName="PageNum" />
+          <ScalarProperty Name="DbIndex" ColumnName="DbIndex" />
+          <ScalarProperty Name="Juz" ColumnName="Juz" />
+          <ScalarProperty Name="verse" ColumnName="verse" />
+          <ScalarProperty Name="ayah_num" ColumnName="ayah-num" />
+          <ScalarProperty Name="surah" ColumnName="surah" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="City">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.City">
+        <MappingFragment StoreEntitySet="City">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Content">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Content">
+        <MappingFragment StoreEntitySet="Content">
+          <ScalarProperty Name="Videopath" ColumnName="Videopath" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="SeoUrl" ColumnName="SeoUrl" />
+          <ScalarProperty Name="SeoMetaKey" ColumnName="SeoMetaKey" />
+          <ScalarProperty Name="SeoDescription" ColumnName="SeoDescription" />
+          <ScalarProperty Name="SeoTitle" ColumnName="SeoTitle" />
+          <ScalarProperty Name="SeoTargetKey" ColumnName="SeoTargetKey" />
+          <ScalarProperty Name="SeoData" ColumnName="SeoData" />
+          <ScalarProperty Name="PermenantKey" ColumnName="PermenantKey" />
+          <ScalarProperty Name="IsHome" ColumnName="IsHome" />
+          <ScalarProperty Name="active" ColumnName="active" />
+          <ScalarProperty Name="ContentCategoryID" ColumnName="ContentCategoryID" />
+          <ScalarProperty Name="ImageDescription" ColumnName="ImageDescription" />
+          <ScalarProperty Name="Imagepath" ColumnName="Imagepath" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Summary" ColumnName="Summary" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ContentCategory">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.ContentCategory">
+        <MappingFragment StoreEntitySet="ContentCategory">
+          <ScalarProperty Name="MaxActiveContent" ColumnName="MaxActiveContent" />
+          <ScalarProperty Name="HasVideo" ColumnName="HasVideo" />
+          <ScalarProperty Name="ImageHeight" ColumnName="ImageHeight" />
+          <ScalarProperty Name="ImageWidth" ColumnName="ImageWidth" />
+          <ScalarProperty Name="SummaryMaxLength" ColumnName="SummaryMaxLength" />
+          <ScalarProperty Name="TitleMaxLength" ColumnName="TitleMaxLength" />
+          <ScalarProperty Name="HasImage" ColumnName="HasImage" />
+          <ScalarProperty Name="HasPublishDate" ColumnName="HasPublishDate" />
+          <ScalarProperty Name="HasDetails" ColumnName="HasDetails" />
+          <ScalarProperty Name="HasSummary" ColumnName="HasSummary" />
+          <ScalarProperty Name="IsPermanent" ColumnName="IsPermanent" />
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="AllowComments" ColumnName="AllowComments" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Action">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Action">
+        <MappingFragment StoreEntitySet="CU_Action">
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="IsSecurity" ColumnName="IsSecurity" />
+          <ScalarProperty Name="EnName" ColumnName="EnName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdProgram" ColumnName="IdProgram" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Branch">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Branch">
+        <MappingFragment StoreEntitySet="CU_Branch">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Department">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Department">
+        <MappingFragment StoreEntitySet="CU_Department">
+          <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+          <ScalarProperty Name="MainTask" ColumnName="MainTask" />
+          <ScalarProperty Name="IdHeadDepartment" ColumnName="IdHeadDepartment" />
+          <ScalarProperty Name="Descriptoin" ColumnName="Descriptoin" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Employee">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Employee">
+        <MappingFragment StoreEntitySet="CU_Employee">
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="IdEmployeeCategory" ColumnName="IdEmployeeCategory" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="LastVisitTime" ColumnName="LastVisitTime" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IsTrainee" ColumnName="IsTrainee" />
+          <ScalarProperty Name="IdHeadDepartment" ColumnName="IdHeadDepartment" />
+          <ScalarProperty Name="IdDepartment" ColumnName="IdDepartment" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Salt" ColumnName="Salt" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="IdJob" ColumnName="IdJob" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Employee_Role">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Employee_Role">
+        <MappingFragment StoreEntitySet="CU_Employee_Role">
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Employee_RoleProgram">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Employee_RoleProgram">
+        <MappingFragment StoreEntitySet="CU_Employee_RoleProgram">
+          <ScalarProperty Name="IdRoleProgram" ColumnName="IdRoleProgram" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_EmployeeCategory">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_EmployeeCategory">
+        <MappingFragment StoreEntitySet="CU_EmployeeCategory">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_HeadDepartment">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_HeadDepartment">
+        <MappingFragment StoreEntitySet="CU_HeadDepartment">
+          <ScalarProperty Name="IdParent" ColumnName="IdParent" />
+          <ScalarProperty Name="MainTask" ColumnName="MainTask" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Job">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Job">
+        <MappingFragment StoreEntitySet="CU_Job">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Log">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Log">
+        <MappingFragment StoreEntitySet="CU_Log">
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="IdPage" ColumnName="IdPage" />
+          <ScalarProperty Name="IdEmployee" ColumnName="IdEmployee" />
+          <ScalarProperty Name="ActionTime" ColumnName="ActionTime" />
+          <ScalarProperty Name="IdAction" ColumnName="IdAction" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Page">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Page">
+        <MappingFragment StoreEntitySet="CU_Page">
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="PageOrder" ColumnName="PageOrder" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="Actions" ColumnName="Actions" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="IdProgram" ColumnName="IdProgram" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Program">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Program">
+        <MappingFragment StoreEntitySet="CU_Program">
+          <ScalarProperty Name="IconClass" ColumnName="IconClass" />
+          <ScalarProperty Name="PREFIX" ColumnName="PREFIX" />
+          <ScalarProperty Name="StatusClass" ColumnName="StatusClass" />
+          <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Role">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Role">
+        <MappingFragment StoreEntitySet="CU_Role">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Role_Page">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Role_Page">
+        <MappingFragment StoreEntitySet="CU_Role_Page">
+          <ScalarProperty Name="Permission" ColumnName="Permission" />
+          <ScalarProperty Name="IdRoleProgram" ColumnName="IdRoleProgram" />
+          <ScalarProperty Name="IdPage" ColumnName="IdPage" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CU_Role_Program">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.CU_Role_Program">
+        <MappingFragment StoreEntitySet="CU_Role_Program">
+          <ScalarProperty Name="IdProgram" ColumnName="IdProgram" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DaysOfWeek">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.DaysOfWeek">
+        <MappingFragment StoreEntitySet="DaysOfWeek">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoaaMainCategory">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.DoaaMainCategory">
+        <MappingFragment StoreEntitySet="DoaaMainCategory">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExceptionLog">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.ExceptionLog">
+        <MappingFragment StoreEntitySet="ExceptionLog">
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Group">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="MoshafID" ColumnName="MoshafID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupTarget">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.GroupTarget">
+        <MappingFragment StoreEntitySet="GroupTarget">
+          <ScalarProperty Name="PagesCount" ColumnName="PagesCount" />
+          <ScalarProperty Name="EndPage" ColumnName="EndPage" />
+          <ScalarProperty Name="StartPage" ColumnName="StartPage" />
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+          <ScalarProperty Name="NotificationTime" ColumnName="NotificationTime" />
+          <ScalarProperty Name="AyaatCount" ColumnName="AyaatCount" />
+          <ScalarProperty Name="SurahID" ColumnName="SurahID" />
+          <ScalarProperty Name="JuzID" ColumnName="JuzID" />
+          <ScalarProperty Name="PeriodTypeID" ColumnName="PeriodTypeID" />
+          <ScalarProperty Name="TargetTypeID" ColumnName="TargetTypeID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupUser">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.GroupUser">
+        <MappingFragment StoreEntitySet="GroupUser">
+          <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Juz">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Juz">
+        <MappingFragment StoreEntitySet="Juz">
+          <ScalarProperty Name="EndAyah" ColumnName="EndAyah" />
+          <ScalarProperty Name="StartAyah" ColumnName="StartAyah" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EndPage" ColumnName="EndPage" />
+          <ScalarProperty Name="StartPage" ColumnName="StartPage" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MailEngine">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.MailEngine">
+        <MappingFragment StoreEntitySet="MailEngine">
+          <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+          <ScalarProperty Name="BccEmail" ColumnName="BccEmail" />
+          <ScalarProperty Name="CcEmail" ColumnName="CcEmail" />
+          <ScalarProperty Name="ToEmail" ColumnName="ToEmail" />
+          <ScalarProperty Name="Body" ColumnName="Body" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moshaf">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Moshaf">
+        <MappingFragment StoreEntitySet="Moshaf">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nationality">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Nationality">
+        <MappingFragment StoreEntitySet="Nationality">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notification">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Notification">
+        <MappingFragment StoreEntitySet="Notification">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="FromAppUserID" ColumnName="FromAppUserID" />
+          <ScalarProperty Name="NotificationTypeID" ColumnName="NotificationTypeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationType">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.NotificationType">
+        <MappingFragment StoreEntitySet="NotificationType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationUser">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.NotificationUser">
+        <MappingFragment StoreEntitySet="NotificationUser">
+          <ScalarProperty Name="IsSeen" ColumnName="IsSeen" />
+          <ScalarProperty Name="AppUserID" ColumnName="AppUserID" />
+          <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PeriodType">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.PeriodType">
+        <MappingFragment StoreEntitySet="PeriodType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PushNotificationLog">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.PushNotificationLog">
+        <MappingFragment StoreEntitySet="PushNotificationLog">
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Error" ColumnName="Error" />
+          <ScalarProperty Name="IsSuccess" ColumnName="IsSuccess" />
+          <ScalarProperty Name="NotificationPayload" ColumnName="NotificationPayload" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResetPasswordRequest">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.ResetPasswordRequest">
+        <MappingFragment StoreEntitySet="ResetPasswordRequest">
+          <ScalarProperty Name="IsExpired" ColumnName="IsExpired" />
+          <ScalarProperty Name="ResetRequestDateTime" ColumnName="ResetRequestDateTime" />
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="ResetPasswordID" ColumnName="ResetPasswordID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setting">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Setting">
+        <MappingFragment StoreEntitySet="Setting">
+          <ScalarProperty Name="twitterUrl" ColumnName="twitterUrl" />
+          <ScalarProperty Name="FaceBookUrl" ColumnName="FaceBookUrl" />
+          <ScalarProperty Name="YoutubeUrl" ColumnName="YoutubeUrl" />
+          <ScalarProperty Name="SurveyUrl" ColumnName="SurveyUrl" />
+          <ScalarProperty Name="CompetitionURL" ColumnName="CompetitionURL" />
+          <ScalarProperty Name="ContactInfo" ColumnName="ContactInfo" />
+          <ScalarProperty Name="HrEmail" ColumnName="HrEmail" />
+          <ScalarProperty Name="WhatsAppCode" ColumnName="WhatsAppCode" />
+          <ScalarProperty Name="WhatsAppPassword" ColumnName="WhatsAppPassword" />
+          <ScalarProperty Name="WahtsAppNo" ColumnName="WahtsAppNo" />
+          <ScalarProperty Name="SmsUrlString" ColumnName="SmsUrlString" />
+          <ScalarProperty Name="SmsFrom" ColumnName="SmsFrom" />
+          <ScalarProperty Name="SmsPort" ColumnName="SmsPort" />
+          <ScalarProperty Name="SmsPassWord" ColumnName="SmsPassWord" />
+          <ScalarProperty Name="SmsUserName" ColumnName="SmsUserName" />
+          <ScalarProperty Name="SmsServer" ColumnName="SmsServer" />
+          <ScalarProperty Name="SSL" ColumnName="SSL" />
+          <ScalarProperty Name="NameIsRequired" ColumnName="NameIsRequired" />
+          <ScalarProperty Name="NameIsVisible" ColumnName="NameIsVisible" />
+          <ScalarProperty Name="FromEmail" ColumnName="FromEmail" />
+          <ScalarProperty Name="PortNo" ColumnName="PortNo" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+          <ScalarProperty Name="SettingID" ColumnName="SettingID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMS_Config">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.SMS_Config">
+        <MappingFragment StoreEntitySet="SMS_Config">
+          <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+          <ScalarProperty Name="SuccessResponseNumber" ColumnName="SuccessResponseNumber" />
+          <ScalarProperty Name="NumberParamName" ColumnName="NumberParamName" />
+          <ScalarProperty Name="MessageParamName" ColumnName="MessageParamName" />
+          <ScalarProperty Name="IntervalTimeToSend" ColumnName="IntervalTimeToSend" />
+          <ScalarProperty Name="IsKeyValue" ColumnName="IsKeyValue" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="KeyValue" ColumnName="KeyValue" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMS_ConfigParam">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.SMS_ConfigParam">
+        <MappingFragment StoreEntitySet="SMS_ConfigParam">
+          <ScalarProperty Name="SMSConfigId" ColumnName="SMSConfigId" />
+          <ScalarProperty Name="IsStatic" ColumnName="IsStatic" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Key" ColumnName="Key" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SMS_Message">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.SMS_Message">
+        <MappingFragment StoreEntitySet="SMS_Message">
+          <ScalarProperty Name="SendDate" ColumnName="SendDate" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="ResponseNumber" ColumnName="ResponseNumber" />
+          <ScalarProperty Name="IsSent" ColumnName="IsSent" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="TextMessage" ColumnName="TextMessage" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Surah">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Surah">
+        <MappingFragment StoreEntitySet="Surah">
+          <ScalarProperty Name="EndAyah" ColumnName="EndAyah" />
+          <ScalarProperty Name="StartAyah" ColumnName="StartAyah" />
+          <ScalarProperty Name="AyatCount" ColumnName="AyatCount" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="EndPage" ColumnName="EndPage" />
+          <ScalarProperty Name="StartPage" ColumnName="StartPage" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TargetType">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.TargetType">
+        <MappingFragment StoreEntitySet="TargetType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="APNID" ColumnName="APNID" />
+          <ScalarProperty Name="GCMID" ColumnName="GCMID" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="IsMale" ColumnName="IsMale" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserAyat">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.UserAyat">
+        <MappingFragment StoreEntitySet="UserAyat">
+          <ScalarProperty Name="AyahID" ColumnName="AyahID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserCode">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.UserCode">
+        <MappingFragment StoreEntitySet="UserCode">
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Juz_Surah" TypeName="QVMobileApplicationModel.Juz_Surah" StoreEntitySet="Juz_Surah">
+      <EndProperty Name="Surah">
+        <ScalarProperty Name="Id" ColumnName="SurahId" />
+      </EndProperty>
+      <EndProperty Name="Juz">
+        <ScalarProperty Name="Id" ColumnName="JuzId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="Article">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doaa">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.Doaa">
+        <MappingFragment StoreEntitySet="Doaa">
+          <ScalarProperty Name="DoaaMeanings" ColumnName="DoaaMeanings" />
+          <ScalarProperty Name="DoaaContent" ColumnName="DoaaContent" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DoaaMainCategoryID" ColumnName="DoaaMainCategoryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NamesOfAllah">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.NamesOfAllah">
+        <MappingFragment StoreEntitySet="NamesOfAllah">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="NameOfAllahMeaning" ColumnName="NameOfAllahMeaning" />
+          <ScalarProperty Name="NameOfAllah" ColumnName="NameOfAllah" />
+          <ScalarProperty Name="NameOfAllahImage" ColumnName="NameOfAllahImage" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DoaaItemSource">
+      <EntityTypeMapping TypeName="QVMobileApplicationModel.DoaaItemSource">
+        <MappingFragment StoreEntitySet="DoaaItemSource">
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ItemSynonyms" ColumnName="ItemSynonyms" />
+          <ScalarProperty Name="ItemSource" ColumnName="ItemSource" />
+          <ScalarProperty Name="SourceNumber" ColumnName="SourceNumber" />
+          <ScalarProperty Name="DoaaID" ColumnName="DoaaID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

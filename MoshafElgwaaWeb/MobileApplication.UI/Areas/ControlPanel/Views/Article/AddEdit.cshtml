@@ -1,0 +1,139 @@
+﻿@using MobileApplication.UI.InfraStructure;
+@using MobileApplication.DataModel;
+
+@model MobileApplication.DataModel.ControlPanel.ArticleModels.ArticleModel
+@{
+    ViewBag.Title = "AddEdit";
+}
+
+@section NavigationBar{
+    @{Html.RenderPartial("_PagePath", new PagePath { PageTitle = " إضافة/تعديل فصل", ParentPath = "الرئيسية,إدارة فصول المقالات", ParentURLs = "/ControlPanel/DashBoard/Default,/ControlPanel/Article/Default" });  }
+}
+
+<div class="container">
+    @using (Ajax.BeginForm("Save", "Article", new AjaxOptions
+    {
+        InsertionMode = InsertionMode.Replace,
+        HttpMethod = "POST",
+        OnSuccess = "Success"
+    }, new { @id = "AddEditArticleForm", autocomplete = "off" }))
+    {
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="panel panel-green">
+            <div class="row setup-content" id="step-1">
+                <div class="col-xs-12">
+                    <div class="col-md-12 well">
+
+                        <div class="panel-heading">
+                            @if (Model.ID == null || Model.ID == 0) //add  mode
+                            {
+                                <h4>إضافة فصل</h4>
+                            }
+                            else  //Edit mode
+                            {
+                                <h4>تعديل فصل</h4>
+                            }
+                        </div>
+                        <div class="panel-body" ng-controller="AddEditArticleController">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @*<div class="row">
+                                        <label class="col-sm-3 control-label">الفصول</label>
+                                        <div class="col-sm-6">
+                                            @Html.DropDownListFor(x => x.ID, LookupManger<MobileApplication.DataModel.ControlPanel.ArticleModels.ArticleModel>.GetSelectListItem(), new { @class = "form-control", ng_model = "CurModel.ArticleMainCategoryID" })
+
+
+                                            @Html.ValidationMessageFor(model => model.ID)
+                                        </div>
+                                    </div>*@
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label">اسم الفصل</label>
+                                        <div class="col-sm-6">
+                                            @Html.TextBoxFor(x => x.Name, new { @Style = "", @class = "control-label", disabled = "true" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 control-label">محتوي الفصل</label>
+                                        <div class="col-sm-6">
+                                            @Html.TextAreaFor(x => x.ArticleContent, new { @Style = "width: 680px; height: 280px; resize: none", TextMode = "MultiLine", @class = "must-validate" })
+
+                                            @Html.ValidationMessageFor(model => model.ArticleContent, null,
+                                                    new
+                                                    {
+                                                        @Class = "errorMsg",
+                                                        @id = "TitleValidation"
+                                                    })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @Html.HiddenFor(m => m.Name)
+
+                        </div>
+                        <div class="panel-footer">
+                            <div class="row">
+
+                                <div class="btn-toolbar pull-left">
+                                    @*<button class="btn-primary btn" name="command" type="submit" value="Save">حفظ</button>*@
+                                    <button class="btn-primary btn" name="command" type="submit" value="SaveAndReturn">حفظ و خروج</button>
+                                    <a href="/ControlPanel/Article/Default" class="btn-default btn"> خروج </a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @section script {
+            @Html.Partial("_Popup")
+        }
+    }
+
+
+</div>
+
+
+<link href="~/JSPlugins/QVEditor/qv_editor.css" rel="stylesheet" />
+<script src="~/JSPlugins/QVEditor/qv_editor.js"></script>
+<script>
+
+    $('#ArticleContent').QVEditor();
+   
+    function Success(data) {
+        if (data.ID > 0) {
+            debugger;
+            ShowConfirmatiomMessage("تأكيد", " تم الحفظ بنجاح");
+
+            if (data.command == "Save") {
+                window.location = "/ControlPanel/Article/Add/0";
+            }
+            else {
+                window.location = "/ControlPanel/Article/Default";
+            }
+        }
+        else { ShowErrorMessage(); }
+    }
+
+    jQuery.validator.addMethod("RequiredEditor", function (value, element) {
+        var html = $(element).val();
+
+        if ($(html).text() == "") {
+            return false;
+        } else {
+            return true;
+        }
+
+    }, '@MobileApplication.DataModel.QvDataAnnotation.ValidationMessages.RequiredField');
+
+    $("#ArticleContent").rules("add", "RequiredEditor");
+
+
+</script>

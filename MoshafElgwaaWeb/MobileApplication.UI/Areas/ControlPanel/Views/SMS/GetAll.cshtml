@@ -1,0 +1,40 @@
+﻿@model List<QvSMS.SMSMessageModel> 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <td>ID</td>
+                <td>CreationDate</td>
+                <td>Mobile</td>
+                <td>Message</td>
+                <td>Sent?</td>
+                <td>Send Date</td>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.CreationDate</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@item.TextMessage</td>
+                    <td>@(item.IsSent.HasValue && item.IsSent.Value?"sent":"not sent")</td>
+                    <td>@item.SendDate</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
+
+

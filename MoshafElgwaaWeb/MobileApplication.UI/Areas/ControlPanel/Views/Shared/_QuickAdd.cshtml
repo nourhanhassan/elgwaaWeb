@@ -1,0 +1,18 @@
+﻿
+
+@using MobileApplication.UI.InfraStructure;
+@using GenericEngine.ServiceContract.Infrastructure;
+@model GenericModel
+    <div ng-controller="QuickAddManageController">
+
+    @{ Html.RenderPartial("_AddEdit", Model); }
+
+</div>
+
+@{Html.RenderPartial("_QuickAddManageScript", new ManageModel { AreaName = "ControlPanel", ControllerName = Model.ControllerName, ModelName = Model.AddBtn.Name, ModalPopUpId = Model.PopupID });}
+  
+
+
+
+
+

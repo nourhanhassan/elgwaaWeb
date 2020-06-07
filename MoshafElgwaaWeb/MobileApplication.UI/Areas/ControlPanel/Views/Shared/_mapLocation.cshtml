@@ -1,0 +1,319 @@
+﻿@*@model bool?*@ 
+ @*is view only*@ 
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDbhdM12IqIoTW-onQikHJcgT8CkVYBri4&sensor=false&amp;language=ar-SA">
+</script>
+<div ng-controller="mapController">
+    <div class="">
+        @*<label class="col-sm-3 control-label">الموقع</label>*@
+        <div   class="form-horizontal row-border ng-pristine ng-valid" >
+            <div ng-if="!model.isViewOnly">
+
+                                  
+                <div class="row">
+<div class="col-sm-12">
+<div class="col-sm-3"></div>
+         <div class="col-sm-4">        
+  <input type="radio" ng-model="model.mapSearchType" value="0"> بحث بالموقع
+</div>
+<div class="col-sm-4">
+                    <input type="radio" ng-model="model.mapSearchType" value="1"> بحث بالاحداثيات
+</div>
+
+
+                    <div ng-hide="model.mapSearchType==1" class="form-group">
+                        <label class="col-sm-3 control-label">الموقع:</label>
+                        <div class="col-md-6">
+
+
+                            <input ng-model="model.searchAddress" id="Address" type="text" class="form-control" />
+
+                        </div>
+                        <div class="" >
+                            <div class="btn-toolbar">
+                                <button class="btn-primary btn Search" type="button" ng-click="findLocaiton()"><i class="fa fa-search"></i>بحث</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+</div>
+                    <div ng-hide="model.mapSearchType==0" class="form-group">
+                        <label class="col-sm-3 control-label">الاحداثيات:</label>
+                   
+                        <div ng-hide="model.mapSearchType==0">
+                            <div class="col-md-4">
+                                <label class="control-label"> خط العرض (latitude)</label>
+                                <input ng-model="model.YLat" ng-value="model.YLat" id="Lat" type="number" class="form-control" />
+
+                            </div>
+                            <div class="col-md-4">
+                                <label class="control-label"> خط الطول (longitude)</label>
+                                <input ng-model="model.XLang" ng-value="model.XLang" id="Long" type="number" class="form-control" />
+
+                            </div>
+                        </div>
+                        <div class="" style="margin-top:29px">
+                            <div class="btn-toolbar">
+                                <button class="btn-primary btn Search" type="button" ng-click="findLocaiton()"><i class="fa fa-search"></i>بحث</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div ng-show="model.isWrongAddress" class="has-error col-md-4 pull-right">
+                        <div class="control-label">
+                            <span> تعذر العثور على هذا العنوان على الخريطة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="help-block">الرجاء تحريك المؤشر</p>
+            </div>
+
+            <div class="form-group" ng-if="model.isViewOnly">
+                @*<div class="row">*@
+
+
+
+
+                    <div>
+                        <div class="col-md-4">
+                            <label class="control-label"> خط العرض (latitude)</label>
+                            <input ng-model="model.YLat" ng-value="model.YLat" ng-disabled="true" id="Lat" type="number" class="form-control" />
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label"> خط الطول (longitude)</label>
+                            <input ng-model="model.XLang" ng-disabled="true" ng-value="model.XLang" id="Long" type="number" class="form-control" />
+
+                        </div>
+                    </div>
+
+
+                @*</div>*@
+
+
+            </div>
+
+            </div>
+</div>
+    </div>
+
+
+<div class="row">
+    <div id="googleMap" style="width: 90%; height: 400px;margin:auto"></div>
+</div>
+
+<script>
+    simpleApp.controller('mapController', function ($scope, $http, $timeout) {
+        
+ 
+        //debugger
+        var Model = @Html.Raw(Json.Encode(Model));
+        Model.model = Model;
+        if(Model.model)
+        {
+            console.log(Model.model)
+            $scope.model={};
+            $scope.model = Model.model;
+            console.log(Model.isView)
+          
+                $scope.model.isViewOnly = Model.isView;
+           
+           
+        }
+         @*$scope.isView = @Html.Raw(Json.Encode(Model)) ;
+        if(!$scope.isView)
+        {
+           // $scope.model = @Html.Raw(Json.Encode(Model))
+            $scope.model.isViewOnly = 'False';
+            }
+    else
+    {
+        $scope.model = model.model;
+            $scope.model.isViewOnly='True';
+        }*@
+        //$scope.model.YLat = parseFloat($scope.model.YLat);
+        //$scope.model.XLang = parseFloat($scope.model.YLat);
+    
+
+        $scope.map="";
+        $scope.geocoder="";
+        $scope.mapProp = {};
+        //$scope.model.XLang = 0;
+        //$scope.model.YLat = 0;
+        $scope.initialize = function () {
+            console.log($scope.model)
+            
+
+            if ( ($scope.model.ID==0)) {
+
+                $scope.model.YLat = "24.7135517";
+                $scope.model.XLang = "46.67529569999999";
+
+            }
+            $scope.model.mapSearchType = 1;
+            $scope.reEnterAddress($scope.model.YLat, $scope.model.XLang)
+            $scope.mapCenter = new google.maps.LatLng($scope.model.YLat, $scope.model.XLang);
+            var marker;
+            $scope.mapProp = {
+                center: $scope.mapCenter,
+                zoom: 15,
+                panControl: true,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                overviewMapControl: true,
+                rotateControl: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            
+            $scope.map = new google.maps.Map(document.getElementById("googleMap"), $scope.mapProp);
+            $scope.map.setTilt(0);
+            //debugger;
+            $scope.isDraggable = $scope.model.isViewOnly == 'True' ? false : true;
+            
+            $scope.marker = new google.maps.Marker({
+                position: $scope.mapCenter,
+                //animation: google.maps.Animation.BOUNCE,
+                draggable: $scope.isDraggable
+            });
+            
+            $scope.marker.setMap($scope.map);
+            //drag the marker to another address to get the longitude and the latitude
+            google.maps.event.addListener($scope.marker, 'dragend', function (event) {
+                console.log(event)
+                //$('#Address').rules("add", { WrongLocation: false, messages: { WrongLocation: "" } });
+                $scope.model.YLat = event.latLng.lat();
+                $scope.model.XLang = event.latLng.lng();
+                $scope.$apply();
+                if($scope.getAddress)
+                {
+                     $scope.getAddress($scope.model.YLat, $scope.model.XLang);
+                }
+                $scope.reEnterAddress($scope.model.YLat, $scope.model.XLang);
+            });
+
+
+
+        }
+        $scope.findLocaiton = function () {
+            $scope.geocoder = new google.maps.Geocoder();
+            if ($scope.model.mapSearchType == 0) {
+
+                $scope.geocoder.geocode({ 'address': $scope.model.searchAddress }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        $scope.rerenderMap(results[0]);
+                    }
+                    else {
+                        $scope.model.isWrongAddress = true;
+                        $scope.$apply();
+                    }
+                }, function (err) {
+                    console.log(err); $scope.model.isWrongAddress = true;
+                });
+            }
+            else {
+                newAddress = new google.maps.LatLng($scope.model.YLat, $scope.model.XLang);
+                $scope.geocoder.geocode({ 'latLng': newAddress }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+
+                        $scope.rerenderMap(results[0]);
+                    }
+                    else {
+                        $scope.model.isWrongAddress = true;
+                        $scope.$apply();
+                    }
+                });
+            }
+
+        }
+
+        $scope.rerenderMap = function(newLocation)
+        {
+            $scope.model.isWrongAddress = false;
+            $scope.$apply();
+            $scope.model.XLang = newLocation.geometry.location.lng();
+            $scope.model.YLat = newLocation.geometry.location.lat();
+            $scope.model.searchAddress = newLocation.formatted_address;
+            $scope.mapProp = {
+                center: newLocation.geometry.location,//myCenter,
+                zoom: 15,
+                panControl: true,
+                zoomControl: true,
+                mapTypeControl: true,
+                scaleControl: true,
+                streetViewControl: true,
+                overviewMapControl: true,
+                rotateControl: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            $scope.map = new google.maps.Map(document.getElementById("googleMap"), $scope.mapProp);
+            $scope.map.setTilt(0);
+            //map.setCenter(newLocation.geometry.location);
+            $scope.marker = new google.maps.Marker({
+                map: $scope.map,
+                position: newLocation.geometry.location,
+                animation: google.maps.Animation.BOUNCE,
+                draggable: true
+            });
+            //drag the marker to another address to get the longitude and the latitude
+            google.maps.event.addListener($scope.marker, 'dragend', function (event) {
+                $scope.model.YLat = event.latLng.lat();
+                $scope.model.XLang = event.latLng.lng();
+                $scope.$apply();
+               
+                $scope.reEnterAddress($scope.model.YLat, $scope.model.XLang);
+            });
+        }
+        $scope.reEnterAddress = function (lat, lng) {
+            geocoder = new google.maps.Geocoder();
+            newAddress = new google.maps.LatLng(lat, lng);
+            geocoder.geocode({ 'latLng': newAddress }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    console.log(results)
+                    if (results[1]) {
+                        var latlong = lat + "," + lng;
+                        var newPos = new google.maps.LatLng({
+                            setCenter: latlong,
+                            map: $scope.map,
+
+                        })
+                        $scope.model.searchAddress = results[1].formatted_address;
+                        $scope.$apply();
+
+                    } else {
+                        alert('No results found');
+                    }
+                } else {
+                    alert('Geocoder failed due to: ' + status);
+                }
+            });
+        }
+
+       
+        $scope.initialize();
+        //longitude = $("#Long").val();
+        //latitude = $("#Lat").val();
+    });
+    //$("#place").click(function(){
+    //    
+    //    var mm = map ;
+    //})
+    //$(function () {
+
+    //    $("#searchLocation").click(function () {
+    //        FindLocaiton()
+    //    });
+
+    //    google.maps.event.addDomListener(window, 'load', initialize)
+
+    //});
+
+
+
+</script>

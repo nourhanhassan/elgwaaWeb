@@ -1,0 +1,262 @@
+﻿@model MobileApplication.Areas.ControlPanel.Models.MultiAttachmentsVM
+
+<script src="~/JSPlugins/DropZoneUploader/dropzone.js"></script>
+<script type="text/javascript">
+    Dropzone.autoDiscover = false;
+</script>
+<link href="~/JSPlugins/DropZoneUploader/dropzone.css" rel="stylesheet" />
+
+<script>
+
+    (function () {
+        var app = angular.module("simpleApp");
+        app.directive("multiAttachments", function ($timeout) {
+
+            return {
+                restrict: "E",
+                template: "<input type='hidden' class='must-validate' id='{{dropZoneElementID}}_hdn' /><div class='dropzone' id='{{dropZoneElementID}}'></div>",
+                scope: {
+                    attachments: "=",
+                    isUploading : "=",
+                    allowedExtensions: "@@",
+                    maxFileSize:"@@",
+                    url:"@@",
+                    elementName: "@@",
+                    folder: "@@",
+                    foreignKeyName: "@@",
+                    foreignkeyValue: "@@",
+                    maxFiles: "@@",
+
+
+                },
+                link: function (scope, element, attr) {
+                   // scope.elementName = "test";
+                    scope.dropZoneElementID = scope.elementName + "_dropzone"
+                    if (!scope.attachments) {
+                        scope.attachments = [];
+
+                    }
+
+                    //if (!scope.isUploading) {
+                        scope.isUploading = false;
+                    //}
+
+                    if (!scope.maxFiles) {
+                        scope.maxFiles = null;
+                    }
+
+                    $timeout(function () {
+
+                        window.dropZone = new Dropzone("#" + scope.dropZoneElementID, {
+                            url: scope.url,
+                            addRemoveLinks: true,
+                            acceptedFiles: scope.allowedExtensions,
+                            dictDefaultMessage: "اسحب الصور أو اضغط هنا لرفع الملفات",
+                            paramName: "file", // The name that will be used to transfer the file
+                            maxFilesize: scope.maxFileSize + "MB", // MB
+                            maxFiles:scope.maxFiles,
+                            dictCancelUpload: "إلغاء",
+                            dictRemoveFile: "مسح الملف",
+                            dictCancelUploadConfirmation: "هل أنت متأكد من الإلغاء؟",
+                            dictFallbackMessage: "متصفحك لا يدعم سحب الملفات",
+                            dictInvalidFileType: "نوع الملف غير مسموح .. الملفات المسموحة هي " + scope.allowedExtensions,
+                            dictFileTooBig: "خطأ... حجم الملف أكبر من المسموح به وهو " + scope.maxFileSize,
+                            dictMaxFilesExceeded: "لا يمكن رفع أكثر من"+ scope.maxFiles+" ملف",
+
+                            init: function () {
+
+                               // console.log(scope.attachments);
+
+
+                                //Attach events
+                                //On before sending the file, add the folder to the form data
+                                this.on("sending", function (file, xhr, formData) {
+                                    if (scope.folder) {
+                                        formData.append("folder", scope.folder);
+                                    }
+                                    scope.isUploading = true;
+                                    scope.$apply();
+                                });
+
+                                //After adding a file attach event listner on click
+                                this.on("addedfile", function (file) {
+
+                                    
+                                });
+
+                                this.on("queuecomplete", function () {
+                                    scope.isUploading = false;
+                                    
+                                    scope.$apply();;
+                                });
+
+                                //After uploading, add the file to the attachments array (only in add mode not in edit mode)
+                                this.on("success", function (file,resp) {
+                                    //var respObj = JSON.parse(resp);
+
+                                    file.previewElement.addEventListener("click", function () {
+
+                                        setActiveElement(file);
+
+                                    });
+
+                                    var fileName = resp?resp.filename:file.name
+                                    file.uploadedFileName = fileName;
+
+                                   
+                                    //if the file does not have an ID (if it's edit mode, we don't need to add the attachments again)
+                                    if (!file.ID) {
+                                        var createdAttachment = {
+                                            ID: 0,
+                                            Path: scope.folder+fileName,
+                                            IsDefault: scope.attachments.length == 0,
+                                            Flag: "added",
+                                            
+                                        };
+                                        if (scope.foreignKeyName) {
+                                            createdAttachment[scope.foreignKeyName] = scope.foreignkeyValue;
+                                        }
+                                        scope.attachments.push(createdAttachment);
+
+                                    }
+                                    if (scope.attachments.length == 1 || file.IsDefault) {
+                                        setActiveElement(file);
+                                    }
+
+                                    scope.$apply();
+
+                                })
+
+                                //remove the file from the attachments array
+                                this.on("removedfile", function (file) {
+                                  
+                                    //var respObj = JSON.parse(resp);
+                                    console.log(file);
+                                    for (var i = 0; i < scope.attachments.length; i++) {
+                                        var att = scope.attachments[i]
+                                        if (att.Path.indexOf(file.uploadedFileName)>=0) {
+                                            if (att.ID > 0) {
+                                                att.Flag = "removed";
+                                            }
+                                            else {
+                                                scope.attachments.splice(i, 1);
+                                            }
+                                            if (att.IsDefault == true) {
+                                                att.IsDefault = false;
+                                                if (dropZone.files.length>0 ) {
+                                                    setActiveElement(dropZone.files[0]);
+                                                }
+                                             
+                                              
+                                            }
+                                            scope.$apply();
+                                            break;
+                                        }
+                                    }
+                                  
+                                })
+                             
+                                $.validator.addMethod('validateMultiUpload', function (value, element, param) {
+                                    //Your Validation Here
+                                    debugger;
+                                    var isValid = dropZone.getRejectedFiles().length == 0;
+                                    return isValid;// return bool here if valid or not.
+                                }, "  ");
+                                
+                                    $("#" + scope.dropZoneElementID+"_hdn").rules("add", {
+                                        validateMultiUpload: true
+                                    });
+                                
+
+
+                            },
+                        });
+
+
+                        //This is to create array of the existing files (edit mode)
+                        var mockfiles = [];
+                        for (var i = 0; i < scope.attachments.length; i++) {
+
+                            var mockFile = { name: scope.attachments[i].Path, size: 1, ID: scope.attachments[i].ID, uploadedFileName: scope.attachments[i].Path, IsDefault: scope.attachments[i].IsDefault,accepted:true };
+                            mockfiles.push(mockFile);
+
+
+                        }
+
+                        //create elements and add the files to the dropzone files
+                        for (var i = 0; i < mockfiles.length; i++) {
+                            dropZone.emit("addedfile", mockfiles[i]);
+                            dropZone.createThumbnailFromUrl(mockfiles[i], scope.attachments[i].Path);
+                            dropZone.emit("success", mockfiles[i]);
+                            dropZone.emit("complete", mockfiles[i]);
+                            dropZone.files.push(mockfiles[i]);
+                        }
+
+                        function setActiveElement(file) {
+                            //remove active class from all elements
+
+                            for (var i = 0; i < scope.attachments.length; i++) {
+                                if (scope.attachments[i].Path.indexOf(file.uploadedFileName) >= 0) {
+                                   
+                                    if (!scope.attachments[i].Flag) {
+                                        scope.attachments[i].Flag = "updated";
+                                    }
+                                    scope.attachments[i].IsDefault = true;
+
+                                }
+                                else {
+                                    if (scope.attachments[i].IsDefault) {
+                                        scope.attachments[i].IsDefault = false;
+                                        if (!scope.attachments[i].Flag) {
+                                            scope.attachments[i].Flag = "updated";
+                                        }
+                                    }
+                                    
+                                }
+                            }
+
+                            for (var i = 0; i < dropZone.files.length; i++) {
+                                angular.element(dropZone.files[i].previewElement).removeClass("active");
+                            }
+
+
+                            scope.$apply();
+                            if (!file.previewElement)
+                            {
+                                for (var j = 0 ; j < dropZone.files.length ; j++)
+                                {
+                                    if (dropZone.files[j].uploadedFileName.indexOf(file.uploadedFileName) >= 0)
+                                    {
+                                        file = dropZone.files[j];
+                                    }
+                                }
+                                
+                            }
+                            angular.element(file.previewElement).addClass("active");
+
+                        }
+
+
+                        function loadAttachments(attachments) {
+                            dropZone.files.push(new File());
+                        }
+
+
+
+
+                    });
+                },
+
+            };
+
+        })
+
+    })();
+
+
+
+
+
+</script>
+
+<multi-attachments url='@Url.Content("~/JSPlugins/DropZoneUploader/UploadFile.ashx")' allowed-extensions="@Model.AllowedExtensions" max-file-size="@Model.MaxAllowedSize" element-name="@Model.ElementID" folder="@Model.Folder" attachments="@Model.AttachmentsPropertyName" is-uploading="@Model.IsUploadingPropertyName"></multi-attachments>

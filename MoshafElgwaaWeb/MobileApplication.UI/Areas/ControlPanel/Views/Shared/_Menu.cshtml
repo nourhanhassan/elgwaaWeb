@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+
+}
+<nav id="page-leftbar" role="navigation">
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul class="acc-menu" id="sidebar">
+        <li>
+            <a href="/ControlPanel/DashBoard/Default"><i class="fa fa-home"></i><span>&nbsp;الرئيسية</span></a>
+        </li>
+
+        @foreach (var page in ViewBag.ParentPages)
+        {
+            if (page.HasPermission || page.CU_Page1.Count != 0)
+    {
+            var Class = "";
+            if (page.CU_Page1.Count > 0)
+            {
+                Class = "hasChild";
+            }
+            <li class="@Class">
+                @if (page.CU_Page1.Count > 0)
+                {
+                    @Html.Raw("<a>");
+                }
+                else
+                {
+                     @Html.Raw("<a href=" + "/ControlPanel/" + page.URL + "/Default" + ">");
+                }
+                <i class="@page.Icon"></i><span>&nbsp; @page.Name </span>
+                @Html.Raw("</a>")
+                @if (page.CU_Page1.Count > 0)
+                {
+                    <ul class="acc-menu">
+                        @foreach (var subPage in page.CU_Page1)
+                        {
+                            <li>
+                                <a href="/ControlPanel/@subPage.URL/Default"><i class="@subPage.Icon"></i><span>&nbsp; @subPage.Name </span></a>
+                            </li>
+
+                        }
+
+                    </ul>
+                }
+            </li>
+        }
+        }
+
+    </ul>
+    <!-- END SIDEBAR MENU -->
+</nav>

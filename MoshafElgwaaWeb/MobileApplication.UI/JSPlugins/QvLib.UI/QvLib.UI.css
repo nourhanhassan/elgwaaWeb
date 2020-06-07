@@ -1,0 +1,54 @@
+﻿/*========== validation-error ====================*/
+.field-validation-error span {
+    display: block;
+    margin-top: 4px;
+    color: #a81515;
+    font-size: 12px;
+	font-weight: bold;
+}
+/*========== * required indicator ====================*/
+.field-validation-indicator {
+    color: #a81515;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    margin: 4px 4px;
+    z-index: 10;
+}
+
+/*========== remain characters ====================*/
+span[data-max-length-msg] {
+    padding: 6px 2px;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+}
+
+/* dblcal */
+.dblcal, .dblcal-gerg {
+    width: 50% !important;
+    float: right !important;
+}
+.dblcal, .dblcal-gerg {
+    background-color: #fff !important;
+    cursor: default !important;
+}
+
+/* for dev */
+/*[class*="panel-"].panel .panel-footer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}*/
+
+img[src=""] {
+  display: none;
+}
+
+.invisible-input {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+    float: right;
+    padding: 0px;
+}

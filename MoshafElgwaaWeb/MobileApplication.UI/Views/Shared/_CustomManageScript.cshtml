@@ -1,0 +1,142 @@
+﻿@model MobileApplication.UI.InfraStructure.ManageModel
+@Html.Partial("_Popup")
+<script type="text/javascript">
+    
+    var ControllerName = "@Model.ControllerName";
+    var ModelName = "@Model.ModelName";
+    var AreaName = "@Model.AreaName";
+    var ModalPopUpId = "@Model.ModalPopUpId";
+
+    simpleApp.controller('ManageController', ['$scope', '$controller', '$http', "$q", '$filter', '$timeout', '$resource', function ($scope, $controller, $http, $q, $filter, $timeout, $resource) {
+            
+            $scope.$defer = $q.defer();
+            $scope.searchObject = {};
+            $scope.filter = {};
+            $scope.dataItems = null;
+            $scope.countPerPage = 8;
+            $scope.countLoadedItems = 0;
+            $scope.params = {
+                page: 1, count: $scope.countPerPage,
+                sorting: { ID: "des" },    // initial sorting
+                filter: $scope.filter
+            }
+   
+    //-----------------------------getData--------------------------------//
+    $scope.getData = function (type) {
+        debugger;
+        $resource('/' + AreaName + '/' + ControllerName + '/GetDataList').get(url(false, $scope.params), function (data) {
+            if (type == "viewAll")
+            {
+                $scope.dataItems = null;
+            }
+            $timeout(function () {
+debugger;
+                $scope.$defer.resolve(data.data);
+                $scope.dataItems = $scope.dataItems == null ? data.data : $scope.dataItems.concat(data.data);
+                $scope.totalCount = data.count;
+                $scope.countLoadedItems = $scope.countLoadedItems + data.data.length;
+
+            }, 500);
+        })
+
+    }
+ 
+
+    //--------------------------------------------------search-----------------
+
+    $scope.search = function () {
+        debugger
+        if ($("form").hasClass("ng-valid") == true) {
+            var clonedSearchObject = angular.copy($scope.searchObject);
+            $scope.params.page = 1;
+            $scope.countLoadedItems = 0;
+            $scope.dataItems = null;
+            $scope.params.filter = clonedSearchObject;
+            $scope.getData();
+            $scope.$apply();
+        }
+    };
+    //-----------------------------------------------viewAll-------------------
+    $scope.viewAll = function () {
+        debugger;
+        $scope.params.filter = {};
+        $scope.searchObject = {};
+        $scope.dataItems = null;
+        $scope.params.page = 1;
+        $scope.countLoadedItems = 0;
+
+        $scope.getData("viewAll");
+    };
+    //--------------------------------------loadmore--------------------
+    $scope.loadMore = function () {
+        $scope.params.page++;
+        $scope.getData()
+    }
+    //--------------------------------------------------Delete-------------------------//
+
+    $scope.DeleteCallback = function ($index) {
+        $scope.dataItems.splice($index, 1);
+        $scope.$apply();
+    };
+
+    $scope.Delete = function ($event, obj, $index, message) {
+        debugger
+        var FormObject =
+        {
+            Controller: ControllerName,
+            Action: "Delete",
+            Id: obj.ID
+        };
+        if (AreaName.length > 0) {
+            FormObject.Area = AreaName;
+        }
+        if (!message) {
+
+            message = "هل أنت متأكد من حذف " + ModelName + " ؟";
+        }
+        ShowConfirmDeleteMessage("حذف", message, FormObject, function () {
+            $scope.DeleteCallback($index);
+        });
+    };
+   //-----------------------------------------default image-----------------------------------------------------//
+    $scope.getDefaultImagePath = function (path) {
+        
+        var pathURL = path == null ? "/DataUpload/default.png" : path
+        return pathURL
+
+    }
+    //-------------------------------------------------url parameters----------------------------------//
+    function url(asString, params) {
+        
+        asString = asString;
+        var pairs = (asString ? [] : {});
+        for (var key in params) {
+            if (params.hasOwnProperty(key)) {
+                var item = params[key],
+                    name = encodeURIComponent(key);
+                if (typeof item === "object") {
+                    for (var subkey in item) {
+                        if (!angular.isUndefined(item[subkey]) && item[subkey] !== "") {
+                            var pname = name + "[" + encodeURIComponent(subkey) + "]";
+                            if (asString) {
+                                pairs.push(pname + "=" + item[subkey]);
+                            } else {
+                                pairs[pname] = item[subkey];
+                            }
+                        }
+                    }
+                } else if (!angular.isFunction(item) && !angular.isUndefined(item) && item !== "") {
+                    if (asString) {
+                        pairs.push(name + "=" + encodeURIComponent(item));
+                    } else {
+                        pairs[name] = encodeURIComponent(item);
+                    }
+                }
+            }
+        }
+        return pairs;
+    };
+
+    }]);
+  
+</script>

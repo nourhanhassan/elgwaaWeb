@@ -1,0 +1,89 @@
+﻿/*Slider*/
+.Qv_slider_Cont
+{
+    overflow:hidden;
+}
+.qv_slider {
+
+    padding:0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.qv_slider >li {
+        list-style: none;
+        display:none;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    }
+
+.qv_slider >li >img{
+    float:right;
+}
+ .qv_slider >li:first-child{ display: block;} 
+/*Navigation-- Arrows*/
+.qv_slider >ol.qv_arrow_nav {
+    position: absolute;
+    top: 45%;
+    width: inherit;
+    padding: 0px;
+    margin: 0px !important;
+    width: 100% !important;
+}
+
+
+.qv_slider >ol.qv_arrow_nav >[class^="arrow"] {
+    width: 25px;
+height: 25px;
+opacity: .85;
+transform: rotate(45deg);
+cursor: pointer;
+position: absolute;
+z-index: 100;
+}
+.qv_slider >ol.qv_arrow_nav >.arrow-right {
+
+border-right: 7px solid #fff;
+border-top: 7px solid #fff;
+
+right: 3%;
+
+}
+
+.qv_slider >ol.qv_arrow_nav >.arrow-left {
+
+border-left: 7px solid #fff;
+border-bottom: 7px solid #fff;
+left: 3%;
+
+}
+
+
+/*Navigation-- bullets*/
+.qv_slider >ol.qv_bullets_nav {
+    overflow: visible;
+position: absolute;
+z-index: 100;
+top: 9%;
+left: 1%;
+    display:block !important;
+}
+.qv_slider >ol.qv_bullets_nav >.qv_bullet {
+    width: 12px;
+height: 12px;
+background: #fff;
+display: inline-block;
+z-index: 100;
+border-radius: 50%;
+border: 2px solid #fff;
+    cursor: pointer;
+    margin: 2px;
+}
+.qv_slider >ol.qv_bullets_nav >.qv_bullet.active {
+   background: #000; 
+}
+
+.qv_slider >li img {
+    max-width: initial;
+}

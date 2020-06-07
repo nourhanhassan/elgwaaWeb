@@ -1,0 +1,173 @@
+﻿@* ///////////////////////////////////Plugin *@
+
+<script src="~/JSPlugins/QVConfirmationMessage/toastr.js"></script>
+<link href="~/JSPlugins/QVConfirmationMessage/toastr.css" rel="stylesheet" />
+
+@*/////////////////////////////////// HTML *@
+
+<div class="modal fade" id="PopupModal">
+    <div class="modal-dialog" id="genericPopUp">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="float: left;"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-default PopupClose pull-left" data-dismiss="modal">غلق</button>
+                <input type="submit" class="btn btn-primary PopupSubmit pull-left" value="تأكيد">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@* /////////////////////////////////// Script *@
+
+<script type="text/javascript">
+
+    function ShowConfirmDeleteMessage(Title, message, FormObject, callback) {
+        debugger
+        $('#genericPopUp .modal-body').html(message);
+        $('#genericPopUp .modal-title').html(Title)
+        $('#PopupModal').modal('show')
+
+        $('#genericPopUp .PopupSubmit').show();
+        $('#genericPopUp .PopupSubmit').unbind("click");
+        $('#genericPopUp .PopupSubmit').bind("click", function () {
+
+            if (FormObject != null) {
+
+                if (typeof (FormObject.Area) != "undefined") {
+                    url = '/' + FormObject.Area + '/' + FormObject.Controller + '/' + FormObject.Action + '/' + FormObject.Id
+                }
+                else {
+                    url = '/' + FormObject.Controller + '/' + FormObject.Action + '/' + FormObject.Id
+                }
+
+                $.ajax({
+                    url: url,
+                    async: false,
+                    type: "POST",
+                    success: function (data) {
+                        $('#PopupModal').modal('hide')
+                     
+                        if (data == "False") {
+                            ShowErrorMessage()
+                        }
+                        else {
+                            ShowConfirmatiomMessage("تأكيد", "تم الحذف بنجاح")
+                            callback();
+                        }
+
+                    },
+                    'error': function () {
+                        $('#PopupModal').modal('hide')
+                        ShowErrorMessage()
+
+                    }
+                });
+            }
+        });
+
+    }
+    function ShowConfirmCancelMessage(Title, message, FormObject, callback) {
+        debugger
+        $('#genericPopUp .modal-body').html(message);
+        $('#genericPopUp .modal-title').html(Title)
+        $('#PopupModal').modal('show')
+
+        $('#genericPopUp .PopupSubmit').show();
+        $('#genericPopUp .PopupSubmit').unbind("click");
+        $('#genericPopUp .PopupSubmit').bind("click", function () {
+
+            if (FormObject != null) {
+
+                if (typeof (FormObject.Area) != "undefined") {
+                    url = '/' + FormObject.Area + '/' + FormObject.Controller + '/' + FormObject.Action + '/' + FormObject.Id
+                }
+                else {
+                    url = '/' + FormObject.Controller + '/' + FormObject.Action + '/' + FormObject.Id
+                }
+
+                $.ajax({
+                    url: url,
+                    async: false,
+                    type: "POST",
+                    success: function (data) {
+                        $('#PopupModal').modal('hide')
+
+                        if (data == "False") {
+                            ShowErrorMessage()
+                        }
+                        else {
+                            ShowConfirmatiomMessage("تأكيد", "تم الإلغاء بنجاح")
+                            callback();
+                        }
+
+                    },
+                    'error': function () {
+                        $('#PopupModal').modal('hide')
+                        ShowErrorMessage()
+
+                    }
+                });
+            }
+        });
+
+    }
+
+    
+
+    function ShowConfirmatiomMessage(Title, message) {
+
+        toastr.success(message, Title, {
+            "closeButton": true,
+            "positionClass": "toast-bottom-right",
+        });
+    }
+
+    function ShowErrorMessage() {
+
+        toastr.error("لقد حدث خطا ما...", "خطا", {
+            "closeButton": true,
+            "positionClass": "toast-bottom-right",
+        });
+    }
+
+    function showConfirmationDialog(title, message, callback, okText, cancelText) {
+        if (!okText) {
+            okText = "موافق";
+        }
+        if (!cancelText) {
+            cancelText = "إلغاء";
+        }
+
+        $('#genericPopUp .modal-body').html(message);
+        $('#genericPopUp .modal-title').html(title)
+        $('#PopupModal').modal('show')
+        $('#genericPopUp .PopupSubmit').val(okText);
+        $('#genericPopUp .PopupClose').html(cancelText);
+
+        $('#genericPopUp .PopupSubmit').show();
+        $('#genericPopUp .PopupSubmit').unbind("click");
+        $('#genericPopUp .PopupSubmit').bind("click", function () {
+            if (typeof(callback)=="function") {
+                callback(true);
+            }
+        });
+
+        $('#genericPopUp .PopupClose').unbind("click");
+        $('#genericPopUp .PopupClose').bind("click", function () {
+            if (typeof (callback) == "function") {
+                callback(false);
+            }
+        });
+
+        
+    }
+
+</script>

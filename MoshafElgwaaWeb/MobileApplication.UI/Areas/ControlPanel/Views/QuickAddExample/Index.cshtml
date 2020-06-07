@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ControlPanel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using MobileApplication.UI.InfraStructure;
+@using GenericEngine.QvGeneric
+@using GenericEngine.ServiceContract.Infrastructure;
+
+
+<div ng-app="simpleApp">
+    @{
+        
+        var quickAddExampleModel =new MobileApplication.DataModel.ControlPanel.quickAddExampleModel();
+
+    }
+
+    <div>
+        @{Html.RenderPartial("_QuickAdd", quickAddExampleModel);}
+
+
+
+
+
+
+    </div>
+    <div ng-controller="testController">
+
+        <select id="dropdownlistId" ng-model="model.dropdownlistId">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </select>
+                             
+    
+       
+        <button ng-click="AddEdit('@quickAddExampleModel.PopupID','@quickAddExampleModel.ControllerName',callBackfunction,'dropdownlistId','model',null)">add new item</button>
+
+
+    </div>
+     container 
+</div>
+
+
+@section script {
+
+
+   <script>
+       simpleApp.controller('testController', function ($scope, $controller, $http, $filter, $timeout) {
+           $.extend(this, $controller('QuickAddManageController', { $scope: $scope }, $controller, $http, $filter, $timeout));
+
+
+           $scope.callBackfunction = function (insertedObject) {
+               // code want to execute after add new item in ddl using quick add 
+           }
+          
+
+          
+       })
+    </script>
+}
+
+
+
+
+

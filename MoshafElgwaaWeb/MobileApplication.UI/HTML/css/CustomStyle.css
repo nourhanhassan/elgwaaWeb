@@ -1,0 +1,24 @@
+﻿.tree-col li li.active{
+    background: aliceblue;
+}
+.tree-col li li li.active{
+    background:lightyellow;
+}
+.tree-col li li ul{display:none;}
+.tree-col li li.active >ul{
+/*display:block ;*/
+}
+/*ul:has(> li.active){
+
+    display:block;
+}*/
+
+.tree-col .man-phases li{
+      border-right-color: #854e9d;
+  color: #854e9d;
+}
+
+.tree-col li:not(.tree-title){
+    margin-right:3%;
+
+}

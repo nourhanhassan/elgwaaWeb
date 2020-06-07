@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Default";
+
+}
+@using MobileApplication.UI.InfraStructure;
+@using GenericEngine.QvGeneric
+@using GenericEngine.ServiceContract.Infrastructure;
+@model GenericModel
+@section NavigationBar{
+    @if (Model.ParentUrls != "")
+    {
+        Html.RenderPartial("_PagePath", new PagePath { PageTitle = "إدارة "+@Model.PageName+"", ParentPath = "الرئيسية,"+@Model.ParentUrlsValues, ParentURLs = "/ControlPanel/DashBoard/Default,"+@Model.ParentUrls });  
+    }
+    else
+	{
+        Html.RenderPartial("_PagePath", new PagePath { PageTitle = "إدارة "+@Model.PageName+"", ParentPath = "الرئيسية ", ParentURLs = "/ControlPanel/DashBoard/Default" });  
+	}
+}
+
+<div ng-app="app">
+    <div ng-controller="@(ViewData["Ng-controller"]==null? "ManageUseController" : ViewData["Ng-controller"].ToString()) ">
+        <div class="container">
+
+            @{Html.RenderPartial("_SearchForm", Model);}
+
+
+            <!--/search-->
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <h4>إدارة @Model.PageName</h4>
+                </div>
+
+                <div class="panel-body">
+                    @if (bool.Parse(ViewData["insert"].ToString()))
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                @if (Model.GetType().GetProperty("HasAddBtn") == null)
+                                { 
+                                   <div class="btn-group">
+
+                                    <a href="@Model.AddBtn.link" ng-click="@Model.AddBtn.ClickAction " class="btn btn-default DTTT_button_text" id="AddBtn">
+                                        <i class="fa fa-plus"></i><span> إضافة  @Model.AddBtn.Name</span>
+                                    </a>
+
+                                </div> 
+                                }
+                                
+                            </div>
+                        </div>
+                    }
+
+                    @Html.RenderGrid(Model, bool.Parse(ViewData["Update"].ToString()), bool.Parse(ViewData["Delete"].ToString()))
+                </div>
+                <br>
+            </div>
+        </div>
+        <img />
+        <!--------------->
+        @*<br />
+            <a href="/ControlPanel/test/AddEdit?id=46"><i class="fa fa-edit"></i></a>*@
+
+        <!--------------->
+        @if (string.IsNullOrEmpty(Model.AddBtn.link) || !Model.AddBtn.link.Contains("Add") || !Model.AddBtn.link.Contains("Edit"))
+        {
+            { Html.RenderPartial("_AddEdit", Model); }
+
+        }
+
+
+
+    </div>
+    <!-- container -->
+</div>
+
+
+@section script {
+    @{Html.RenderPartial("_ng-table");} 
+    @Html.Partial("_Popup")
+
+
+   @{Html.RenderPartial("_ManageScript", new ManageModel { AreaName = "ControlPanel", ControllerName = @HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString(), ModelName = @Model.AddBtn.Name, ModalPopUpId = @Model.PopupID });}
+@{Html.RenderPartial("_ManageUserScript", new ManageModel { AreaName = "ControlPanel", ControllerName = @HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString(), ModelName = @Model.PageName, ModalPopUpId = @Model.PopupID });}
+@Html.Partial("_additionals")
+
+
+
+
+<script src="~/JSPlugins/QVCalender/jquery.calendars.js"></script>
+<script src="~/JSPlugins/QVCalender/jquery.calendars.plus.js"></script>
+<script src="~/JSPlugins/QVCalender/jquery.calendars.picker.js"></script>
+<script src="~/JSPlugins/QVCalender/jquery.calendars.ummalqura.js"></script>
+<script src="~/JSPlugins/QVCalender/jquery.calendars.dblDatePicker.js"></script>
+    <script>
+        app.filter('true_false', function () {
+            return function (text, length, end) {
+                if (text) {
+                    return 'فعال';
+                }
+                return 'غير فعال';
+            }
+        });
+     
+    </script>
+}
+
+
+
+

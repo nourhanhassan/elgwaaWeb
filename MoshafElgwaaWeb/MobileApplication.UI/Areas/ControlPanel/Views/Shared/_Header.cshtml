@@ -1,0 +1,65 @@
+﻿ <header class="navbar navbar-inverse navbar-fixed-top" role="banner">
+        <a id="rightmenu-trigger" class="tooltips" data-toggle="tooltip" data-placement="" ></a>
+
+    <div class="navbar-header pull-right">
+        @* <a class="navbar-brand" >@Resources.AppResources.AppName</a> *@
+
+    </div>
+
+    <div class="navbar-header pull-right"> <a>@Resources.AppResources.AppName</a> </div>
+
+    <ul class="nav navbar-nav pull-left toolbar">
+        @if (ViewBag.HasNotification == true)
+        {
+        <li class="dropdown">
+            <a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><i class="fa fa-bell"></i><span class="badge notifications-count">@ViewBag.UnSeenNotifications.Count</span></a>
+            <ul class="dropdown-menu notifications arrow">
+                <li class="dd-header clearfix"><span>لديك عدد <label class="notifications-count">@ViewBag.UnSeenNotifications.Count</label> تنبيهات</span> <span><a id="SeeAllNotifications" href="javascript:;">تم مشاهدة جميع التنبيهات</a></span> </li>
+
+                <div class="scrollthis notifications-container">
+                    @foreach (var notification in ViewBag.UnSeenNotifications)
+                    {
+
+                        <li><a data-url="@notification.Link" href="@notification.Link" data-id="@notification.ID" class="notification-item active"><span class="time">@notification.TimePassed</span> <span class="msg"> @notification.Message </span> </a></li>
+
+                    }
+
+                </div>
+                <li class="dd-footer"><a href="/ControlPanel/Notification/Default">اظهر كل التنبيهات</a></li>
+            </ul>
+        </li>
+        }
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle username" data-toggle="dropdown">
+                  <i class="fa fa-user"></i><span class="hidden-xs"> @ViewBag.UserName <i class="fa fa-caret-down"></i></span>
+        
+                @*<img src="/Content/img/user.jpg" />*@
+            </a>
+            <ul class="dropdown-menu userinfo arrow">
+                <li class="username">
+                    <a href="#">
+                        <div class="pull-left">
+                        @*<img src="/Content/img/user.jpg" />*@
+                        </div>
+                        <div class="pull-right">
+                            <h5>مرحبا </h5>
+                            <small>اسم المستخدم <span>@ViewBag.UserName</span></small>
+                        </div>
+                    </a>
+                </li>
+                <li class="userlinks">
+                    <ul class="dropdown-menu">
+                        @*<li><a href="#">تعديل الملف الشخصي <i class="pull-left fa fa-pencil"></i></a></li>
+                        <li><a href="#">نوع الحساب <i class="pull-left fa fa-cog"></i></a></li>
+                        <li><a href="#">مساعدة <i class="pull-left fa fa-question-circle"></i></a></li>*@
+                        @*<li class="divider"></li>*@
+                        <li>
+                            <a href="/ControlPanel/Account/ChangePassword" class="text-right">تغيير كلمة المرور <i class="pull-left fa fa-lock"></i></a>
+                            <a href="/ControlPanel/Account/Logout" class="text-right">تسجيل خروج <i class="pull-left fa fa-lock"></i></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</header>

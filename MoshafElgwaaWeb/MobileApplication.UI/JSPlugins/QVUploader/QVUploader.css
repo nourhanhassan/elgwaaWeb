@@ -1,0 +1,36 @@
+﻿.loadedImage{
+    margin-left:5px;
+    width:100px !important;
+    display:none;
+}
+.fileUpload {
+      margin-left: 0px;
+    margin-right: 51px !important;
+  padding: 0px;
+  float: right;
+    display: inline;
+}
+
+.lblUploadCheck {
+        padding-right: 15px;
+}
+
+.chbxUpload {
+}
+
+
+.btnNonBrowseUpload {
+}
+
+.spanUpload {
+
+
+}
+
+.clearUpload {
+      margin-right: 62%;
+}
+
+.clearUpload:hover {
+    cursor:pointer;
+}

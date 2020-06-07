@@ -1,0 +1,4 @@
+﻿/*this is to make the modal window not scroll up when calling modal("show")*/
+body.modal-open {
+    overflow: visible;
+}

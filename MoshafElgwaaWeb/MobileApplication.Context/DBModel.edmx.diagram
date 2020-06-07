@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc4ea7b7904d4b299492fc2d0af73b11" Name="Diagram1">
+        <EntityTypeShape EntityType="QVMobileApplicationModel.AppSetting" Width="1.5" PointX="13.75" PointY="14.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.ArticleItemExplanation" Width="1.5" PointX="15" PointY="11.25" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Ayah" Width="1.5" PointX="8.75" PointY="26.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.City" Width="1.5" PointX="0.75" PointY="17.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Content" Width="1.5" PointX="13" PointY="1.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.ContentCategory" Width="1.5" PointX="10.75" PointY="1.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Action" Width="1.5" PointX="6" PointY="17.625" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Branch" Width="1.5" PointX="0.75" PointY="11.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Department" Width="1.5" PointX="0.75" PointY="4.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Employee" Width="1.5" PointX="3" PointY="6.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Employee_Role" Width="1.5" PointX="5.25" PointY="8.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Employee_RoleProgram" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_EmployeeCategory" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_HeadDepartment" Width="1.5" PointX="1.5" PointY="0.875" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Job" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Log" Width="1.5" PointX="8.25" PointY="4" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Page" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Program" Width="1.5" PointX="3.75" PointY="17.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Role" Width="1.5" PointX="0.75" PointY="21.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Role_Page" Width="1.5" PointX="8.25" PointY="12.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.CU_Role_Program" Width="1.5" PointX="3" PointY="21.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.DaysOfWeek" Width="1.5" PointX="7.75" PointY="15.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.DoaaMainCategory" Width="1.5" PointX="12.75" PointY="7.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.ExceptionLog" Width="1.5" PointX="17.75" PointY="11.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Group" Width="1.5" PointX="14" PointY="17.625" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.GroupTarget" Width="1.5" PointX="19.25" PointY="17" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.GroupUser" Width="1.5" PointX="16.25" PointY="17.875" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Juz" Width="1.5" PointX="6.5" PointY="28.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.MailEngine" Width="1.5" PointX="19.75" PointY="5.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Moshaf" Width="1.5" PointX="11.75" PointY="15.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Nationality" Width="1.5" PointX="15.75" PointY="5.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Notification" Width="1.5" PointX="8.25" PointY="8.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.NotificationType" Width="1.5" PointX="6" PointY="21.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.NotificationUser" Width="1.5" PointX="10.5" PointY="8.5" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.PeriodType" Width="1.5" PointX="17" PointY="15" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.PushNotificationLog" Width="1.5" PointX="19.75" PointY="12.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.ResetPasswordRequest" Width="1.5" PointX="5.25" PointY="13.875" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Setting" Width="1.5" PointX="13.75" PointY="21.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.SMS_Config" Width="1.5" PointX="15.75" PointY="1.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.SMS_ConfigParam" Width="1.5" PointX="18" PointY="1.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.SMS_Message" Width="1.5" PointX="20.75" PointY="1.125" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Surah" Width="1.5" PointX="6.5" PointY="24.875" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.TargetType" Width="1.5" PointX="17" PointY="21.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.User" Width="1.5" PointX="8.75" PointY="17.25" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.UserAyat" Width="1.5" PointX="11" PointY="18" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.UserCode" Width="1.5" PointX="11" PointY="24.125" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Ayah_Juz" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Ayah_Surah" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_UserAyat_Ayah" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Content_ContentCategory" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_ContentCategory_ContentCategoryParent" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Action_CU_Program" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Log_CU_Action" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_CU_Branch" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Department_CU_Department" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Department_CU_HeadDepartment" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_CU_Department" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_CU_Department1" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_CU_EmployeeCategory" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_CU_Job" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_Role_CU_Employee" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_RoleProgram_CU_Employee" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Log_CU_Employee" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Notification_CU_Employee" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_NotificationUser_User" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Poor_ResetPasswordRequest_CU_Employee" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_Role_CU_Role" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Employee_RoleProgram_CU_Role_Program" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_HeadDepartment_CU_HeadDepartment" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Log_CU_Page" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Page_CU_Page" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Page_CU_Program" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Role_Page_CU_Page" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Role_Program_CU_Program" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Role_Program_CU_Role" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_CU_Role_Page_CU_Role_Program" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Group_Moshaf" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Group_User" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_GroupTarget_Group" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_GroupUser_Group" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_GroupTarget_PeriodType" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_GroupTarget_TargetType" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_GroupUser_User" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Notification_NotificationType" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_NotificationUser_Notification" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_SMS_ConfigParam_SMS_Config" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_UserAyat_User" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_UserCode_User" />
+        <AssociationConnector Association="QVMobileApplicationModel.Juz_Surah" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Article" Width="1.5" PointX="12.75" PointY="11.375" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.Doaa" Width="1.5" PointX="15" PointY="7.375" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_ArticleItemExplanation_Article" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_Doaa_DoaaMainCategory" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.NamesOfAllah" Width="1.5" PointX="20.375" PointY="8.75" />
+        <EntityTypeShape EntityType="QVMobileApplicationModel.DoaaItemSource" Width="1.5" PointX="17.25" PointY="7.25" />
+        <AssociationConnector Association="QVMobileApplicationModel.FK_DoaaDetails_Doaa" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

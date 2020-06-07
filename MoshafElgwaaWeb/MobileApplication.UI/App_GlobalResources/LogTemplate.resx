@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action" xml:space="preserve">
+    <value>@Action</value>
+  </data>
+  <data name="ActionDetails" xml:space="preserve">
+    <value>@ActionDetails</value>
+  </data>
+  <data name="ActionText" xml:space="preserve">
+    <value>@ActionText</value>
+  </data>
+  <data name="AddedEditedObjLnk" xml:space="preserve">
+    <value>&lt;a target="_blank" href="@AddEditPageLink "&gt;@AddEditObjName&lt;/a&gt; </value>
+  </data>
+  <data name="AddEditObjName" xml:space="preserve">
+    <value>@AddEditObjName</value>
+  </data>
+  <data name="AddEditPageLink" xml:space="preserve">
+    <value>@AddEditPageLink</value>
+  </data>
+  <data name="ClassIcon" xml:space="preserve">
+    <value>@ClassIcon</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>تم حذف           </value>
+  </data>
+  <data name="EditText" xml:space="preserve">
+    <value>      تم القيام بعملية تعديل على</value>
+  </data>
+  <data name="HourAction" xml:space="preserve">
+    <value>@HourAction</value>
+  </data>
+  <data name="InsertText" xml:space="preserve">
+    <value>تم إدخال </value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>@IpAddress</value>
+  </data>
+  <data name="logDate" xml:space="preserve">
+    <value>@logDate</value>
+  </data>
+  <data name="logDetails" xml:space="preserve">
+    <value> &lt;span&gt; @ActionText &lt;/span&gt;  &lt;span&gt;@ActionDetails &lt;/span&gt;</value>
+  </data>
+  <data name="logID" xml:space="preserve">
+    <value>@LogID</value>
+  </data>
+  <data name="LoginText" xml:space="preserve">
+    <value>تم تسجيل الدخول إلى النظام من عنوان الايبى  </value>
+  </data>
+  <data name="LogOutText" xml:space="preserve">
+    <value>تم تسجيل الخروج من النظام</value>
+  </data>
+  <data name="LogRecordItem" xml:space="preserve">
+    <value>&lt;li class="timeline-success" id="@LogID" &gt;
+							&lt;div class="timeline-icon"&gt;&lt;i class="@ClassIcon"&gt;&lt;/i&gt;&lt;/div&gt;
+							&lt;div class="timeline-body"&gt;
+								&lt;div class="timeline-header"&gt;
+									&lt;span class="author"&gt;المستخدم &lt;a href=""&gt;@UserName&lt;/a&gt;&lt;/span&gt;
+		&lt;span&gt;@logDate&lt;/span&gt;&lt;span class=" loadlogtime" hour="@HourAction"
+                                    min="@MinAction"&gt;&lt;/span&gt;							
+								&lt;/div&gt;
+								&lt;div class="timeline-content"&gt;
+									&lt;h4&gt;العملية: @Action&lt;/h4&gt;
+									&lt;p&gt;@logDetails&lt;/p&gt;
+								&lt;/div&gt;
+								&lt;div class="timeline-footer"&gt;
+									&lt;span class="pull-left" &gt;عنوان الأيبي: @IpAddress&lt;/span&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/li&gt;</value>
+  </data>
+  <data name="MinAction" xml:space="preserve">
+    <value>@MinAction</value>
+  </data>
+  <data name="NotFoundLog" xml:space="preserve">
+    <value>&lt;div class="empty"&gt;
+        لا يوجد بيانات
+    &lt;/div&gt;</value>
+  </data>
+  <data name="PageLink" xml:space="preserve">
+    <value>&lt;span&gt;&lt;a target='_blank' href="@PageURL "&gt;@PageName&lt;/a&gt; &lt;/span&gt;</value>
+  </data>
+  <data name="PageName" xml:space="preserve">
+    <value>@PageName</value>
+  </data>
+  <data name="PageURL" xml:space="preserve">
+    <value>@PageURL</value>
+  </data>
+  <data name="PasswordText" xml:space="preserve">
+    <value>      تم القيام بعملية  تغيير كلمة المرور </value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>@UserName</value>
+  </data>
+  <data name="ViewText" xml:space="preserve">
+    <value>تم الدخول إلى صفحة   </value>
+  </data>
+</root>

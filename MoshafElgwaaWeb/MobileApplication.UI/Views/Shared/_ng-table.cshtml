@@ -1,0 +1,65 @@
+﻿<link href="~/Areas/ControlPanel/Content/css/ng-table.css" rel="stylesheet" />
+<script src="~/Scripts/Angular/angular-resource.min.js"></script>
+<script src="~/Scripts/Angular/angular-mocks.js"></script>
+<script src="~/Scripts/Angular/ng-table.js"></script>
+
+<script type="text/javascript">
+    //var app = angular.module('app', ['ngTable', 'ngResource', 'ngMockE2E'])
+
+    app.controller('TableController',['$scope', '$timeout', '$resource','NgTableParams', function ($scope, $timeout, $resource, NgTableParams) {
+        var Api = $resource('@ViewBag.pagingMethodName');
+        $scope.tabledata;
+        $scope.tableParams = new NgTableParams({
+            page: 1,            /*show first page*/
+            count: 10,          // count per page
+            sorting: {
+                ID: 'des'     // initial sorting
+            },
+            filter: {},
+            projectid: '@ViewBag.projectId',
+            BaseProductID: '@ViewBag.BaseProductID',
+        },
+            {
+                total: '@ViewBag.count',           // length of data
+                getData: function ($defer, params) {
+                    
+                    // ajax request to api
+                    Api.get(params.url(), function (data) {
+                        $timeout(function () {
+                            params.total(data.count);
+                            $defer.resolve(data.data);
+                            $scope.tabledata = data.data;
+                        }, 500);
+                    });
+                }
+            });
+
+        var Api2 = $resource('@ViewBag.pagingMethodName1');
+        $scope.tabledata2;
+        $scope.tableParams2 = new NgTableParams({
+            page: 1,            // show first page
+            count: 10,          // count per page
+            sorting: {
+                ID: 'des'     // initial sorting
+            },
+            filter: {},
+            projectid: '@ViewBag.projectId',
+            BaseProductID: '@ViewBag.BaseProductID',
+        },
+            {
+                total: '@ViewBag.count',           // length of data
+                getData: function ($defer, params) {
+                    
+                    // ajax request to api
+                    Api2.get(params.url(), function (data) {
+                        $timeout(function () {
+                            params.total(data.count);
+                            $defer.resolve(data.data);
+                            $scope.tabledata2 = data.data;
+                        }, 500);
+                    });
+                }
+            });
+    }]);
+
+</script>

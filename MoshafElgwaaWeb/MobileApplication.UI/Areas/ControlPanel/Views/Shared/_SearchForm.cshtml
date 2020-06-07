@@ -1,0 +1,115 @@
+﻿@model GenericEngine.ServiceContract.Infrastructure.GenericModel
+
+@using MobileApplication.DataModel;
+@using GenericEngine.Service.Enum
+@using GenericEngine.QVControlPanel.InfraStructure
+@using GenericEngine.ServiceContract.Infrastructure
+
+@{
+
+    var SearchProp = GenericHelpers.getPropertyWithSpesificAttr(Model, typeof(SearchAttribute));
+}
+@if (SearchProp.Count > 0)
+{
+    <div class="panel panel-grape" my-enter="search()">
+        <div class="panel-heading">
+            <h4>البحث</h4>
+            <div class="options"><a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a></div>
+        </div>
+        <div class="panel-body collapse">
+
+            <form action="" class="form-horizontal row-border" name="form" novalidate>
+
+                <div class="row">
+
+                    @for (int i = 0; i < SearchProp.Count; i++)
+                    {
+                        DisplayFieldAttribute _DisplayFieldAttribute = (DisplayFieldAttribute)GenericHelpers.getPropertyAttr(SearchProp[i], typeof(DisplayFieldAttribute)).FirstOrDefault();
+                        if (_DisplayFieldAttribute != null)
+                        {
+                            <div class='col-md-6'>
+                                <label class="control-label">@_DisplayFieldAttribute.FieldName</label>
+
+                                @switch (_DisplayFieldAttribute.FieldType)
+                                {
+                                    case FieldsTypeHtml.DropdownList:
+
+                                        @Html.DropDownList(SearchProp[i].Name, (List<SelectListItem>)typeof(MobileApplication.UI.InfraStructure.LookupManger<>).MakeGenericType(_DisplayFieldAttribute.modelType).GetMethod("GetSelectListItem").Invoke(null, new object[] { _DisplayFieldAttribute.TextAttr, _DisplayFieldAttribute.ValueAttr }), new { @ng_model = "searchObject." + SearchProp[i].Name + "", @class = "form-control search " })
+                                        break;
+                                    case FieldsTypeHtml.OnTheFlyDropDownList: 
+                                        @Html.DropDownList(SearchProp[i].Name, (List<SelectListItem>)typeof(MobileApplication.DataService.HelperMethods).GetMethod(_DisplayFieldAttribute.methodName).Invoke(Activator.CreateInstance(typeof(MobileApplication.DataService.HelperMethods)), null),"اختر", new { @ng_model = "searchObject." + SearchProp[i].Name + "", @class = "form-control search " })
+                                        break;
+                                    case FieldsTypeHtml.DatePicker:
+                                    <input type="text" name="@SearchProp[i].Name" class="form-control search" id="@SearchProp[i].Name" ng-model="searchObject.@SearchProp[i].Name">
+                                    <script>$("#@SearchProp[i].Name").calendarsPicker({ changeMonth: true, changeYear: true, dateFormat: 'yyyy-mm-dd', maxDate: '0Y', calendar: $.calendars.instance('ummalqura') });</script>
+                                        break;
+                                    case FieldsTypeHtml.TextArea:
+                                    @Html.TextArea(SearchProp[i].Name, null, new { @ng_model = "searchObject." + SearchProp[i].Name + "", @class = "form-control search", @regExpRequire = "^[^<>]+$" })
+                                        break;
+
+                                    case FieldsTypeHtml.RadioButton:
+
+                                        for (int j = 0; j < _DisplayFieldAttribute.parameters.Length; j++)
+                                        {
+                                            <label class="radio-btn">
+
+                                                <input type="radio" name="@SearchProp[i].Name" value="@(j==0?"True":"False")" class="form-control search" ng-model="searchObject.@SearchProp[i].Name" />@_DisplayFieldAttribute.parameters[j].Trim()
+                                            </label>
+
+                                        }
+
+                                        break;
+
+                                    case FieldsTypeHtml.CheckBox:
+
+                                    <input type="checkbox" ng-true-value="'True'" ng-false-value="'False'" ng-model="searchObject.@SearchProp[i].Name" name="@SearchProp[i].Name" class="ng-pristine ng-valid ng-scope ng-touched">@_DisplayFieldAttribute.FieldName.Trim()
+
+                                        break;
+
+                                   
+
+                                     case FieldsTypeHtml.Number:
+                                         @Html.TextBox(SearchProp[i].Name, null, new { @ng_model = "searchObject." + SearchProp[i].Name + "", @class = "form-control search", @reg_Exp_Require = "/(<|>)/", @type = "number" })
+                               
+                                        break;
+                                     default:
+                                    @Html.TextBox(SearchProp[i].Name, null, new { @ng_model = "searchObject." + SearchProp[i].Name + "", @class = "form-control search", @reg_Exp_Require = "/(<|>)/" })
+                                   
+                                        break;
+
+                                }
+
+                            </div>
+
+                        }
+
+                    }
+                </div>
+
+            </form>
+
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="pull-left">
+                        <div class="btn-toolbar">
+                            <button class="btn-primary btn Search" type="submit" ng-click="search()"><i class="fa fa-search"></i>بحث</button>
+                            <button class="btn-default btn ShowAll" ng-click="viewAll()">عرض الكل</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(".search").removeAttr("data-val-required")
+
+
+    </script>
+
+
+}
+
+
+

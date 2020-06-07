@@ -1,0 +1,1376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QVMobileApplicationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="AppSetting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="KeyArabicName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsMobile" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ArticleContent" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ArticleItemExplanation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticleID" Type="int" Nullable="false" />
+    <Property Name="ExplanationNumber" Type="int" Nullable="false" />
+    <Property Name="ItemExplanation" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ayah">
+    <Key>
+      <PropertyRef Name="DbIndex" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="surah" Type="int" Nullable="false" />
+    <Property Name="ayah-num" Type="int" Nullable="false" />
+    <Property Name="verse" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Juz" Type="int" />
+    <Property Name="DbIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PageNum" Type="int" />
+  </EntityType>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Content">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Summary" Type="nvarchar(max)" />
+    <Property Name="Details" Type="nvarchar(max)" />
+    <Property Name="PublishDate" Type="datetime" />
+    <Property Name="Imagepath" Type="nvarchar" MaxLength="350" />
+    <Property Name="ImageDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContentCategoryID" Type="int" />
+    <Property Name="active" Type="bit" />
+    <Property Name="IsHome" Type="bit" />
+    <Property Name="PermenantKey" Type="nvarchar" MaxLength="50" />
+    <Property Name="SeoData" Type="nvarchar(max)" />
+    <Property Name="SeoTargetKey" Type="nvarchar(max)" />
+    <Property Name="SeoTitle" Type="nvarchar(max)" />
+    <Property Name="SeoDescription" Type="nvarchar(max)" />
+    <Property Name="SeoMetaKey" Type="nvarchar(max)" />
+    <Property Name="SeoUrl" Type="nvarchar(max)" />
+    <Property Name="CreationDate" Type="datetime" Nullable="false" />
+    <Property Name="Videopath" Type="nvarchar" MaxLength="350" />
+  </EntityType>
+  <EntityType Name="ContentCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="AllowComments" Type="bit" />
+    <Property Name="Order" Type="int" />
+    <Property Name="IsPermanent" Type="bit" Nullable="false" />
+    <Property Name="HasSummary" Type="bit" Nullable="false" />
+    <Property Name="HasDetails" Type="bit" Nullable="false" />
+    <Property Name="HasPublishDate" Type="bit" Nullable="false" />
+    <Property Name="HasImage" Type="bit" Nullable="false" />
+    <Property Name="TitleMaxLength" Type="int" Nullable="false" />
+    <Property Name="SummaryMaxLength" Type="int" Nullable="false" />
+    <Property Name="ImageWidth" Type="int" Nullable="false" />
+    <Property Name="ImageHeight" Type="int" Nullable="false" />
+    <Property Name="HasVideo" Type="bit" />
+    <Property Name="MaxActiveContent" Type="int" />
+  </EntityType>
+  <EntityType Name="CU_Action">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="IdProgram" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EnName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsSecurity" Type="bit" Nullable="false" />
+    <Property Name="Order" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_Branch">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Descriptoin" Type="nvarchar" MaxLength="500" />
+    <Property Name="IdHeadDepartment" Type="int" Nullable="false" />
+    <Property Name="MainTask" Type="nvarchar" MaxLength="500" />
+    <Property Name="IdParent" Type="int" />
+  </EntityType>
+  <EntityType Name="CU_Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="IdJob" Type="int" />
+    <Property Name="Mobile" Type="varchar" MaxLength="20" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="LoginName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Salt" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IdDepartment" Type="int" />
+    <Property Name="IdHeadDepartment" Type="int" />
+    <Property Name="IsTrainee" Type="bit" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="LastVisitTime" Type="datetime" />
+    <Property Name="ImagePath" Type="nvarchar" MaxLength="150" />
+    <Property Name="IdEmployeeCategory" Type="int" />
+    <Property Name="BranchID" Type="int" />
+  </EntityType>
+  <EntityType Name="CU_Employee_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmployee" Type="int" Nullable="false" />
+    <Property Name="IdRole" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_Employee_RoleProgram">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmployee" Type="int" Nullable="false" />
+    <Property Name="IdRoleProgram" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_EmployeeCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CU_HeadDepartment">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="MainTask" Type="nvarchar" MaxLength="250" />
+    <Property Name="IdParent" Type="int" />
+  </EntityType>
+  <EntityType Name="CU_Job">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_Log">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAction" Type="int" Nullable="false" />
+    <Property Name="ActionTime" Type="datetime" Nullable="false" />
+    <Property Name="IdEmployee" Type="int" Nullable="false" />
+    <Property Name="IdPage" Type="int" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IpAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="ActionName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CU_Page">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IdProgram" Type="int" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="Actions" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Icon" Type="varchar" MaxLength="50" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="PageOrder" Type="int" />
+    <Property Name="IsVisible" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_Program">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="URL" Type="nvarchar" MaxLength="100" />
+    <Property Name="LogoPath" Type="nvarchar" MaxLength="100" />
+    <Property Name="StatusClass" Type="nvarchar" MaxLength="50" />
+    <Property Name="PREFIX" Type="nvarchar" MaxLength="10" />
+    <Property Name="IconClass" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CU_Role">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="350" />
+  </EntityType>
+  <EntityType Name="CU_Role_Page">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdPage" Type="int" Nullable="false" />
+    <Property Name="IdRoleProgram" Type="int" Nullable="false" />
+    <Property Name="Permission" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CU_Role_Program">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdRole" Type="int" Nullable="false" />
+    <Property Name="IdProgram" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DaysOfWeek">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Doaa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoaaMainCategoryID" Type="int" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="DoaaContent" Type="nvarchar(max)" />
+    <Property Name="DoaaMeanings" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DoaaItemSource">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DoaaID" Type="int" Nullable="false" />
+    <Property Name="SourceNumber" Type="int" Nullable="false" />
+    <Property Name="ItemSource" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ItemSynonyms" Type="nvarchar(max)" />
+    <Property Name="Type" Type="nvarchar" MaxLength="150" />
+    <Property Name="Reference" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DoaaMainCategory">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExceptionLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="URL" Type="nvarchar(max)" />
+    <Property Name="Data" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="MoshafID" Type="int" />
+  </EntityType>
+  <EntityType Name="GroupTarget">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="TargetTypeID" Type="int" Nullable="false" />
+    <Property Name="PeriodTypeID" Type="int" Nullable="false" />
+    <Property Name="JuzID" Type="int" />
+    <Property Name="SurahID" Type="int" />
+    <Property Name="AyaatCount" Type="int" Nullable="false" />
+    <Property Name="NotificationTime" Type="bigint" Nullable="false" />
+    <Property Name="NotificationID" Type="bigint" />
+    <Property Name="StartPage" Type="int" />
+    <Property Name="EndPage" Type="int" />
+    <Property Name="PagesCount" Type="int" />
+  </EntityType>
+  <EntityType Name="GroupUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="IsAdmin" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Juz">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="StartPage" Type="int" Nullable="false" />
+    <Property Name="EndPage" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StartAyah" Type="int" />
+    <Property Name="EndAyah" Type="int" />
+  </EntityType>
+  <EntityType Name="Juz_Surah">
+    <Key>
+      <PropertyRef Name="SurahId" />
+      <PropertyRef Name="JuzId" />
+    </Key>
+    <Property Name="SurahId" Type="int" Nullable="false" />
+    <Property Name="JuzId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MailEngine">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar(max)" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="ToEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="CcEmail" Type="nvarchar(max)" />
+    <Property Name="BccEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsSent" Type="bit" />
+  </EntityType>
+  <EntityType Name="Moshaf">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NamesOfAllah">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NameOfAllahImage" Type="nvarchar" MaxLength="150" />
+    <Property Name="NameOfAllah" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="NameOfAllahMeaning" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Number" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nationality">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotificationTypeID" Type="int" />
+    <Property Name="FromAppUserID" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="NotificationType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NotificationUser">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotificationID" Type="int" Nullable="false" />
+    <Property Name="AppUserID" Type="int" Nullable="false" />
+    <Property Name="IsSeen" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PeriodType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PushNotificationLog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotificationPayload" Type="nvarchar(max)" />
+    <Property Name="IsSuccess" Type="bit" />
+    <Property Name="Error" Type="nvarchar(max)" />
+    <Property Name="CreateDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ResetPasswordRequest">
+    <Key>
+      <PropertyRef Name="ResetPasswordID" />
+    </Key>
+    <Property Name="ResetPasswordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeID" Type="int" Nullable="false" />
+    <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ResetRequestDateTime" Type="datetime" Nullable="false" />
+    <Property Name="IsExpired" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Setting">
+    <Key>
+      <PropertyRef Name="SettingID" />
+    </Key>
+    <Property Name="SettingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServerName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="PortNo" Type="int" Nullable="false" />
+    <Property Name="FromEmail" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="NameIsVisible" Type="bit" Nullable="false" />
+    <Property Name="NameIsRequired" Type="bit" Nullable="false" />
+    <Property Name="SSL" Type="bit" Nullable="false" />
+    <Property Name="SmsServer" Type="nvarchar" MaxLength="200" />
+    <Property Name="SmsUserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SmsPassWord" Type="nvarchar" MaxLength="100" />
+    <Property Name="SmsPort" Type="int" />
+    <Property Name="SmsFrom" Type="nvarchar" MaxLength="50" />
+    <Property Name="SmsUrlString" Type="nvarchar" MaxLength="100" />
+    <Property Name="WahtsAppNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="WhatsAppPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="WhatsAppCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="HrEmail" Type="nvarchar" MaxLength="150" />
+    <Property Name="ContactInfo" Type="nvarchar(max)" />
+    <Property Name="CompetitionURL" Type="nvarchar(max)" />
+    <Property Name="SurveyUrl" Type="nvarchar(max)" />
+    <Property Name="YoutubeUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="FaceBookUrl" Type="nvarchar" MaxLength="250" />
+    <Property Name="twitterUrl" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="SMS_Config">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KeyValue" Type="nvarchar(max)" />
+    <Property Name="Url" Type="nvarchar(max)" />
+    <Property Name="IsKeyValue" Type="bit" />
+    <Property Name="IntervalTimeToSend" Type="int" />
+    <Property Name="MessageParamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="NumberParamName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SuccessResponseNumber" Type="int" />
+    <Property Name="IsDefault" Type="bit" />
+  </EntityType>
+  <EntityType Name="SMS_ConfigParam">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Key" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsStatic" Type="bit" Nullable="false" />
+    <Property Name="SMSConfigId" Type="int" />
+  </EntityType>
+  <EntityType Name="SMS_Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TextMessage" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsSent" Type="bit" />
+    <Property Name="ResponseNumber" Type="int" />
+    <Property Name="CreationDate" Type="datetime" />
+    <Property Name="SendDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Surah">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="StartPage" Type="int" Nullable="false" />
+    <Property Name="EndPage" Type="int" Nullable="false" />
+    <Property Name="Type" Type="int" />
+    <Property Name="AyatCount" Type="int" />
+    <Property Name="StartAyah" Type="int" />
+    <Property Name="EndAyah" Type="int" />
+  </EntityType>
+  <EntityType Name="TargetType">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsMale" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="GCMID" Type="nvarchar" MaxLength="300" />
+    <Property Name="APNID" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="UserAyat">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="AyahID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserCode">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ArticleItemExplanation_Article">
+    <End Role="Article" Type="Self.Article" Multiplicity="1" />
+    <End Role="ArticleItemExplanation" Type="Self.ArticleItemExplanation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ArticleItemExplanation">
+        <PropertyRef Name="ArticleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ayah_Juz">
+    <End Role="Juz" Type="Self.Juz" Multiplicity="0..1" />
+    <End Role="Ayah" Type="Self.Ayah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juz">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ayah">
+        <PropertyRef Name="Juz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ayah_Surah">
+    <End Role="Surah" Type="Self.Surah" Multiplicity="1" />
+    <End Role="Ayah" Type="Self.Ayah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Surah">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ayah">
+        <PropertyRef Name="surah" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Content_ContentCategory">
+    <End Role="ContentCategory" Type="Self.ContentCategory" Multiplicity="0..1" />
+    <End Role="Content" Type="Self.Content" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContentCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Content">
+        <PropertyRef Name="ContentCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ContentCategory_ContentCategoryParent">
+    <End Role="ContentCategory" Type="Self.ContentCategory" Multiplicity="0..1" />
+    <End Role="ContentCategory1" Type="Self.ContentCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ContentCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ContentCategory1">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Action_CU_Program">
+    <End Role="CU_Program" Type="Self.CU_Program" Multiplicity="0..1" />
+    <End Role="CU_Action" Type="Self.CU_Action" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Action">
+        <PropertyRef Name="IdProgram" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Department_CU_Department">
+    <End Role="CU_Department" Type="Self.CU_Department" Multiplicity="0..1" />
+    <End Role="CU_Department1" Type="Self.CU_Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Department1">
+        <PropertyRef Name="IdParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Department_CU_HeadDepartment">
+    <End Role="CU_HeadDepartment" Type="Self.CU_HeadDepartment" Multiplicity="1" />
+    <End Role="CU_Department" Type="Self.CU_Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_HeadDepartment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Department">
+        <PropertyRef Name="IdHeadDepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_CU_Branch">
+    <End Role="CU_Branch" Type="Self.CU_Branch" Multiplicity="0..1" />
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Branch">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee">
+        <PropertyRef Name="BranchID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_CU_Department">
+    <End Role="CU_Department" Type="Self.CU_Department" Multiplicity="0..1" />
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee">
+        <PropertyRef Name="IdDepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_CU_Department1">
+    <End Role="CU_Department" Type="Self.CU_Department" Multiplicity="0..1" />
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee">
+        <PropertyRef Name="IdHeadDepartment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_CU_EmployeeCategory">
+    <End Role="CU_EmployeeCategory" Type="Self.CU_EmployeeCategory" Multiplicity="0..1" />
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_EmployeeCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee">
+        <PropertyRef Name="IdEmployeeCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_CU_Job">
+    <End Role="CU_Job" Type="Self.CU_Job" Multiplicity="0..1" />
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Job">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee">
+        <PropertyRef Name="IdJob" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_Role_CU_Employee">
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="1" />
+    <End Role="CU_Employee_Role" Type="Self.CU_Employee_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee_Role">
+        <PropertyRef Name="IdEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_Role_CU_Role">
+    <End Role="CU_Role" Type="Self.CU_Role" Multiplicity="1" />
+    <End Role="CU_Employee_Role" Type="Self.CU_Employee_Role" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee_Role">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_RoleProgram_CU_Employee">
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CU_Employee_RoleProgram" Type="Self.CU_Employee_RoleProgram" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee_RoleProgram">
+        <PropertyRef Name="IdEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Employee_RoleProgram_CU_Role_Program">
+    <End Role="CU_Role_Program" Type="Self.CU_Role_Program" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CU_Employee_RoleProgram" Type="Self.CU_Employee_RoleProgram" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Role_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Employee_RoleProgram">
+        <PropertyRef Name="IdRoleProgram" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_HeadDepartment_CU_HeadDepartment">
+    <End Role="CU_HeadDepartment" Type="Self.CU_HeadDepartment" Multiplicity="0..1" />
+    <End Role="CU_HeadDepartment1" Type="Self.CU_HeadDepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_HeadDepartment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_HeadDepartment1">
+        <PropertyRef Name="IdParent" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Log_CU_Action">
+    <End Role="CU_Action" Type="Self.CU_Action" Multiplicity="1" />
+    <End Role="CU_Log" Type="Self.CU_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Action">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Log">
+        <PropertyRef Name="IdAction" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Log_CU_Employee">
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="1" />
+    <End Role="CU_Log" Type="Self.CU_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Log">
+        <PropertyRef Name="IdEmployee" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Log_CU_Page">
+    <End Role="CU_Page" Type="Self.CU_Page" Multiplicity="0..1" />
+    <End Role="CU_Log" Type="Self.CU_Log" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Page">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Log">
+        <PropertyRef Name="IdPage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Page_CU_Page">
+    <End Role="CU_Page" Type="Self.CU_Page" Multiplicity="0..1" />
+    <End Role="CU_Page1" Type="Self.CU_Page" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Page">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Page1">
+        <PropertyRef Name="ParentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Page_CU_Program">
+    <End Role="CU_Program" Type="Self.CU_Program" Multiplicity="1" />
+    <End Role="CU_Page" Type="Self.CU_Page" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Page">
+        <PropertyRef Name="IdProgram" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Role_Page_CU_Page">
+    <End Role="CU_Page" Type="Self.CU_Page" Multiplicity="1" />
+    <End Role="CU_Role_Page" Type="Self.CU_Role_Page" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Page">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Role_Page">
+        <PropertyRef Name="IdPage" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Role_Page_CU_Role_Program">
+    <End Role="CU_Role_Program" Type="Self.CU_Role_Program" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="CU_Role_Page" Type="Self.CU_Role_Page" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Role_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Role_Page">
+        <PropertyRef Name="IdRoleProgram" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Role_Program_CU_Program">
+    <End Role="CU_Program" Type="Self.CU_Program" Multiplicity="1" />
+    <End Role="CU_Role_Program" Type="Self.CU_Role_Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Role_Program">
+        <PropertyRef Name="IdProgram" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CU_Role_Program_CU_Role">
+    <End Role="CU_Role" Type="Self.CU_Role" Multiplicity="1" />
+    <End Role="CU_Role_Program" Type="Self.CU_Role_Program" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Role">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CU_Role_Program">
+        <PropertyRef Name="IdRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doaa_DoaaMainCategory">
+    <End Role="DoaaMainCategory" Type="Self.DoaaMainCategory" Multiplicity="0..1" />
+    <End Role="Doaa" Type="Self.Doaa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DoaaMainCategory">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Doaa">
+        <PropertyRef Name="DoaaMainCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DoaaDetails_Doaa">
+    <End Role="Doaa" Type="Self.Doaa" Multiplicity="1" />
+    <End Role="DoaaItemSource" Type="Self.DoaaItemSource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doaa">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DoaaItemSource">
+        <PropertyRef Name="DoaaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Group_Moshaf">
+    <End Role="Moshaf" Type="Self.Moshaf" Multiplicity="0..1" />
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Moshaf">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="MoshafID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Group_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupTarget_Group">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="GroupTarget" Type="Self.GroupTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupTarget">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupTarget_PeriodType">
+    <End Role="PeriodType" Type="Self.PeriodType" Multiplicity="1" />
+    <End Role="GroupTarget" Type="Self.GroupTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PeriodType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupTarget">
+        <PropertyRef Name="PeriodTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupTarget_TargetType">
+    <End Role="TargetType" Type="Self.TargetType" Multiplicity="1" />
+    <End Role="GroupTarget" Type="Self.GroupTarget" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TargetType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupTarget">
+        <PropertyRef Name="TargetTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupUser_Group">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="GroupUser" Type="Self.GroupUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupUser">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GroupUser_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="GroupUser" Type="Self.GroupUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="GroupUser">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Juz_Surah_Juz">
+    <End Role="Juz" Type="Self.Juz" Multiplicity="1" />
+    <End Role="Juz_Surah" Type="Self.Juz_Surah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Juz">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Juz_Surah">
+        <PropertyRef Name="JuzId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Juz_Surah_surah">
+    <End Role="Surah" Type="Self.Surah" Multiplicity="1" />
+    <End Role="Juz_Surah" Type="Self.Juz_Surah" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Surah">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Juz_Surah">
+        <PropertyRef Name="SurahId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_CU_Employee">
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="FromAppUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Notification_NotificationType">
+    <End Role="NotificationType" Type="Self.NotificationType" Multiplicity="0..1" />
+    <End Role="Notification" Type="Self.Notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NotificationType">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Notification">
+        <PropertyRef Name="NotificationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationUser_Notification">
+    <End Role="Notification" Type="Self.Notification" Multiplicity="1" />
+    <End Role="NotificationUser" Type="Self.NotificationUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Notification">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NotificationUser">
+        <PropertyRef Name="NotificationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NotificationUser_User">
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="1" />
+    <End Role="NotificationUser" Type="Self.NotificationUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NotificationUser">
+        <PropertyRef Name="AppUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Poor_ResetPasswordRequest_CU_Employee">
+    <End Role="CU_Employee" Type="Self.CU_Employee" Multiplicity="1" />
+    <End Role="ResetPasswordRequest" Type="Self.ResetPasswordRequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CU_Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ResetPasswordRequest">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SMS_ConfigParam_SMS_Config">
+    <End Role="SMS_Config" Type="Self.SMS_Config" Multiplicity="0..1" />
+    <End Role="SMS_ConfigParam" Type="Self.SMS_ConfigParam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SMS_Config">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="SMS_ConfigParam">
+        <PropertyRef Name="SMSConfigId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAyat_Ayah">
+    <End Role="Ayah" Type="Self.Ayah" Multiplicity="1" />
+    <End Role="UserAyat" Type="Self.UserAyat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ayah">
+        <PropertyRef Name="DbIndex" />
+      </Principal>
+      <Dependent Role="UserAyat">
+        <PropertyRef Name="AyahID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAyat_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserAyat" Type="Self.UserAyat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserAyat">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserCode_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserCode" Type="Self.UserCode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserCode">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="TableRef" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="table" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <EntityContainer Name="QVMobileApplicationModelStoreContainer">
+    <EntitySet Name="AppSetting" EntityType="Self.AppSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleItemExplanation" EntityType="Self.ArticleItemExplanation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ayah" EntityType="Self.Ayah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Content" EntityType="Self.Content" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContentCategory" EntityType="Self.ContentCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Action" EntityType="Self.CU_Action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Branch" EntityType="Self.CU_Branch" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Department" EntityType="Self.CU_Department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Employee" EntityType="Self.CU_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Employee_Role" EntityType="Self.CU_Employee_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Employee_RoleProgram" EntityType="Self.CU_Employee_RoleProgram" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_EmployeeCategory" EntityType="Self.CU_EmployeeCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_HeadDepartment" EntityType="Self.CU_HeadDepartment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Job" EntityType="Self.CU_Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Log" EntityType="Self.CU_Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Page" EntityType="Self.CU_Page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Program" EntityType="Self.CU_Program" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Role" EntityType="Self.CU_Role" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Role_Page" EntityType="Self.CU_Role_Page" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CU_Role_Program" EntityType="Self.CU_Role_Program" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DaysOfWeek" EntityType="Self.DaysOfWeek" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Doaa" EntityType="Self.Doaa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoaaItemSource" EntityType="Self.DoaaItemSource" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DoaaMainCategory" EntityType="Self.DoaaMainCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExceptionLog" EntityType="Self.ExceptionLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupTarget" EntityType="Self.GroupTarget" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupUser" EntityType="Self.GroupUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Juz" EntityType="Self.Juz" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Juz_Surah" EntityType="Self.Juz_Surah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MailEngine" EntityType="Self.MailEngine" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Moshaf" EntityType="Self.Moshaf" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NamesOfAllah" EntityType="Self.NamesOfAllah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nationality" EntityType="Self.Nationality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Notification" EntityType="Self.Notification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationType" EntityType="Self.NotificationType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationUser" EntityType="Self.NotificationUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PeriodType" EntityType="Self.PeriodType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PushNotificationLog" EntityType="Self.PushNotificationLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ResetPasswordRequest" EntityType="Self.ResetPasswordRequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Setting" EntityType="Self.Setting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMS_Config" EntityType="Self.SMS_Config" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMS_ConfigParam" EntityType="Self.SMS_ConfigParam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMS_Message" EntityType="Self.SMS_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Surah" EntityType="Self.Surah" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TargetType" EntityType="Self.TargetType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAyat" EntityType="Self.UserAyat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserCode" EntityType="Self.UserCode" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ArticleItemExplanation_Article" Association="Self.FK_ArticleItemExplanation_Article">
+      <End Role="Article" EntitySet="Article" />
+      <End Role="ArticleItemExplanation" EntitySet="ArticleItemExplanation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ayah_Juz" Association="Self.FK_Ayah_Juz">
+      <End Role="Juz" EntitySet="Juz" />
+      <End Role="Ayah" EntitySet="Ayah" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ayah_Surah" Association="Self.FK_Ayah_Surah">
+      <End Role="Surah" EntitySet="Surah" />
+      <End Role="Ayah" EntitySet="Ayah" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Content_ContentCategory" Association="Self.FK_Content_ContentCategory">
+      <End Role="ContentCategory" EntitySet="ContentCategory" />
+      <End Role="Content" EntitySet="Content" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ContentCategory_ContentCategoryParent" Association="Self.FK_ContentCategory_ContentCategoryParent">
+      <End Role="ContentCategory" EntitySet="ContentCategory" />
+      <End Role="ContentCategory1" EntitySet="ContentCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Action_CU_Program" Association="Self.FK_CU_Action_CU_Program">
+      <End Role="CU_Program" EntitySet="CU_Program" />
+      <End Role="CU_Action" EntitySet="CU_Action" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Department_CU_Department" Association="Self.FK_CU_Department_CU_Department">
+      <End Role="CU_Department" EntitySet="CU_Department" />
+      <End Role="CU_Department1" EntitySet="CU_Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Department_CU_HeadDepartment" Association="Self.FK_CU_Department_CU_HeadDepartment">
+      <End Role="CU_HeadDepartment" EntitySet="CU_HeadDepartment" />
+      <End Role="CU_Department" EntitySet="CU_Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_CU_Branch" Association="Self.FK_CU_Employee_CU_Branch">
+      <End Role="CU_Branch" EntitySet="CU_Branch" />
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_CU_Department" Association="Self.FK_CU_Employee_CU_Department">
+      <End Role="CU_Department" EntitySet="CU_Department" />
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_CU_Department1" Association="Self.FK_CU_Employee_CU_Department1">
+      <End Role="CU_Department" EntitySet="CU_Department" />
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_CU_EmployeeCategory" Association="Self.FK_CU_Employee_CU_EmployeeCategory">
+      <End Role="CU_EmployeeCategory" EntitySet="CU_EmployeeCategory" />
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_CU_Job" Association="Self.FK_CU_Employee_CU_Job">
+      <End Role="CU_Job" EntitySet="CU_Job" />
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_Role_CU_Employee" Association="Self.FK_CU_Employee_Role_CU_Employee">
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+      <End Role="CU_Employee_Role" EntitySet="CU_Employee_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_Role_CU_Role" Association="Self.FK_CU_Employee_Role_CU_Role">
+      <End Role="CU_Role" EntitySet="CU_Role" />
+      <End Role="CU_Employee_Role" EntitySet="CU_Employee_Role" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_RoleProgram_CU_Employee" Association="Self.FK_CU_Employee_RoleProgram_CU_Employee">
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+      <End Role="CU_Employee_RoleProgram" EntitySet="CU_Employee_RoleProgram" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Employee_RoleProgram_CU_Role_Program" Association="Self.FK_CU_Employee_RoleProgram_CU_Role_Program">
+      <End Role="CU_Role_Program" EntitySet="CU_Role_Program" />
+      <End Role="CU_Employee_RoleProgram" EntitySet="CU_Employee_RoleProgram" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_HeadDepartment_CU_HeadDepartment" Association="Self.FK_CU_HeadDepartment_CU_HeadDepartment">
+      <End Role="CU_HeadDepartment" EntitySet="CU_HeadDepartment" />
+      <End Role="CU_HeadDepartment1" EntitySet="CU_HeadDepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Log_CU_Action" Association="Self.FK_CU_Log_CU_Action">
+      <End Role="CU_Action" EntitySet="CU_Action" />
+      <End Role="CU_Log" EntitySet="CU_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Log_CU_Employee" Association="Self.FK_CU_Log_CU_Employee">
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+      <End Role="CU_Log" EntitySet="CU_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Log_CU_Page" Association="Self.FK_CU_Log_CU_Page">
+      <End Role="CU_Page" EntitySet="CU_Page" />
+      <End Role="CU_Log" EntitySet="CU_Log" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Page_CU_Page" Association="Self.FK_CU_Page_CU_Page">
+      <End Role="CU_Page" EntitySet="CU_Page" />
+      <End Role="CU_Page1" EntitySet="CU_Page" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Page_CU_Program" Association="Self.FK_CU_Page_CU_Program">
+      <End Role="CU_Program" EntitySet="CU_Program" />
+      <End Role="CU_Page" EntitySet="CU_Page" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Role_Page_CU_Page" Association="Self.FK_CU_Role_Page_CU_Page">
+      <End Role="CU_Page" EntitySet="CU_Page" />
+      <End Role="CU_Role_Page" EntitySet="CU_Role_Page" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Role_Page_CU_Role_Program" Association="Self.FK_CU_Role_Page_CU_Role_Program">
+      <End Role="CU_Role_Program" EntitySet="CU_Role_Program" />
+      <End Role="CU_Role_Page" EntitySet="CU_Role_Page" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Role_Program_CU_Program" Association="Self.FK_CU_Role_Program_CU_Program">
+      <End Role="CU_Program" EntitySet="CU_Program" />
+      <End Role="CU_Role_Program" EntitySet="CU_Role_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CU_Role_Program_CU_Role" Association="Self.FK_CU_Role_Program_CU_Role">
+      <End Role="CU_Role" EntitySet="CU_Role" />
+      <End Role="CU_Role_Program" EntitySet="CU_Role_Program" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doaa_DoaaMainCategory" Association="Self.FK_Doaa_DoaaMainCategory">
+      <End Role="DoaaMainCategory" EntitySet="DoaaMainCategory" />
+      <End Role="Doaa" EntitySet="Doaa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DoaaDetails_Doaa" Association="Self.FK_DoaaDetails_Doaa">
+      <End Role="Doaa" EntitySet="Doaa" />
+      <End Role="DoaaItemSource" EntitySet="DoaaItemSource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Group_Moshaf" Association="Self.FK_Group_Moshaf">
+      <End Role="Moshaf" EntitySet="Moshaf" />
+      <End Role="Group" EntitySet="Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Group_User" Association="Self.FK_Group_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Group" EntitySet="Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupTarget_Group" Association="Self.FK_GroupTarget_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="GroupTarget" EntitySet="GroupTarget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupTarget_PeriodType" Association="Self.FK_GroupTarget_PeriodType">
+      <End Role="PeriodType" EntitySet="PeriodType" />
+      <End Role="GroupTarget" EntitySet="GroupTarget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupTarget_TargetType" Association="Self.FK_GroupTarget_TargetType">
+      <End Role="TargetType" EntitySet="TargetType" />
+      <End Role="GroupTarget" EntitySet="GroupTarget" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupUser_Group" Association="Self.FK_GroupUser_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="GroupUser" EntitySet="GroupUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GroupUser_User" Association="Self.FK_GroupUser_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="GroupUser" EntitySet="GroupUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Juz_Surah_Juz" Association="Self.FK_Juz_Surah_Juz">
+      <End Role="Juz" EntitySet="Juz" />
+      <End Role="Juz_Surah" EntitySet="Juz_Surah" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Juz_Surah_surah" Association="Self.FK_Juz_Surah_surah">
+      <End Role="Surah" EntitySet="Surah" />
+      <End Role="Juz_Surah" EntitySet="Juz_Surah" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_CU_Employee" Association="Self.FK_Notification_CU_Employee">
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Notification_NotificationType" Association="Self.FK_Notification_NotificationType">
+      <End Role="NotificationType" EntitySet="NotificationType" />
+      <End Role="Notification" EntitySet="Notification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationUser_Notification" Association="Self.FK_NotificationUser_Notification">
+      <End Role="Notification" EntitySet="Notification" />
+      <End Role="NotificationUser" EntitySet="NotificationUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NotificationUser_User" Association="Self.FK_NotificationUser_User">
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+      <End Role="NotificationUser" EntitySet="NotificationUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Poor_ResetPasswordRequest_CU_Employee" Association="Self.FK_Poor_ResetPasswordRequest_CU_Employee">
+      <End Role="CU_Employee" EntitySet="CU_Employee" />
+      <End Role="ResetPasswordRequest" EntitySet="ResetPasswordRequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SMS_ConfigParam_SMS_Config" Association="Self.FK_SMS_ConfigParam_SMS_Config">
+      <End Role="SMS_Config" EntitySet="SMS_Config" />
+      <End Role="SMS_ConfigParam" EntitySet="SMS_ConfigParam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAyat_Ayah" Association="Self.FK_UserAyat_Ayah">
+      <End Role="Ayah" EntitySet="Ayah" />
+      <End Role="UserAyat" EntitySet="UserAyat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAyat_User" Association="Self.FK_UserAyat_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserAyat" EntitySet="UserAyat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserCode_User" Association="Self.FK_UserCode_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserCode" EntitySet="UserCode" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

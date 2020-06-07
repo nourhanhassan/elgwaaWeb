@@ -1,0 +1,207 @@
+﻿@using MobileApplication.UI.InfraStructure;
+@using MobileApplication.DataModel;
+@model MobileApplication.DataModel.EmployeeModel
+
+@if (Model.ID == null || Model.ID == 0) 
+{
+    <link href="/JSPlugins/QVPassword/QVPassword.css" rel="stylesheet" />
+    <script src="/JSPlugins/QVPassword/QVPassword.js"></script>
+
+}
+
+<div class="form-group">
+    <div class="row">
+        <label class="col-sm-3 control-label">اسم المستخدم</label>
+
+        <div class="col-sm-6">
+            @Html.TextBoxFor(model => model.Name, new { @class = "form-control", placeholder = "اسم المستخدم" })
+
+            @Html.ValidationMessageFor(model => model.Name, null,
+                    new
+                    {
+
+                        @Class = "errorMsg",
+                        @id = "TitleValidation"
+                    })
+        </div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="row">
+        <label class="col-sm-3 control-label">رقم الجوال</label>
+
+        <div class="col-sm-6">
+            @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control", placeholder = "رقم الجوال" })
+
+            @Html.ValidationMessageFor(model => model.Mobile, null,
+                    new
+                    {
+
+                        @Class = "errorMsg",
+                        @id = "TitleValidation"
+                    })
+        </div>
+    </div>
+</div>
+
+@if (Model.ID == null || Model.ID == 0) 
+{
+    <div class="form-group">
+        <div class="row">
+            <label class="col-sm-3 control-label">اسم الدخول</label>
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.LoginName, new { @class = "form-control", placeholder = "اسم الدخول" })
+
+                @Html.ValidationMessageFor(model => model.LoginName, null,
+                    new
+                    {
+                        @Class = "errorMsg",
+                        @id = "TitleValidation"
+                    })
+            </div>
+        </div>
+    </div>
+}
+
+@if (Model.ID == null || Model.ID == 0) 
+{
+
+    <div class="form-group">
+        <div class="row">
+            <label class="col-sm-3 control-label">البريد الإلكترونى </label>
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", placeholder = "البريد الإلكترونى" })
+
+                @Html.ValidationMessageFor(model => model.Email, null,
+                    new
+                    {
+                        @Class = "errorMsg",
+                        @id = "TitleValidation"
+                    })
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="form-group">
+        <div class="row">
+            <label class="col-sm-3 control-label">البريد الإلكترونى</label>
+            <div class="col-sm-9">
+                <label for="selector1" class="control-label" style="word-break:break-all;">@Model.Email</label>
+                @*<input type="hidden" name="Email" value="@Model.Email" />*@
+            </div>
+        </div>
+    </div>
+
+}
+@*<div class="form-group">
+        <div class="row">
+            <label for="Mob" class="col-sm-3 control-label">الجوال</label>
+            <div class="col-sm-6">
+                @Html.TextBoxFor(model => model.Mobile, new { @class = "form-control", placeholder = "الجوال" })
+
+                @Html.ValidationMessageFor(model => model.mobile, null,
+                        new
+                        {
+                            @Class = "errorMsg",
+                            @id = "TitleValidation"
+                        })
+            </div>
+        </div>
+    </div>*@
+
+@if (Model.ID == null || Model.ID == 0) 
+{
+
+
+    <div id="pwdControl">
+        @*<div class="errorPass errorMsg"></div>*@
+        <input type="text" id="txtAddPassword" name="Password" />
+    </div>
+}
+else  //edit mode
+{
+    <div class="form-group">
+        <div class="row">
+            <label class="col-sm-3 control-label">اسم الدخول</label>
+            <div class="col-sm-6">
+                <label for="selector1" class="control-label">@Model.LoginName</label>
+                @*<input type="hidden" name="LoginName" value="@Model.LoginName" />
+                <input type="hidden" name="Password" value="@Model.Password" />
+                <input type="hidden" name="LastVisitTime" value="@Model.LastVisitTime" />*@
+            </div>
+        </div>
+    </div>
+
+}
+
+
+    @*<div class="form-group">
+        <label class="col-sm-3 control-label"> الوظيفة </label>
+        <div class="col-sm-6">
+
+            @Html.DropDownListFor(x => x.IdJob, LookupManger<CU_JobModel>.GetSelectListItem(), new { @class = "form-control", ng_model = "CurModel.BeneficialId" })
+
+            <div class="errorMsg">
+                @Html.ValidationMessageFor(x => x.IdJob)
+            </div>
+        </div>
+    </div>*@
+
+
+
+<div class="form-group">
+    <label for="checkbox" class="col-sm-3 control-label">حالة المستخدم </label>
+    <div class="col-sm-6">
+        <table id="checklstUserRoles">
+            <tbody>
+                <tr>
+                    <td style="padding-top: 8px;">
+                        <span>
+                            @*<input type="checkbox" value="@Model.IsActive" id="@Model.ID" />*@
+                         @Html.CheckBoxFor(n=>n.IsActive)
+                            <label for="@Model.ID">فعال</label>
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+        $(document).ready(function () {
+            //stop textboxes from autoComplete
+            $("form").attr("autocomplete", "off");
+            $("form :input").attr("autocomplete", "off");
+
+        });
+
+</script>
+@if (Model.ID == null || Model.ID == 0) 
+{
+    <script>
+            $(document).ready(function () {
+                $("#txtAddPassword").QVConfirmPassword(true);
+
+                $('input[type=password]').val('');
+            });
+    </script>
+}
+<script>
+        $(window).load(function () {
+            $('input[type=password]').val('');
+        });
+
+</script>

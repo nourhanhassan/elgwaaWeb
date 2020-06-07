@@ -1,0 +1,239 @@
+﻿@{
+    Layout = null;
+}
+@using System.Web.Optimization
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <title>@Resources.AppResources.AppName</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--css-->
+    @Styles.Render("~/Areas/ControlPanel/Content/csss/")
+   
+    <!--js-->
+    @Scripts.Render("~/ControlPanel/js")
+
+  
+    @* //----------------------------------signalR Notifications---------------------------------//*@
+    @if (ViewBag.HasNotification == true)
+        {
+        <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+        <script src="~/signalr/hubs"></script>
+   
+    
+   <script type="text/javascript">
+
+    debugger;
+    var userId = @ViewBag.UserId;
+        $(function () {
+            debugger;
+
+            var proxy = $.connection.notificationHub;
+
+            $.connection.hub.qs = { 'UserID': userId };
+
+
+            proxy.client.receiveNotification = function (notificationObject) {
+                debugger;
+
+                console.log(notificationObject);
+                apendNotification(notificationObject);
+
+            };
+            proxy.client.applyIsSeen = function (notificationID) {
+                debugger;
+
+                if (parseInt($(".notifications-count.badge").text()) >= 1) {
+                    $(".notifications-count.badge").text(parseInt($(".notifications-count.badge").text()) - 1);
+                    $(".dropdown-menu").find(".notifications-count").text(parseInt($(".dropdown-menu").find(".notifications-count").text() - 1))
+                }
+                $(".notifications-container [data-id='" + notificationID + "']").find("a").removeClass("active");
+                $(".notifications-container [data-id='" + notificationID + "']").remove();
+
+
+            }
+
+            proxy.client.applyAllIsSeen = function () {
+                debugger;
+
+                $(".notifications-count.badge").text("0");
+                $(".dropdown-menu").find(".notifications-count").text(0);
+                $(".notifications-container li").find("a").removeClass("active");
+            }
+            $.connection.hub.start();
+
+            SetSeen = function(notificationID){
+                debugger;
+
+                proxy.server.setIsSeen(userId, notificationID);
+            };
+            //see all notifications
+            $("#SeeAllNotifications").on("click", function () {
+                debugger;
+
+                proxy.server.seeAllNotifcation(userId);
+            });
+            $(".notification-item").on("click", function (e) {
+                debugger;
+                e.preventDefault();
+                notificationClick($(this));
+            });
+
+        });
+
+        function apendNotification(notificationObject) {
+            debugger;
+
+            //var notificationElement = '<li onclick="NotClick(this)" data-url="'+notificationObject.Link+'" data-id="' + notificationObject.ID + '"><a href="#" class="active"><span class="time">' + notificationObject.TimePassed + '</span> <span class="msg">' + notificationObject.Message + '</span> </a></li>'
+            var notificationElement = '<li ><a data-url="'+notificationObject.Link+'" href="'+notificationObject.Link+'" data-id="' + notificationObject.ID + '" class="notification-item active"><span class="time">' + notificationObject.TimePassed + '</span> <span class="msg">' + notificationObject.Message +' </span> </a></li>'
+
+        $(".notifications-container").prepend(notificationElement);
+        var currentNotificationsCount = parseInt($(".notifications-count").html());
+        currentNotificationsCount++;
+        $(".notifications-count").html(currentNotificationsCount);
+    }
+
+    function notificationClick(clicked) {
+
+        debugger;
+        var notificationID = $(clicked).attr("data-id");
+        $(clicked).removeClass("active");
+        var url = $(clicked).attr("data-url");
+        if (url != undefined) {
+            window.location.href = url;
+        }
+        SetSeen(notificationID);
+
+    }
+
+    function NotClick(clicked)
+    {
+        debugger;
+        console.log(clicked.children[0].className);
+        if (clicked.children[0].className=="active") {
+            var notificationID = clicked.getAttribute("data-id");
+            var url=$(".notifications-container li[data-id='" + notificationID + "']").attr("data-url");
+            if(url!=undefined)
+            {
+                window.location.href=url;
+            }
+            SetSeen(notificationID);
+        }
+    }
+    </script>
+}
+    <!--[if IE]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body class="">
+    @{Html.RenderPartial("~/Areas/ControlPanel/Views/Shared/_Header.cshtml");}
+    <div id="page-container">
+
+        <!--pleaseWaitDialog-->
+        <div class="modal fade" id="pleaseWaitDialog" data-backdrop="static" data-keyboard="false"
+             style="    position: absolute;    right: 700px;    top: 337px;">
+            <div class="modal-body">
+                <img src="/Areas/ControlPanel/Content/img/ring.gif" />
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /pleaseWaitDialog -->
+        <!-- AfterAjaxPopUP -->
+        <div class="modal fade" id="AfterAjaxPopUP">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                         <h4 class="modal-title" id="modalTitle"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalBody"></p>
+                    </div>
+
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /modal -->
+        <!-- Modal popup -->
+        <div id="myModal" class="modal fade" aria-hidden="true">
+            <div class="modal-dialog" id="modal-content-placeholder">
+            </div>
+        </div>
+        <!-- /modal -->
+        <!-- page-content -->
+        @* VDX *@
+        @{Html.RenderPartial("~/Areas/ControlPanel/Views/Shared/_Menu.cshtml");}
+        <div id="page-content">
+            <div id='wrap'>
+                <div id="page-heading">
+                    @RenderSection("NavigationBar", false)
+                    <div class="options dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <div class="btn-toolbar">
+                                <button class="btn btn-default" id="daterangepicker2"><i class="fa fa-calendar-o"></i><span class="hidden-xs hidden-sm dateValue"> @ViewBag.CurTime </span><b class="caret"></b></button>
+                            </div>
+                        </a>
+                        <div class="daterangepicker dropdown-menu opensleft">
+                            <div class="ranges">
+                                <ul>
+                                    <li>تاريخ آخر زيارة @ViewBag.LastVisit</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <!-- page-content -->
+        <footer role="contentinfo">
+            <div class="clearfix">
+                <ul class="list-unstyled list-inline pull-right">
+                    <p id="copy_right">جميع الحقوق محفوظة @Resources.AppResources.AppName &copy; 2017 - تم التطوير بواسطة <a href="http://www.qvsite.com/" target="_blank" style="color:blue">Qvision</a></p>
+                    
+                </ul>
+                <button class="pull-left btn btn-inverse-alt btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
+            </div>
+        </footer>
+    </div>
+    @RenderSection("Script", false)
+    <script src="~/Scripts/commonFunctions.js"></script>
+</body>
+</html>
+<script>
+    $.validator.setDefaults({ ignore: ':hidden:not(".must-validate")' });
+    function CheckPassValidation(){
+    debugger
+    var isSubMit = false;
+    var isValidPass = $("#txtAddPassword").attr("valid");
+    //var iUserID = $("#ID").val();
+
+    if (isValidPass != "true") {
+        if (!$("#password_txtAddPassword").val()) {
+            $('.error_txtAddPassword').show();
+        }
+
+        if (!$("#confirmpassword_txtAddPassword").val()) {
+            $('.confirmpassword_error_txtAddPassword').show();
+        }
+    }
+    }
+    $(function() {
+        $(".qvisioneditor_btn_video").hide()
+        $(".qvisioneditor_btn_link").hide();
+        //$(".qvisioneditor_btn_image").hide();
+        $(".qvisioneditor_btn_gallery").hide();
+        $(".qvisioneditor_btn_backcolor").hide();
+        $(".qvisioneditor_btn_image").click(function () { $("#qvisioneditor_tabs a").eq(2).hide() })
+    })
+</script>

@@ -1,0 +1,194 @@
+﻿@using MobileApplication.UI.InfraStructure;
+
+@{
+    ViewBag.Title = "Default";
+}
+@section NavigationBar{
+    @{Html.RenderPartial("_PagePath", new PagePath { PageTitle = "إدارة المستخدمين", ParentPath = "الرئيسية ", ParentURLs = "/ControlPanel/DashBoard/Default" });  }
+}
+
+<div ng-app="app">
+    <div ng-controller="ManageUseController">
+        <div class="container">
+            <div class="panel panel-midnightblue" my-enter="search()">
+                <div class="panel-heading"     style="background-color: #94979a;">
+                    <h4 style="color:white;">البحث</h4>
+                    <div class="options"><a style="color:white;" href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a></div>
+                </div>
+                <div class="panel-body collapse">
+                    <form action="" class="form-horizontal row-border" name="form" novalidate>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-4">
+                                    <label class="control-label">اسم المستخدم</label>
+                                    <input ng-model="searchObject.Name" type="text" name="Name" class="form-control" , reg-exp-require ="/(<|>)/" @*ng-pattern="/^[a-zA-Z0-9\u0600-\u06ff,./\s_-]{0,200}$/"*@>
+                                    @*<span style="color: red" ng-show="form.Name.$invalid">
+                                        <span ng-show="form.Name.$error.pattern">يجب ان لا يزيد عدد الحروف عن 200 حرف و غير مسموح بكتابة رموز خاصة .</span>
+                                    </span>*@
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="control-label">اسم الدخول</label>
+                                    <input ng-model="searchObject.LoginName" type="text" name="LoginName" class="form-control"  reg-exp-require="/(<|>)/"  @*ng-pattern="/^[a-zA-Z0-9\u0600-\u06ff,./\s_-]{0,200}$/"*@>
+                                    @*<span style="color: red" ng-show="form.LoginName.$invalid">
+                                        <span ng-show="form.LoginName.$error.pattern">يجب ان لا يزيد عدد الحروف عن 200 حرف و غير مسموح بكتابة رموز خاصة .</span>
+                                    </span>*@
+                                </div>
+
+
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-4">
+                                    <label class="control-label">البريد الإلكترونى </label>
+                                    <input ng-model="searchObject.Email" type="email" name="Email" class="form-control" reg-exp-require="/(<|>)/">
+                                    @*<span style="color: red" ng-show="form.Email.$invalid">
+                                        <span ng-show="form.Email.$error">بريد الكترونى غير صحيح</span>
+                                    </span>*@
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="control-label">حالة المستخدم</label>
+
+                                    <select class="form-control" ng-optionss="status.text for status in  track by status.value" ng-model="searchObject.IsActive">
+                                        <option value="" selected>اختر..</option>
+                                        <option ng-repeat="status in [{text:'فعال',value:'True'}, {text:'غير فعال',value:'False'}]" value="{{status.value}}" > {{status.text}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="pull-left">
+                                <div class="btn-toolbar">
+                                    <button class="btn-primary btn Search" type="submit" ng-click="search()"><i class="fa fa-search"></i>بحث</button>
+                                    <button class="btn-default btn ShowAll" ng-click="viewAll()">عرض الكل</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/search-->
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <h4>إدارة المستخدمين</h4>
+                </div>
+                <div class="panel-body">
+                    @if (bool.Parse(ViewData["Insert"].ToString()))
+                    {
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="btn-group">
+
+                                    <a href="/ControlPanel/Employee/Add/0" class="btn btn-default DTTT_button_text">
+                                        <i class="fa fa-plus"></i><span>إضافة مستخدم</span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div loading-container="tableParams.settings().$loading" class="usersDiv">
+                        <div class="table-responsive table-scroll">
+                            <table ng-table="tableParams" class=" table table-striped table-hover text-center ">
+
+                                <tr ng-repeat="User in tabledata  track by User.ID">
+                                    <td data-title="'اسم المستخدم'" sortable="'Name'" sort-indicator="'span'">{{User.Name}}</td>
+                                    <td data-title="'اسم الدخول'" sortable="'LoginName'" sort-indicator="'span'">{{User.LoginName}}</td>
+
+                                    <td data-title="'البريد الإلكتروني'">{{User.Email}}</td>
+                                    <td data-title="'حالة المستخدم	'">{{User.IsActive | true_false}}</td>
+
+
+                                   @if (bool.Parse(ViewData["Password"].ToString()))
+                                    {
+    <td style="width: 80px;" data-title="'تغيير كلمة المرور'" ng-switch="User.CanEdit">
+        <a href="" ng-click="viewChangePass(User.ID)" ng-switch-when="true" class="pointer"><i class="fa fa-edit"></i></a>
+        <a href="" title="لا يمكن تغيير كلمة المرور هذا المستخدم" ng-switch-when="false" style="opacity: 0.3"><i class="fa fa-edit"></i></a>
+
+    </td>
+
+                                    }
+                                    @if (bool.Parse(ViewData["Update"].ToString()))
+                                    {
+                                    
+    <td style="width: 80px;" data-title="'الصلاحيات'" ng-switch="User.CanEdit">
+        <a href="" ng-click="ManageUserRoles(User)" ng-switch-when="true" style="cursor: pointer"><i class="fa fa-edit"></i></a>
+        <a href="" title="لا يمكن تغيير صلاحيات هذا المستخدم" ng-switch-when="false" style="opacity: 0.3"><i class="fa fa-edit"></i></a>
+    </td>
+    <td data-title="'تعديل'" ng-switch="User.CanEdit">
+        <a ng-click="AddEdit(User)" href="/ControlPanel/Employee/Edit?Id={{User.ID}}" ng-switch-when="true" style="cursor: pointer"><i class="fa fa-edit"></i></a>
+        <a href="" title="لا يمكن  تعديل هذا المستخدم" ng-switch-when="false" style="opacity: 0.3"><i class="fa fa-edit"></i></a>
+
+    </td>
+                                    }
+                                    @if (bool.Parse(ViewData["Delete"].ToString()))
+                                    {
+                                        <td data-title="'حذف'" ng-switch="User.CanDelete">
+                                            <a href="" ng-click="Delete($event,User,$index)" ng-switch-when="true" style="cursor: pointer">
+                                                <i class="fa fa-times-circle delete"></i>
+                                            </a>
+                                            <a href="" title="لا يمكنك حذف المستخدم لارتباطه ببيانات أخرى " ng-switch-when="false" style="opacity: 0.3">
+                                                <i class="fa fa-times-circle delete"></i>
+                                            </a>
+                                        </td>
+                                    }
+                                </tr>
+                                <tr ng-hide="tabledata.length">
+                                    <td colspan="9" style="text-align: center">لا يوجد بيانات</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        @Html.Partial("_UserRoles")
+        @Html.Partial("_ChangePassword")
+
+    </div>
+    <!-- container -->
+</div>
+@section script {
+    @{Html.RenderPartial("_ng-table");}
+    @Html.Partial("_Popup")
+
+
+    @{Html.RenderPartial("_ManageScript", new ManageModel { AreaName = "ControlPanel", ControllerName = "Employee", ModelName = "مستخدم", ModalPopUpId = "MainOperationModal" });}
+    @{Html.RenderPartial("_ManageUserScript", new ManageModel { AreaName = "ControlPanel", ControllerName = "Employee", ModelName = "مستخدم", ModalPopUpId = "UserModal" });}
+
+    <script>
+        app.filter('true_false', function () {
+            return function (text, length, end) {
+                if (text) {
+                    return 'فعال';
+                }
+                return 'غير فعال';
+            }
+        });
+        app.directive("regExpRequire", function () {
+
+            var regexp;
+            return {
+                restrict: "A",
+                link: function (scope, elem, attrs) {
+                    regexp = eval(attrs.regExpRequire);
+
+                    var char;
+                    elem.on("keypress", function (event) {
+                        char = String.fromCharCode(event.which)
+                        if (regexp.test(char)) {
+                            event.preventDefault();
+                        }
+                    })
+                }
+            }
+
+        });
+    </script>
+}
+
+
+

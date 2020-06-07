@@ -1,0 +1,284 @@
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.UI.dll.config
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.UI.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.UI.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Antlr3.Runtime.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\AutoMapper.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\EntityFramework.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\GenericEngine.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.DataModel.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.DataService.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Newtonsoft.Json.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\NReco.VideoConverter.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Owin.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\QVEnterprise.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Helpers.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Mvc.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Optimization.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Razor.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.WebPages.Deployment.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.WebPages.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.WebPages.Razor.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\WebGrease.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\QVRepository.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.Context.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\PushSharp.Google.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\PushSharp.Apple.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\PushSharp.Core.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.DataModel.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.DataService.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\EntityFramework.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Helpers.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Mvc.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Optimization.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.Razor.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.WebPages.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.WebPages.Deployment.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\System.Web.WebPages.Razor.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Antlr3.Runtime.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\QVRepository.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\bin\MobileApplication.Context.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\obj\Debug\MobileApplication.UI.csprojResolveAssemblyReference.cache
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\obj\Debug\MobileApplication.UI.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.UI\obj\Debug\MobileApplication.UI.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.dll.config
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Antlr3.Runtime.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\AutoMapper.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\EntityFramework.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\GenericEngine.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataModel.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataService.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Newtonsoft.Json.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\NReco.VideoConverter.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Owin.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\QVEnterprise.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Helpers.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Mvc.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Optimization.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Razor.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Deployment.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Razor.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\WebGrease.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\QVRepository.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.Context.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Google.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Apple.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Core.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataModel.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataService.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\EntityFramework.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Helpers.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Mvc.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Optimization.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Razor.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Deployment.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Razor.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Antlr3.Runtime.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\QVRepository.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.Context.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.csprojResolveAssemblyReference.cache
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.dll.config
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Antlr3.Runtime.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\AutoMapper.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\EntityFramework.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\GenericEngine.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataModel.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataService.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Newtonsoft.Json.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\NReco.VideoConverter.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Owin.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\QVEnterprise.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Helpers.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Mvc.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Optimization.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Razor.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Deployment.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Razor.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\WebGrease.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\QVRepository.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.Context.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Google.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Apple.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Core.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataModel.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataService.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\EntityFramework.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Helpers.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Mvc.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Optimization.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Razor.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Deployment.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Razor.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Antlr3.Runtime.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\QVRepository.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.Context.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.csprojResolveAssemblyReference.cache
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.csprojResolveAssemblyReference.cache
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Antlr3.Runtime.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\AutoMapper.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\EntityFramework.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\GenericEngine.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Web.Infrastructure.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataModel.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataService.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Newtonsoft.Json.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\NReco.VideoConverter.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Owin.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\QVEnterprise.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Helpers.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Mvc.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Optimization.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Razor.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Deployment.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Razor.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\WebGrease.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\QVRepository.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.Context.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Google.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Apple.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\PushSharp.Core.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataModel.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.DataService.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\EntityFramework.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.Core.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Helpers.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Mvc.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Optimization.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.Razor.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Deployment.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\System.Web.WebPages.Razor.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Antlr3.Runtime.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Google.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\QVRepository.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.Context.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\obj\Debug\MobileApplication.UI.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.dll.config
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.UI\bin\MobileApplication.UI.pdb

@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58A5B8E4-5157-4B4B-9796-650B3C17BFE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileApplication.DataService</RootNamespace>
+    <AssemblyName>MobileApplication.DataService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\shared_dll\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericEngine">
+      <HintPath>..\shared_dll\GenericEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE\PublicAssemblies\Microsoft.QualityTools.Testing.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Amazon">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Amazon.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Amazon.Adm">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Amazon.Adm.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Android">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Apple">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Apple.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Blackberry">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Blackberry.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Core">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Firefox">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Firefox.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.FirefoxOS">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.FirefoxOS.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Google">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Google.Chrome">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Google.Chrome.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.Windows">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="PushSharp.WindowsPhone">
+      <HintPath>..\shared_dll\pushsharpdlls\PushSharp.WindowsPhone.dll</HintPath>
+    </Reference>
+    <Reference Include="QVEnterprise">
+      <HintPath>..\shared_dll\QVEnterprise.dll</HintPath>
+    </Reference>
+    <Reference Include="QVRepository">
+      <HintPath>..\shared_dll\QVRepository.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoMapper\AutoMapperConfig.cs" />
+    <Compile Include="ControlPanel\ArticleService.cs" />
+    <Compile Include="ControlPanel\DoaaService.cs" />
+    <Compile Include="ControlPanel\NamesOfAllahService.cs" />
+    <Compile Include="CU\CU_AccountService.cs" />
+    <Compile Include="CU\CU_ActionService.cs" />
+    <Compile Include="CU\CU_EmployeeService.cs" />
+    <Compile Include="CU\CU_Employee_RoleProgramService .cs" />
+    <Compile Include="CU\CU_Employee_RoleService.cs" />
+    <Compile Include="CU\CU_LogService.cs" />
+    <Compile Include="CU\CU_PageService.cs" />
+    <Compile Include="CU\CU_RoleService.cs" />
+    <Compile Include="CU\CU_Role_PageService.cs" />
+    <Compile Include="CU\CU_Role_ProgramService.cs" />
+    <Compile Include="CU\EmployeeService.cs" />
+    <Compile Include="CU\PermissionService.cs" />
+    <Compile Include="DataServiceArabicResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataServiceArabicResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionHandler\ExceptionHandlerService.cs" />
+    <Compile Include="Notification\INotificationHub.cs" />
+    <Compile Include="Notification\NotificationService.cs" />
+    <Compile Include="Notification\NotificationUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushNotification\PushNotificationLogService.cs" />
+    <Compile Include="PushNotification\PushSharpService.cs" />
+    <Compile Include="Report\ReportService.cs" />
+    <Compile Include="Settings\AppSettingService.cs" />
+    <Compile Include="Settings\SettingService.cs" />
+    <Compile Include="SharedService\BaseService.cs" />
+    <Compile Include="SharedService\HelperMethods.cs" />
+    <Compile Include="SharedService\ImageService.cs" />
+    <Compile Include="SharedService\MailService.cs" />
+    <Compile Include="SharedService\ManageBaseService.cs" />
+    <Compile Include="SMS\SMSEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataServiceArabicResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DataServiceArabicResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="API\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MobileApplication.Context\MobileApplication.Context.csproj">
+      <Project>{baba1012-87a0-49a4-83bd-89822d86401b}</Project>
+      <Name>MobileApplication.Context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileApplication.DataModel\MobileApplication.DataModel.csproj">
+      <Project>{dccaf18f-ba1e-4177-b072-7ed407a6ec03}</Project>
+      <Name>MobileApplication.DataModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

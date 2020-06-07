@@ -1,0 +1,11 @@
+﻿
+@model IEnumerable<MobileApplication.DataModel.LogModel>
+
+@if (Model != null && Model.Count() > 0)
+{
+    @*<ul class="timeline" id="ulContainer">*@
+    @Html.Raw(MobileApplication.UI.InfraStructure.UIHelperLog.GetLogTempaltes(Model.ToList()))
+    <div id="seperator"></div>
+    @*</ul>*@
+}
+<input type="hidden" value="@ViewBag.total" id="hiddenTotal" />

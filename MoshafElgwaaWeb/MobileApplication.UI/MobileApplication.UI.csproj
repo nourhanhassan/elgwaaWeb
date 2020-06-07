@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{950639DF-30D0-44A4-9FE6-FE9BF920EFEB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MobileApplication.UI</RootNamespace>
+    <AssemblyName>MobileApplication.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=4.1.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="GenericEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\GenericEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.Core">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.2.2\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.SignalR.SystemWeb">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.SystemWeb.2.2.2\lib\net45\Microsoft.AspNet.SignalR.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NReco.VideoConverter">
+      <HintPath>..\shared_dll\Nreco\NReco.VideoConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="QVEnterprise, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\shared_dll\QVEnterprise.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\AppResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MerchandiseTypeResource.designer.cs">
+      <DependentUpon>MerchandiseTypeResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\VehicleBrandResource.designer.cs">
+      <DependentUpon>VehicleBrandResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\VehicleColorResource.designer.cs">
+      <DependentUpon>VehicleColorResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\VehicleSizeResource.designer.cs">
+      <DependentUpon>VehicleSizeResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\VehicleModelResource.designer.cs">
+      <DependentUpon>VehicleModelResource.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="App_GlobalResources\CityResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CityResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ShipmentCostSettingResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShipmentCostSettingResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\DriverResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DriverResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\EmployeeResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\LogTemplate.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LogTemplate.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ManyToManyResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ManyToManyResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MerchantResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerchantResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\PermissionResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PermissionResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\RoleResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoleResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\ShipmentSettingResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShipmentSettingResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\TableResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TableResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\MerchantStoreResource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MerchantStoreResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\VehicleResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VehicleResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\API\APIAreaRegistration.cs" />
+    <Compile Include="Areas\API\Controllers\BaseAPIController.cs" />
+    <Compile Include="Areas\API\Controllers\FileAPIController.cs" />
+    <Compile Include="Areas\API\Controllers\SelectListController.cs" />
+    <Compile Include="Areas\API\Controllers\UmalquraController.cs" />
+    <Compile Include="Areas\ControlPanel\App_Start\BundleConfig.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\AccountController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\ArticleController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\ArticleItemExplanationController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\BaseController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\DashBoardController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\DoaaController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\DoaaItemSourceController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\EmployeeController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\LogController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\NamesOfAllahController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\NationalityController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\NotificationController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\PermissionController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\ReportControllers\_ReportBaseController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\RoleController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\QuickAddExampleController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\SettingController.cs" />
+    <Compile Include="Areas\ControlPanel\Controllers\SMSController.cs" />
+    <Compile Include="Areas\ControlPanel\ControlPanelAreaRegistration.cs" />
+    <Compile Include="Areas\ControlPanel\Models\MultiAttachmentsVM.cs" />
+    <Compile Include="Areas\ControlPanel\Models\Report\ReportSearhVM.cs" />
+    <Compile Include="Areas\Site\App_Start\BundleConfig.cs" />
+    <Compile Include="Areas\Site\SiteAreaRegistration.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="error\500.aspx.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error\500.aspx.designer.cs">
+      <DependentUpon>500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InfraStructure\asset\Globals.cs" />
+    <Compile Include="InfraStructure\asset\Helpers.cs" />
+    <Compile Include="InfraStructure\asset\Utilities.cs" />
+    <Compile Include="InfraStructure\CustomFilter\ControlPanelUserAuthorize.cs" />
+    <Compile Include="InfraStructure\CustomFilter\UserPermission.cs" />
+    <Compile Include="InfraStructure\CustomModelBinders\UserModelBinder.cs" />
+    <Compile Include="InfraStructure\CustomModelBinders\UserProfile.cs" />
+    <Compile Include="InfraStructure\LogUIHelpers\UIHelperLog.cs" />
+    <Compile Include="InfraStructure\LookupManger.cs" />
+    <Compile Include="InfraStructure\ManageModels\ManageModel.cs" />
+    <Compile Include="InfraStructure\ManageModels\PagePath.cs" />
+    <Compile Include="InfraStructure\Report\MyApp.cs" />
+    <Compile Include="InfraStructure\ViewGridBaseController.cs" />
+    <Compile Include="JSPlugins\QVEditor\qv_editor.ashx.cs">
+      <DependentUpon>qv_editor.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReportModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\ReportPage.aspx.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ReportPage.aspx.designer.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StartUp\NotificationHub.cs" />
+    <Compile Include="StartUp\Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\ControlPanel\Content\css\jquery.calendars.picker.css" />
+    <Content Include="Areas\ControlPanel\Content\css\styles.css" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Areas\ControlPanel\Content\img\AjaxLoader.gif" />
+    <Content Include="Areas\ControlPanel\Content\img\login-logo.png" />
+    <Content Include="Areas\ControlPanel\Content\img\logo.png" />
+    <Content Include="DataUpload\Driver\0b67113a-55ed-4943-9f06-2a40d9607276.jpg" />
+    <Content Include="error\404.aspx" />
+    <Content Include="error\500.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="HTML\add1.htm" />
+    <Content Include="HTML\add2-editable.htm" />
+    <Content Include="HTML\add2.htm" />
+    <Content Include="HTML\add3-responsiveTable.htm" />
+    <Content Include="HTML\contract.htm" />
+    <Content Include="HTML\css\angular-ui.css" />
+    <Content Include="HTML\css\bootstrap.css" />
+    <Content Include="HTML\css\bootstrap.min.css" />
+    <Content Include="HTML\css\component.css" />
+    <Content Include="HTML\css\CustomStyle.css" />
+    <Content Include="HTML\css\demo.css" />
+    <Content Include="HTML\css\formToWizard2.css" />
+    <Content Include="HTML\css\ie8.css" />
+    <Content Include="HTML\css\jquery-ui-themes.css" />
+    <Content Include="HTML\css\jquery.calendars.picker.css" />
+    <Content Include="HTML\css\jquery.calendars.picker1.css" />
+    <Content Include="HTML\css\jquery.fileupload-ui.css" />
+    <Content Include="HTML\css\jquery.mCustomScrollbar.css" />
+    <Content Include="HTML\css\main.css" />
+    <Content Include="HTML\css\ng-table.css" />
+    <Content Include="HTML\css\normalize.css" />
+    <Content Include="HTML\css\pop-up.css" />
+    <Content Include="HTML\css\responsive-tables.css" />
+    <Content Include="HTML\css\select2.min.css" />
+    <Content Include="HTML\css\styles.css" />
+    <Content Include="HTML\css\styles.min.css" />
+    <Content Include="HTML\css\styles1.css" />
+    <Content Include="HTML\edit.htm" />
+    <Content Include="HTML\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="HTML\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="HTML\forgotpassword.htm" />
+    <Content Include="HTML\img\AjaxLoader.gif" />
+    <Content Include="HTML\img\Button-Close-icon.png" />
+    <Content Include="HTML\img\code-signing-certificate.png" />
+    <Content Include="HTML\img\InProgress.gif" />
+    <Content Include="HTML\img\login-bg.png" />
+    <Content Include="HTML\img\login-logo.png" />
+    <Content Include="HTML\img\logo-big.png" />
+    <Content Include="HTML\img\logo.png" />
+    <Content Include="HTML\img\main-bg.png" />
+    <Content Include="HTML\img\Minus-icon.png" />
+    <Content Include="HTML\img\Notificationdone.png" />
+    <Content Include="HTML\img\Plus-icon.png" />
+    <Content Include="HTML\img\ring.GIF" />
+    <Content Include="HTML\img\sidebar-toggle.png" />
+    <Content Include="HTML\img\sidebar-toggle1.png" />
+    <Content Include="HTML\img\spotlight-poi-blue.png" />
+    <Content Include="HTML\img\spotlight-poi.png" />
+    <Content Include="HTML\img\stripes.png" />
+    <Content Include="HTML\img\user.jpg" />
+    <Content Include="HTML\index.htm" />
+    <Content Include="HTML\index2.htm" />
+    <Content Include="HTML\js\application.js" />
+    <Content Include="HTML\js\bootstrap.js" />
+    <Content Include="HTML\js\bootstrap.min.js" />
+    <Content Include="HTML\js\demo-alerts.js" />
+    <Content Include="HTML\js\demo-formwizard.js" />
+    <Content Include="HTML\js\demo-tableeditable.js" />
+    <Content Include="HTML\js\enquire.js" />
+    <Content Include="HTML\js\jquery-1.10.2.min.js" />
+    <Content Include="HTML\js\jquery.cookie.js" />
+    <Content Include="HTML\js\jquery.easing.1.3.js" />
+    <Content Include="HTML\js\jquery.editable.min.js" />
+    <Content Include="HTML\js\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="HTML\js\jquery.nicescroll.js" />
+    <Content Include="HTML\js\jquery.nicescroll.min.js" />
+    <Content Include="HTML\js\jquery.pnotify.min.js" />
+    <Content Include="HTML\js\jQuery.pulsate.min.js" />
+    <Content Include="HTML\js\jquery.stepy.js" />
+    <Content Include="HTML\js\jquery.touchSwipe.min.js" />
+    <Content Include="HTML\js\jquery.validate.min.js" />
+    <Content Include="HTML\js\jqueryui-1.10.3.min.js" />
+    <Content Include="HTML\js\jqueryui.css" />
+    <Content Include="HTML\js\jqueryui.min.css" />
+    <Content Include="HTML\js\less.js" />
+    <Content Include="HTML\js\placeholdr.js" />
+    <Content Include="HTML\js\responsive-tables.js" />
+    <Content Include="HTML\log.htm" />
+    <Content Include="HTML\login.htm" />
+    <Content Include="HTML\manage.htm" />
+    <Content Include="HTML\manageThumbnails.htm" />
+    <Content Include="HTML\new page.htm" />
+    <Content Include="HTML\new page2.htm" />
+    <Content Include="HTML\pop-up.htm" />
+    <Content Include="HTML\report.htm" />
+    <Content Include="HTML\wizard.htm" />
+    <Content Include="JSPlugins\DropZoneUploader\dropzone.css" />
+    <Content Include="JSPlugins\DropZoneUploader\dropzone.js" />
+    <Content Include="JSPlugins\QVCalender\jquery.calendars.dblDatePicker.js" />
+    <Content Include="JSPlugins\QVCalender\jquery.calendars.js" />
+    <Content Include="JSPlugins\QVCalender\jquery.calendars.picker.js" />
+    <Content Include="JSPlugins\QVCalender\jquery.calendars.plus.js" />
+    <Content Include="JSPlugins\QVCalender\jquery.calendars.ummalqura.js" />
+    <Content Include="JSPlugins\QVCalender\qv-calender.js" />
+    <Content Include="JSPlugins\QVConfirmationMessage\toastr.css" />
+    <Content Include="JSPlugins\QVConfirmationMessage\toastr.js" />
+    <Content Include="JSPlugins\QVConfirmationMessage\toastr.min.css" />
+    <Content Include="JSPlugins\QVConfirmationMessage\toastr.min.js" />
+    <Content Include="JSPlugins\QVEditor\controlPanel.css" />
+    <Content Include="JSPlugins\QVEditor\EditorHelper.css" />
+    <Content Include="JSPlugins\QVEditor\icons\1.png" />
+    <Content Include="JSPlugins\QVEditor\icons\2.png" />
+    <Content Include="JSPlugins\QVEditor\icons\3.png" />
+    <Content Include="JSPlugins\QVEditor\icons\4.png" />
+    <Content Include="JSPlugins\QVEditor\icons\5.png" />
+    <Content Include="JSPlugins\QVEditor\icons\6.png" />
+    <Content Include="JSPlugins\QVEditor\icons\end-icon.png" />
+    <Content Include="JSPlugins\QVEditor\icons\Sep.png" />
+    <Content Include="JSPlugins\QVEditor\icons\start-icon.png" />
+    <Content Include="JSPlugins\QVEditor\qv_editor.css" />
+    <Content Include="JSPlugins\QVEditor\qv_editor.js" />
+    <Content Include="JSPlugins\QVEditor\Qv_Slider\QvSlider.css" />
+    <Content Include="JSPlugins\QVEditor\Qv_Slider\QvSlider.js" />
+    <Content Include="JSPlugins\QvLib.UI\QvLib.UI.css" />
+    <Content Include="JSPlugins\QvLib.UI\QvLib.UI.js" />
+    <Content Include="JSPlugins\QVLoading\jquery.Loading.css" />
+    <Content Include="JSPlugins\QVLoading\jquery.loading.js" />
+    <Content Include="JSPlugins\QVMultiUploader\images\AjaxLoader.gif" />
+    <Content Include="JSPlugins\QVMultiUploader\images\no_image_thumb.gif" />
+    <Content Include="JSPlugins\QVMultiUploader\QVUploader.css" />
+    <Content Include="JSPlugins\QVMultiUploader\QVUploader.js" />
+    <Content Include="JSPlugins\QVPassword\QVPassword.css" />
+    <Content Include="JSPlugins\QVPassword\QVPassword.js" />
+    <Content Include="JSPlugins\QVPassword\QVPassword22.js" />
+    <Content Include="JSPlugins\QVRepeat\qv-repeat.js" />
+    <Content Include="JSPlugins\QVSeo\KeyWordsPlugin-1.1.0.css" />
+    <Content Include="JSPlugins\QVSeo\KeyWordsPlugin-1.1.0.js" />
+    <Content Include="JSPlugins\QVSeo\KeyWordsPlugin.js" />
+    <Content Include="JSPlugins\QVSqweezeImageUploader\images\AjaxLoader.gif" />
+    <Content Include="JSPlugins\QVSqweezeImageUploader\images\no_image_thumb.gif" />
+    <Content Include="JSPlugins\QVSqweezeImageUploader\QVSqweezeImageUploader.css" />
+    <Content Include="JSPlugins\QVSqweezeImageUploader\QVSqweezeImageUploader.js" />
+    <Content Include="JSPlugins\QVUploader2\images\AjaxLoader.gif" />
+    <Content Include="JSPlugins\QVUploader2\images\no_image_thumb.gif" />
+    <Content Include="JSPlugins\QVUploader2\QVUploader2.css" />
+    <Content Include="JSPlugins\QVUploader2\QVUploader2.js" />
+    <Content Include="JSPlugins\QVUploader\assets\fonts\jquery.filer-icons\jquery-filer-preview.html" />
+    <Content Include="JSPlugins\QVUploader\assets\fonts\jquery.filer-icons\jquery-filer.css" />
+    <Content Include="JSPlugins\QVUploader\css\jquery.filer.css" />
+    <Content Include="JSPlugins\QVUploader\css\themes\jquery.filer-dragdropbox-theme.css" />
+    <Content Include="JSPlugins\QVUploader\images\AjaxLoader.gif" />
+    <Content Include="JSPlugins\QVUploader\images\no_image_thumb.gif" />
+    <Content Include="JSPlugins\QVUploader\js\jquery.filer.js" />
+    <Content Include="JSPlugins\QVUploader\js\jquery.filer.min.js" />
+    <Content Include="JSPlugins\QVUploader\QVUploader.css" />
+    <Content Include="JSPlugins\QVUploader\QVUploader.js" />
+    <Content Include="JSPlugins\SelectBoxIt_Plugin\selectboxit.css" />
+    <Content Include="JSPlugins\SelectBoxIt_Plugin\selectBoxIt.js" />
+    <Content Include="MailTemplate\ChangePasswordMail.html" />
+    <Content Include="MailTemplate\ChangePasswordMailByAdmin.html" />
+    <Content Include="MailTemplate\ForgotpasswordMail.html" />
+    <Content Include="MailTemplate\NotificationMail.html" />
+    <Content Include="Areas\API\Views\web.config" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Bold.eot" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Bold.ttf" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Bold.woff" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Bold.woff2" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Regular.eot" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Regular.ttf" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Regular.woff" />
+    <Content Include="Areas\ControlPanel\Content\fonts\DroidKufi-Regular.woff2" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\core.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\extras.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\fixed-width.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\font-awesome.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\icons.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\larger.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\list.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\mixins.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\path.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\spinning.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\stacked.less" />
+    <Content Include="Areas\ControlPanel\Content\fonts\font-awesome\less\variables.less" />
+    <Content Include="Areas\Site\Content\fonts\DroidArabicKufi.eot" />
+    <Content Include="Areas\Site\Content\fonts\DroidArabicKufi.ttf" />
+    <Content Include="Areas\Site\Content\fonts\DroidArabicKufi.woff" />
+    <Content Include="Areas\Site\Content\fonts\DroidArabicKufi.woff2" />
+    <Content Include="Areas\Site\Content\fonts\DroidKufi-Bold.eot" />
+    <Content Include="Areas\Site\Content\fonts\DroidKufi-Bold.ttf" />
+    <Content Include="Areas\Site\Content\fonts\DroidKufi-Bold.woff" />
+    <Content Include="Areas\Site\Content\fonts\DroidKufi-Bold.woff2" />
+    <Content Include="Areas\Site\Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Areas\Site\Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Areas\Site\Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Areas\Site\Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Areas\Site\Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Areas\Site\Content\fonts\FontAwesome.otf" />
+    <Content Include="Areas\Site\Views\web.config" />
+    <Content Include="JSPlugins\DropZoneUploader\UploadFile.ashx" />
+    <Content Include="JSPlugins\QVConfirmationMessage\toastr.less" />
+    <Content Include="JSPlugins\QVConfirmationMessage\toastr.scss" />
+    <Content Include="JSPlugins\QVMultiUploader\DownloadFile.ashx" />
+    <Content Include="JSPlugins\QVMultiUploader\UploadFile.ashx" />
+    <Content Include="JSPlugins\QVUploader\assets\fonts\jquery.filer-icons\jquery-filer.eot" />
+    <Content Include="JSPlugins\QVUploader\assets\fonts\jquery.filer-icons\jquery-filer.svg" />
+    <Content Include="JSPlugins\QVUploader\assets\fonts\jquery.filer-icons\jquery-filer.ttf" />
+    <Content Include="JSPlugins\QVUploader\assets\fonts\jquery.filer-icons\jquery-filer.woff" />
+    <Content Include="JSPlugins\QVUploader\UploadFile.ashx" />
+    <Content Include="Report\ajaxloader.gif" />
+    <Content Include="Report\ReportPage.aspx" />
+    <Content Include="Scripts\Angular\angular-dragdrop.min.js" />
+    <Content Include="Scripts\Angular\angular-mocks.js" />
+    <Content Include="Scripts\Angular\angular-resource.min.js" />
+    <Content Include="Scripts\Angular\angular-sanitize.js" />
+    <Content Include="Scripts\Angular\angular-ui.js" />
+    <Content Include="Scripts\Angular\angular-validator-rules.js" />
+    <Content Include="Scripts\Angular\angular-validator-rules.min.js" />
+    <Content Include="Scripts\Angular\angular-validator.js" />
+    <Content Include="Scripts\Angular\angular-validator.min.js" />
+    <Content Include="Scripts\Angular\angular.js" />
+    <Content Include="Scripts\Angular\AngularConfig.js" />
+    <Content Include="Scripts\Angular\customSelect.js" />
+    <Content Include="Scripts\Angular\ng-table.js" />
+    <Content Include="Scripts\Angular\sortable.js" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ChartJs\Chart.js" />
+    <Content Include="Scripts\ChartJs\Chart.min.js" />
+    <Content Include="Scripts\commonFunctions.js" />
+    <Content Include="Scripts\driverCtrl.js" />
+    <Content Include="Scripts\enquire.js" />
+    <Content Include="JSPlugins\QVSqweezeImageUploader\UploadFile.ashx" />
+    <Content Include="HTML\fonts\DroidKufi-Bold.eot" />
+    <Content Include="HTML\fonts\DroidKufi-Bold.ttf" />
+    <Content Include="HTML\fonts\DroidKufi-Bold.woff" />
+    <Content Include="HTML\fonts\DroidKufi-Bold.woff2" />
+    <Content Include="HTML\fonts\DroidKufi-Regular.eot" />
+    <Content Include="HTML\fonts\DroidKufi-Regular.ttf" />
+    <Content Include="HTML\fonts\DroidKufi-Regular.woff" />
+    <Content Include="HTML\fonts\DroidKufi-Regular.woff2" />
+    <Content Include="HTML\fonts\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="HTML\fonts\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="HTML\fonts\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="HTML\fonts\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="HTML\fonts\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="HTML\fonts\font-awesome\less\bordered-pulled.less" />
+    <Content Include="HTML\fonts\font-awesome\less\core.less" />
+    <Content Include="HTML\fonts\font-awesome\less\extras.less" />
+    <Content Include="HTML\fonts\font-awesome\less\fixed-width.less" />
+    <Content Include="HTML\fonts\font-awesome\less\font-awesome.less" />
+    <Content Include="HTML\fonts\font-awesome\less\icons.less" />
+    <Content Include="HTML\fonts\font-awesome\less\larger.less" />
+    <Content Include="HTML\fonts\font-awesome\less\list.less" />
+    <Content Include="HTML\fonts\font-awesome\less\mixins.less" />
+    <Content Include="HTML\fonts\font-awesome\less\path.less" />
+    <Content Include="HTML\fonts\font-awesome\less\rotated-flipped.less" />
+    <Content Include="HTML\fonts\font-awesome\less\spinning.less" />
+    <Content Include="HTML\fonts\font-awesome\less\stacked.less" />
+    <Content Include="HTML\fonts\font-awesome\less\variables.less" />
+    <Content Include="HTML\js\jquery.min.map" />
+    <Content Include="JSPlugins\QVUploader2\UploadFile.ashx" />
+    <Content Include="Certificates.p12" />
+    <Content Include="MomtazExpressMerchantCertificates.p12" />
+    <Content Include="Areas\ControlPanel\Views\Account\ChangePassword.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Account\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Account\ForgetPassword.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Account\ResetPassword.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\DashBoard\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Employee\AddEdit.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Employee\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Employee\_AddEditEmployee.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Employee\_ChangePassword.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Employee\_UserRoles.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\log\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\log\GetLogs.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Notification\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Notification\GetNotifications.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Permission\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\QuickAddExample\Index.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\QuickAddExample\TestAttachments.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Report\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Report\_ReportSearch.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\ControllerNotDefine.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\Default.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\Error.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\ExpiredLink.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\Layout.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\NotFound.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\UnAuthorizedUser.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_AddEdit.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_additionals.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_Header.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_Map.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_mapLocation.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_Menu.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_MultiAttachments.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_QuickAdd.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Shared\_SearchForm.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\SMS\GetAll.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\web.config" />
+    <Content Include="Areas\ControlPanel\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Doaa\AddEdit.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\Article\AddEdit.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\ArticleItemExplanation\AddEdit.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\DoaaItemSource\AddEdit.cshtml" />
+    <Content Include="Areas\ControlPanel\Views\NamesOfAllah\AddEdit.cshtml" />
+    <Content Include="JSPlugins\QVEditor\qv_editor.ashx" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\jquery.nicescroll.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.0.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.1.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lumino.glyphs.js" />
+    <Content Include="Scripts\map.js" />
+    <Content Include="Scripts\modernizr.js" />
+    <Content Include="Scripts\placeholdr.js" />
+    <Content Include="Scripts\QvLib.js" />
+    <Content Include="Scripts\QvLib.UI.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_CustomManageScript.cshtml" />
+    <Content Include="Views\Shared\_FileUPload.cshtml" />
+    <Content Include="Views\Shared\_ManageScript.cshtml" />
+    <Content Include="Views\Shared\_ManageUserScript.cshtml" />
+    <Content Include="Views\Shared\_ng-table.cshtml" />
+    <Content Include="Views\Shared\_PagePath.cshtml" />
+    <Content Include="Views\Shared\_Popup.cshtml" />
+    <Content Include="Views\Shared\_QuickAddManageScript.cshtml" />
+    <Content Include="Views\Shared\_ReportViewer.cshtml" />
+    <Content Include="Views\Shared\UnAuthorizedUser.cshtml" />
+    <Content Include="Views\Shared\_LayoutReport.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\API\Models\" />
+    <Folder Include="Areas\API\Views\Shared\" />
+    <Folder Include="Areas\ControlPanel\Content\js\" />
+    <Folder Include="Areas\Site\Content\css\" />
+    <Folder Include="Areas\Site\Content\img\" />
+    <Folder Include="Areas\Site\Content\js\" />
+    <Folder Include="Areas\Site\Controllers\" />
+    <Folder Include="Areas\Site\Models\" />
+    <Folder Include="Areas\Site\Views\Shared\" />
+    <Folder Include="DataUpload\Content\Image\" />
+    <Folder Include="DataUpload\Images\" />
+    <Folder Include="DataUpload\Merchant\" />
+    <Folder Include="DataUpload\NameOfAllah\Image\" />
+    <Folder Include="DataUpload\Vehicle\" />
+    <Folder Include="JSPlugins\QVEditor\gallery\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\AppResources.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\TableResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>TableResource.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\EmployeeResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>EmployeeResource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\LogTemplate.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>LogTemplate.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\PermissionResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>PermissionResource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\RoleResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>RoleResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\DriverResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>DriverResource.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MerchantResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MerchantResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MerchantStoreResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MerchantStoreResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\VehicleResources.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VehicleResources.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ManyToManyResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ManyToManyResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ShipmentCostSettingResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ShipmentCostSettingResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\ShipmentSettingResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>ShipmentSettingResource.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\CityResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>CityResource.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\VehicleModelResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VehicleModelResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MerchandiseTypeResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MerchandiseTypeResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\VehicleBrandResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VehicleBrandResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\VehicleColorResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VehicleColorResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\VehicleSizeResource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>VehicleSizeResource.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MobileApplication.DataModel\MobileApplication.DataModel.csproj">
+      <Project>{dccaf18f-ba1e-4177-b072-7ed407a6ec03}</Project>
+      <Name>MobileApplication.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MobileApplication.DataService\MobileApplication.DataService.csproj">
+      <Project>{58a5b8e4-5157-4b4b-9796-650b3c17bfe9}</Project>
+      <Name>MobileApplication.DataService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3027</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:30216/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

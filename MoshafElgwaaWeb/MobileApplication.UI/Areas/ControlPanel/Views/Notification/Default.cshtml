@@ -1,0 +1,169 @@
+﻿@using MobileApplication.UI.InfraStructure;
+@{
+    ViewBag.Title = "التنبيهات";
+}
+
+@section NavigationBar{
+    @{Html.RenderPartial("_PagePath", new PagePath { PageTitle = "إدارة الإشعارات", ParentPath = "الرئيسية ", ParentURLs = "/ControlPanel/DashBoard/Default" });  }
+
+}
+<div class="container">
+
+    <div >
+
+        <div >
+
+            <div id="NotifyHolderDiv" class="row NotifyHolderDiv">
+
+
+                @Html.Action("GetNotifications", "Notification")
+
+                <div id="more" class="archHeader" style="text-align: center; font-weight: bold; cursor: pointer;">
+                    <a>المزيد</a>
+                    <div id="loader" style="text-align: center; display: none; position: relative; top: -13px; left: -41px;">
+                        @*<img src="~/Content/ControlPanel/img/AjaxLoader.gif" alt="الرجاء الأنتظار" />*@
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+        var requestOff = true;
+        var notificationsNumber = 0;
+
+
+        var Notification = {
+            skip: 0,
+            take: 10,
+            isSarch: false,
+            requestOff: true,
+            userID: "@ViewBag.CurrUserID",
+
+            //scrol to the log data to show
+            //all new logs.
+            scroll: function () {
+                if (!Log.isSarch) {
+                    $("html, body").animate({ scrollTop: $(document).height() - $(window).height() - 100 }, 2500);
+                }
+
+            }
+        }
+
+
+        $(function () {
+            debugger;
+            notificationsNumber = $('.NotifyHolderDiv').find('.timeline-success').length;
+
+            if (notificationsNumber == 0)  // if no notifications to load
+            {
+                $('#more').remove();
+                $('.NotifyHolderDiv').append('<center style="font-size: 14px;font-weight: bold;height: 150px;padding-top: 100px;"><div class="alert alert-warning"> لا يوجد إشعارات</div> </p>')
+                $('.NotifyHolderDiv').append($('#seperator').clone());
+            }
+            else if (notificationsNumber < '10') {
+                $('#more').remove();
+            }
+
+
+
+            ////when click on more btn get next 10 log data.
+            $('#more').click(function () {
+
+                if (Notification.requestOff) {  // if there is no request to get data , go to get data
+                    Notification.requestOff = false; // to stop any other request
+                    $('#loader').show(); // show loading image
+                    debugger;
+                    var Notificationdata = new Object();
+                    Notification.skip += 10;
+
+                    if (Notification.isSarch) {
+                        Notification.skip = 0;
+                        //  $("#logHolderDiv").html("");
+                    }
+                    Notificationdata.skip = Notification.skip;
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("GetNotifications")',
+                        dataType: "html",
+                        data: Notificationdata,
+                        success: function (data) {
+                            debugger;
+                            Notification.total = $(data).filter("#hiddenTotal").val();
+
+                            if (data) {
+                                if (Notification.isSarch) {
+                                    $("#NotifyHolderDiv").html(data);
+                                } else {
+                                    $('#seperator').before(data);
+                                }
+                                if (Notification.total == 0) {
+                                    $("#NotifyHolderDiv").html("<div class='empty'>لا يوجد بيانات</div>");
+                                }
+                            } else {
+                                $("#NotifyHolderDiv").html("<div class='empty'>لا يوجد بيانات</div>");
+                            }
+                            Notification.isSarch = false;
+
+                            if (Notification.skip + 10 >= Notification.total || typeof Notification.total === 'undefined') {
+                                debugger;
+                                $('#more').hide();
+                            } else {
+                                $('#more').show();
+                            }
+
+                            $('#loader').hide();
+                            Notification.requestOff = true;
+
+
+                        },
+                        error: function (request, status, error) {
+                            debugger;
+                            Notification.requestOff = true;
+                        }
+                    });  // end of ajax request
+
+                }
+            });
+
+            var userId = @ViewBag.UserId;
+            var proxy = $.connection.notificationHub;
+            //set is seen if not seen
+            $("li.timeline-success").on("click", function () {
+                debugger;
+                //if ($(this).find("a").hasClass("active")) {
+                var notificationID = $(this).find("a").attr("data-id");
+                var isSeen = $(this).find("a").attr("data-isSeen");
+
+                var url=$(this).find("a").attr("href");
+                if(url!=undefined)
+                {
+                    window.location.href=url;
+                }
+                if (isSeen!="True") {
+                    proxy.server.setIsSeen(userId, notificationID);
+
+                }
+                //}
+            });
+
+
+
+        });
+
+        //If Scroll Down
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                $('#more').click();
+            }
+        });
+
+
+
+    </script>
+
+
+</div>

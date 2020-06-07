@@ -1,0 +1,122 @@
+﻿@model GenericEngine.ServiceContract.Infrastructure.GenericModel
+@*@using GenericEngine.QvGeneric*@
+@*@using GenericEngine.QVControlPanel.InfraStructure;*@
+@using MobileApplication.DataModel;
+@using MobileApplication.UI.InfraStructure
+@using GenericEngine.Service.Enum
+
+<div id="@Model.PopupID" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-left closeStatusPopup" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">{{PopupTitle}}  @Model.PageName</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="ModelForm" ng-submit="Save($event)">
+
+                    @{    var AddEditProp = GenericEngine.QVControlPanel.InfraStructure.GenericHelpers.getPropertyWithSpesificAttr(Model, typeof(GenericEngine.ServiceContract.Infrastructure.DisplayFieldAttribute));}
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            @Html.Hidden(Model.UniqueColumn, null, new { @ng_value = "CurModel." + Model.UniqueColumn + "" })
+
+
+                            @foreach (System.Reflection.PropertyInfo prop in AddEditProp)
+                            {
+                                if (prop.Name == Model.UniqueColumn)
+                                {
+                                    //@Html.Hidden(prop.Name, null, new { @ng_value = "CurModel." + prop.Name + "" })
+                                }
+                                else
+                                {
+                                    GenericEngine.ServiceContract.Infrastructure.DisplayFieldAttribute _DisplayFieldAttribute = (GenericEngine.ServiceContract.Infrastructure.DisplayFieldAttribute)GenericEngine.QVControlPanel.InfraStructure.GenericHelpers.getPropertyAttr(prop, typeof(GenericEngine.ServiceContract.Infrastructure.DisplayFieldAttribute)).FirstOrDefault();
+                                    if (_DisplayFieldAttribute != null)
+                                    {
+                                        var DontDisplayProp = GenericEngine.QVControlPanel.InfraStructure.GenericHelpers.getPropertyWithSpesificAttr(Model, typeof(GenericEngine.ServiceContract.Infrastructure.ExistInAddEditViewAttribute)).Where(j => j.Name == prop.Name).FirstOrDefault();
+                                        if (DontDisplayProp == null)
+                                        {
+                                        <label for="input1" class="col-sm-3 control-label"> @_DisplayFieldAttribute.FieldName</label>
+                                        <div class="input-group">
+                                            @switch (_DisplayFieldAttribute.FieldType)
+                                            {
+                                                case FieldsTypeHtml.DropdownList:
+                                                    if (_DisplayFieldAttribute.FilterValue == 0)
+                                                    {
+                                                        @Html.DropDownList(prop.Name, (List<SelectListItem>)typeof(MobileApplication.UI.InfraStructure.LookupManger<>).MakeGenericType(_DisplayFieldAttribute.modelType).GetMethod("GetSelectListItem").Invoke(null, new object[] { _DisplayFieldAttribute.TextAttr, _DisplayFieldAttribute.ValueAttr }), new { @ng_model = "CurModel." + prop.Name + "", @class = "form-control", @ng_change = "DDlChange('" + prop.Name + "')" })
+
+                                                    }
+                                                    else
+                                                    {
+                                                        @Html.DropDownList(prop.Name, (List<SelectListItem>)typeof(LookupManger<>).MakeGenericType(_DisplayFieldAttribute.modelType).GetMethod("GetSelectListItemWithFilter").Invoke(null, new object[] { _DisplayFieldAttribute.FilterName, _DisplayFieldAttribute.FilterValue, _DisplayFieldAttribute.TextAttr, _DisplayFieldAttribute.ValueAttr }), new { @ng_model = "CurModel." + prop.Name + "", @class = "form-control", @ng_change = "DDlChange('" + prop.Name + "')" })
+                                                    }
+
+
+                                                    break;
+
+                                                case FieldsTypeHtml.DatePicker:
+                                                    <input type="text" name="@prop.Name" class="form-control" id="@prop.Name">
+                                                    <script>$("#@prop.Name").calendarsPicker({ changeMonth: true, changeYear: true, dateFormat: 'yyyy-mm-dd', maxDate: '0Y', calendar: $.calendars.instance('ummalqura') });</script>
+
+                                                    break;
+                                                case FieldsTypeHtml.TextArea:
+                                                    @Html.TextArea(prop.Name, null, new { @ng_model = "CurModel." + prop.Name + "" })
+                                                    break;
+                                                case FieldsTypeHtml.RadioButton:
+                                                    <label class="col-xs-12  gendertype" for="cd-email">@_DisplayFieldAttribute.FieldName </label>
+                                                @*<div class="radio col-sm-6 col-xs-12">
+                                                        <label class="radio-btn">
+                                                            <input type="radio" name="@SearchProp[i].Name" value="true" checked />@_DisplayFieldAttribute.ValueAttr
+
+                                                        </label>
+                                                    </div>*@
+                                                    foreach (var button in _DisplayFieldAttribute.parameters)
+                                                    {
+                                                        <div class="radio col-sm-6 col-xs-12">
+                                                            <label class="radio-btn">
+                                                                <input type="radio" name="@prop.Name" value="false" />@button
+                                                            </label>
+                                                        </div>
+
+                                                    }
+
+                                                    break;
+                                                case FieldsTypeHtml.CheckBox:
+
+                                                    <input type="checkbox"  ng-model="CurModel.@prop.Name" name="@prop.Name" class="ng-pristine ng-valid ng-scope ng-touched">
+
+                                                    break;
+                                                default:
+                                                    @Html.TextBox(prop.Name, null, new { @ng_model = "CurModel." + prop.Name + "" })
+                                                    break;
+                                            }
+
+                                            <div class="errorMsg">
+                                                @Html.ValidationMessage(prop.Name)
+                                            </div>
+
+                                        </div>
+                                        }
+                                        @*else
+                                        {
+                                            <input type="checkbox" ng-model="CurModel.@prop.Name" name="@prop.Name" class="ng-pristine ng-valid ng-scope ng-touched">
+                                        }*@
+                                    }
+                                }
+                            }
+
+                        </div>
+
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div class="pull-left">
+                    <button type="button" class="btn-primary btn" ng-click="Save($event)" id="btn_save">حفظ</button>
+                    <button type='button' ng-click="cancel()" class="btn-default btn">إلغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

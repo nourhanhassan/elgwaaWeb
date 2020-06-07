@@ -1,0 +1,334 @@
+﻿@using MobileApplication.UI.InfraStructure;
+@using MobileApplication.DataModel;
+@model MobileApplication.DataModel.LogModel
+
+
+@{
+    ViewBag.Title = "Default";
+}
+
+@section NavigationBar{
+    @{Html.RenderPartial("_PagePath", new PagePath { PageTitle = "إدارة سجل العمليات", ParentPath = "الرئيسية", ParentURLs = "/ControlPanel/DashBoard/Default" });  }
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "ErrorMessage" })
+    <div class="panel panel-grape" my-enter="search()">
+        <div class="panel-heading">
+            <h4>البحث</h4>
+            <div class="options"><a href="javascript:;" class="panel-collapse"><i class="fa fa-chevron-down"></i></a></div>
+        </div>
+
+        <div class="panel-body collapse">
+            <div class="form-horizontal row-border">
+
+                <div class="divSearch">
+                    <div class="form-group">
+                        <div class="col-md-6">
+                            <label class="control-label">الصفحة</label>
+                           @Html.DropDownListFor(model => model.IdPage, LookupManger<PageModelLookup>.GetSelectListItem(), new { @class = "form-control" })
+                         </div>
+                        <div class="col-md-6">
+                            <label class="control-label">العملية</label>
+                            @Html.DropDownListFor(model => model.IdAction, LookupManger<ActionModel>.GetSelectListItem(), new { @class = "form-control" })
+
+                        @*    @Html.DropDownListFor(model => model.IdAction, LookupManger<.action>.GetSelectListItem(), new { @class = "form-control" })*@
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <label class="control-label">من</label>
+                                @Html.TextBoxFor(model => model.startDate, null, new { @class = "form-textbox", @readonly = "readonly" })
+                                <span id="dateRangeVal" class="text-danger" style="display: none;">تاريخ البداية لا بد أن يكون قبل تاريخ النهاية</span>
+                                <div class="text-danger">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label class="control-label">إلى</label>
+                                @Html.TextBoxFor(model => model.endDate, null, new { @class = "form-textbox", @readonly = "readonly" })
+
+                            </div>
+                            <span class="errorMsg text-danger" style="display: none;">يجب ان يكون تاريخ بداية البحث اقل من تاريخ النهاية</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <label class="control-label">اسم المستخدم</label>
+                                @Html.TextBoxFor(model => model.EmployeeName, null, new { @class = "form-textbox" })
+                                @Html.ValidationMessageFor(model => model.EmployeeName, null,
+                                    new
+                                    {
+                                        @Class = "text-danger",
+                                        @id = "TitleValidation"
+                                    })
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="pull-left">
+                        <div class="btn-toolbar">
+                            <img id="loading" src="/Areas/ControlPanel/Content/img/AjaxLoader.gif" title="جارى التحميل..." style="display: none;">
+                            <button type="submit" name="Submit0" class="btn-primary btn Search" id="btnSearch"><i class="fa fa-search"></i>بحث</button>
+                            
+                            <a  name="Submit0" class="btn-default btn ShowAll" id="btnShowAll">عرض الكل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+}
+<!--/search-->
+@*Log Content*@
+
+
+<div class="col-md-12">
+    <div class="container" style="margin-bottom: 10px;">
+        @* <div id="btnToHide" class="row">
+                <a class="downloadBtn btn btn-default pull-left" href="javascript:void(0)" style="cursor: hand" title="طباعة سجل العمليات">
+                    <i class="fa fa-print"></i>طباعة سجل العمليات
+                </a>
+            </div>*@
+    </div>
+    <div id="" class="row">
+        <ul class="timeline" id="logHolderDiv">
+            @Html.Action("GetLogs", "Log")
+        </ul>
+
+
+    </div>
+
+
+</div>
+<br />
+<div id="more" class="archHeader " style="text-align: center; font-weight: bold; cursor: pointer;">
+    <a>المزيد</a>
+    <div id="loader" style="text-align: center; display: none; position: relative; top: -13px; left: -41px;">
+        <img src="/Areas/ControlPanel/Content/img/AjaxLoader.gif" alt="الرجاء الانتظار" />
+    </div>
+</div>
+@*<div id="loadongbar" class="archHeader" style="text-align: center; font-weight: bold; cursor: pointer; display:none;">
+        <img src="/Content/img/AjaxLoader.gif" alt="الرجاء الانتظار" />
+    </div>*@
+
+<script>
+
+    var Log = {
+        skip: 0,
+        take: 10,
+        startDate: "",
+        endDate: "",
+        IdPage: 0,
+        isSarch: false,
+        requestOff: true,
+        IdAction: 0,
+        EmployeeName: "",
+        userID: "@ViewBag.CurrUserID",
+        //scrol to the log data to show
+        //all new logs.
+        scroll: function () {
+            if (!Log.isSarch) {
+                $("html, body").animate({ scrollTop: $(document).height() - $(window).height() - 100 }, 2500);
+            }
+
+        }
+    }
+    function convertTimeFromGMT(hour, min) {
+        
+        var time = new Date("01/01/2000 " + hour + ":" + min + ":00")
+
+        time.setMinutes((time.getMinutes() - new Date().getTimezoneOffset()), 00, 00);
+
+        min = (time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes());
+
+        if (time.getHours() > 12) {
+            time.setHours(time.getHours() - 12);
+            return (time.getHours() + ":" + min + " م");
+        }
+        else if (time.getHours() == 12)
+            return (time.getHours() + ":" + min + " م");
+        else
+            return (time.getHours() + ":" + min + " ص");
+    }
+
+    $(function () {
+
+        //calendar Hijrii
+        //$('#startDate,#endDate').calendarsPicker({
+        //    changeMonth: true,
+        //    changeYear: true,
+        //    showTrigger: '#calImg',
+        //    calendar: $.calendars.instance('ummalqura'),
+        //    dateFormat: 'dd/mm/yyyy'
+        //});
+        $("#startDate,#endDate").calendarsPicker({
+            changeMonth: true,//this option for allowing user to select month
+            changeYear: true, //this option for allowing user to select from year range
+            dateFormat: 'yyyy-mm-dd',
+            maxDate: '0Y',
+            calendar: $.calendars.instance('ummalqura'),
+            onSelect: function() {
+                $(this).valid();
+            }
+        });
+
+        // get count of all avialble log data.
+        //then hide the more btn if the we retrieved all log data.
+        Log.total = $('#hiddenTotal').val();
+        if (Log.skip + 10 >= Log.total || Log.total == 0 || typeof Log.total === 'undefined') {
+           
+            $('#more').hide();
+        } else {
+            $('#more').show();
+        }
+        $(document).on("click", ".calendars-popup table tr td", function () {
+            $('#fromDate').trigger("input");
+            $('#toDate').trigger("input");
+        });
+
+        ////when click on more btn get next 10 log data.
+        $('#more').click(function () {
+            
+            if (Log.requestOff) {  // if there is no request to get data , go to get data
+                Log.requestOff = false; // to stop any other request
+                $('#loader').show(); // show loading image
+                
+                var Logdata = new Object();
+                Log.skip += 10;
+
+                if (Log.isSarch) {
+                    Log.skip = 0;
+                    //  $("#logHolderDiv").html("");
+                }
+                Logdata.skip = Log.skip;
+                Logdata.startDate = $("#startDate").val();
+                Logdata.endDate = $("#endDate").val();
+                Logdata.IdPage = $("#IdPage").val();
+                Logdata.IdAction = $("#IdAction").val();
+                Logdata.EmployeeName = $("#EmployeeName").val();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/ControlPanel/Log/GetLogs',
+                    dataType: "html",
+                    data: Logdata,
+                    success: function (data) {
+                        
+                        Log.total = $(data).filter("#hiddenTotal").val();
+
+                        if (data) {
+                            if (Log.isSarch) {
+                                $("#logHolderDiv").html(data);
+                            } else {
+                                $('#seperator').before(data);
+                            }
+                            if (Log.total == 0) {
+                                $("#logHolderDiv").html("<div class='empty' style='text-align: center;'>لا يوجد بيانات</div>");
+                            }
+                        } else {
+                            $("#logHolderDiv").html("<div class='empty'>لا يوجد بيانات</div>");
+                        }
+                        Log.isSarch = false;
+
+                        if (Log.skip + 10 >= Log.total || typeof Log.total === 'undefined') {
+                            
+                            $('#more').hide();
+                        } else {
+                            $('#more').show();
+                        }
+
+                        $('#loader').hide();
+                        Log.requestOff = true;
+                        $('.loadlogtime').each(function () {
+                            //call js method.
+                            $(this).html("   " + convertTimeFromGMT($(this).attr("hour"), $(this).attr("min")));
+                            $(this).show();
+                        });
+                    },
+                    error: function (request, status, error) {
+                        
+                        Log.requestOff = true;
+                    }
+                });  // end of ajax request
+
+            }
+        });
+        $('#btnSearch').click(function (e) {
+            
+
+            e.preventDefault();
+            Log.isSarch = true;
+            var sDate = $('#startDate').val();
+            var eDate = $('#endDate').val();
+            if (sDate !== "" && eDate !== "") {
+               // if (HijridateCompare(sDate, eDate) == -1 || HijridateCompare(sDate, eDate) == 0)
+                if (eDate >= sDate) {
+                    $('.errorMsg').hide();
+                    Log.isSarch = true;
+
+                } else {
+                    
+                    $('.errorMsg').show();
+                    Log.isSarch = false;
+                }
+            }
+            var EmpNameValid = $("#EmployeeName").valid();
+            if (Log.isSarch && EmpNameValid == 1) {
+                $('#more').click();
+            }
+
+        });
+        ///////////////////////////////////////////////////
+
+        //click on show all btn
+        //empty all search inputs
+        // then call  the function of the more btn.
+        $('#btnShowAll').click(function () {
+            $("#startDate").val("");
+            $("#endDate").val("");
+            $("#IdPage").val(0);
+            $("#IdAction").val(0);
+            $("#EmployeeName").val("");
+            window.location.href = "/ControlPanel/Log/Default";
+        });
+        ///
+
+
+        $('.loadlogtime').each(function () {
+            //call js method.
+            $(this).html("    " + convertTimeFromGMT($(this).attr("hour"), $(this).attr("min")));
+            $(this).show();
+        });
+
+
+    });
+
+</script>
+<script>
+
+    $(document).ajaxStart(function () {
+        $("#loading").show();
+    }).ajaxStop(function () {
+        $("#loading").hide();
+
+    });
+
+</script>
+

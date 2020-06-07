@@ -1,0 +1,103 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    // get Rout Data => report path
+    var routData = HttpContext.Current.Request.RequestContext.RouteData;
+    string reportPath = "/Report/ReportPage.aspx?reportName=" + routData.GetRequiredString("controller");
+    // report description
+    string title = ViewBag.Title ?? "عنوان التقرير";
+    string reportDescription = ViewBag.ReportDescription ?? "وصف الغرض من التقرير";
+}
+@section NavigationBar{
+    @{Html.RenderPartial("_PagePath", new MobileApplication.UI.InfraStructure.PagePath { PageTitle = @title, ParentPath = "الرئيسية,التقارير", ParentURLs = "/Deduction/Dashboard/Default,/Deduction/Report/Default" });  }
+}
+<style>
+    .dblcal, .dblcal-gerg {
+        width: 50% !important;
+        float: right !important;
+    }
+</style>
+
+<div class="container report-container" ng-app="app" ng-controller="ReportController">
+    <div class="col-md-25">
+        @using (Ajax.BeginForm("Submit", null, new AjaxOptions
+        {
+            UpdateTargetId = "reportResultHTML",
+            //InsertionMode = InsertionMode.Replace,
+            OnSuccess = "OnSuccess",
+            OnFailure = "OnFailure"
+
+        }, new { @name = "formSearch", @id = "searchForm" }))
+        {
+            <div class="panel panel-info">
+                <div class="panel-heading"><h3 class="panel-title">البحث</h3></div>
+                <div class="panel-body">
+                    @RenderBody()
+                </div>
+
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="pull-left">
+                            <div class="btn-toolbar">
+                                <button class="btn-primary btn Search" id="btn_ReportSearch">عرض التقرير <i class="fa fa-search"></i></button>
+                                <button class="btn-default btn" id="btn_resetALL" ng-click="viewAllData()">إعادة تعيين</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    <div class="col-md-95">
+        <div class="alert alert-info" role="alert" style="margin-bottom:8px">
+            <i class="fa fa-info-circle" style="color: #0c508d; font-size: 22px;"></i> @reportDescription
+        </div>
+        <div id="reportResultHTML">
+
+        </div>
+    </div>
+</div>
+@section script {
+    @Html.Partial("_ng-table")
+    @Html.Partial("_Popup")
+    @Html.Partial("_ManageScript", new MobileApplication.UI.InfraStructure.ManageModel { AreaName = "Deduction", ControllerName = "Report", ModelName = "التقرير", ModalPopUpId = "" })
+
+}
+
+
+<script type="text/javascript">
+    function OnSuccess(data) {
+
+    }
+    function OnFailure() {
+
+    }
+
+    app.controller("ReportController", ['$scope', '$controller', '$http', '$filter', '$timeout', function ($scope, $controller, $http, $filter, $timeout, $resource, NgTableParams) {
+        $.extend(this, $controller('ManageController', { $scope: $scope }, $timeout, $resource, NgTableParams));
+
+        $scope.viewAllData = function () {
+            debugger;
+            $scope.searchObject = {};
+            $('#ProjectID').attr('disabled', false);
+            $("#reportResultHTML").empty();
+
+            
+            //$("#MostSelectedProjectCheck").val("True");
+
+            var theMostDeservingBouns = $("#TheMostDeservingBounsCheck").val("True");
+
+            $("#TheMostDeservingBounsCheck").val(theMostDeservingBouns).trigger('change');
+            $("#TheMostDeservingBounsCheck").val("True");
+
+
+            var theMostSelectedProject = $("#MostSelectedProjectCheck").val("True");
+
+            $("#MostSelectedProjectCheck").val(theMostSelectedProject).trigger('change');
+            $("#MostSelectedProjectCheck").val("True");
+
+        };
+
+    }])
+
+</script>
+

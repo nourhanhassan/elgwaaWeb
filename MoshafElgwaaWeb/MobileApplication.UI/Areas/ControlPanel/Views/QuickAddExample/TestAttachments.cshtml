@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ControlPanel/Views/Shared/Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using QV.PoorFamiliesUI.InfraStructure;
+@using GenericEngine.QvGeneric
+@using GenericEngine.ServiceContract.Infrastructure;
+@*@model GenericModel*@
+
+
+<div ng-app="simpleApp">
+
+    <div ng-controller="testController">
+        @*@Html.Partial("_Address", new Service.Contracts.Models.AddressModel())
+
+
+            <button ng-click="AddEdit('@CityModel.PopupID','@CityModel.ControllerName',callBackCity,'cities')">add city</button>
+            <button ng-click="AddEdit('@CountryModel.PopupID','@CountryModel.ControllerName',callBackCountry,'CountryID')">add country</button>*@
+
+        @*@Html.RenderPartial("_QuickAddtest",new Service.Contracts.Models.CityModel())*@
+
+        @Html.Partial("_MultiAttachments", new QV.PoorFamiliesUI.Areas.ControlPanel.Models.MultiAttachmentsVM() {Folder="/DataUpload/",ElementID="propimages",ForeignKeyName="PropertyID",ForeignKeyValue= "0",MaxAllowedSize=2,AllowedExtensions=".png,jpg,jpeg" })
+    </div>
+ </div>
+    
+    <!-- container -->
+
+
+
+@section script {
+    @*@{Html.RenderPartial("_testmanagescript", new ManageModel { AreaName = "ControlPanel", ControllerName = "City", ModelName = "vvv", ModalPopUpId = "AddEditPopup" });}*@
+
+
+    <script>
+        simpleApp.controller('testController', function ($scope, $controller, $http, $filter, $timeout) {
+        //    $scope.attachments = [{ FileName: "15106cff-ed41-4b0e-bc73-4325efcc658e.png",  ID: 1, IsActive: true }];
+        
+        })
+    </script>
+}
+
+
+
+
+

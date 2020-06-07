@@ -1,0 +1,35 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    ViewBag.Title = "التقارير";
+}
+@using MobileApplication.UI.InfraStructure;
+
+@section NavigationBar{
+    @{Html.RenderPartial("_PagePath", new PagePath { PageTitle = " التقارير", ParentPath = "الرئيسية", ParentURLs = "" });  }
+
+}
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="col-md-3 col-xs-12 col-sm-6">
+                    <a class="info-tiles tiles-toyo" href="/Deduction/REP_Users">
+
+                        <div class="tiles-heading"> تقرير المستخدمين</div>
+                        <div class="tiles-body-alt">
+                            <i class="fa fa-cogs">
+                            </i>
+
+                        </div>
+                        <div class="tiles-footer">المستخدمين</div>
+                    </a>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+</div>

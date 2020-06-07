@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>بوابة تفريج الكرب</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/jquery.fileupload-ui.css">
+
+<!--[if lt IE 9]>
+        <link rel="stylesheet" href="css/ie8.css">
+		<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+        
+	<![endif]-->
+
+</head>
+
+<body class="">
+<header class="navbar navbar-inverse navbar-fixed-top" role="banner"> <a id="rightmenu-trigger" class="tooltips" data-toggle="tooltip" data-placement="left" title="حرك القائمة"></a>
+  <div class="navbar-header pull-right"> <a class="navbar-brand" href="index.htm">بوابة تفريج الكرب</a> </div>
+  <ul class="nav navbar-nav pull-left toolbar">
+    <li class="dropdown"> <a href="#" class="hasnotifications dropdown-toggle" data-toggle='dropdown'><i class="fa fa-bell"></i><span class="badge">3</span></a>
+      <ul class="dropdown-menu notifications arrow">
+        <li class="dd-header clearfix"> <span>لديك عدد 3 تنبيهات</span> <span><a href="#">علمهم كلهم خلاص اتشافوا</a></span> </li>
+        <div class="scrollthis">
+          <li> <a href="#" class="active"> <span class="time">4 دقائق</span> <span class="msg">فيه حد جديد سجل</span> </a> </li>
+          <li> <a href="#" class="active"> <span class="time">20 دقيقة</span> <span class="msg"> حد قديم سابنا ومشي</span> </a> </li>
+          <li> <a href="#" class="active"> <span class="time">1 ساعة</span> <span class="msg"> السيرفر واقع</span> </a> </li>
+          <li> <a href="#"> <span class="time">2 ساعة</span> <span class="msg"> قاعدة البيانات على آخرها</span> </a> </li>
+          <li> <a href="#"> <span class="time">10 ساعات</span> <span class="msg">تم إستلام طلب جديد </span> </a> </li>
+          <li> <a href="#"> <span class="time">2 ساعة</span> <span class="msg"> قاعدة البيانات على آخرها</span> </a> </li>
+          <li> <a href="#"> <span class="time">10 ساعات</span> <span class="msg">تم إستلام طلب جديد </span> </a> </li>
+        </div>
+        <li class="dd-footer"><a href="#">اظهر كل التنبيهات</a></li>
+      </ul>
+    </li>
+    <li class="dropdown"> <a href="#" class="dropdown-toggle username" data-toggle="dropdown"><span class="hidden-xs">اسم المستخدم<i class="fa fa-caret-down"></i></span><img src="img/user.jpg" /></a>
+      <ul class="dropdown-menu userinfo arrow">
+        <li class="username"> <a href="#">
+          <div class="pull-left"><img src="img/user.jpg" /></div>
+          <div class="pull-right">
+            <h5>مرحبا أدمين</h5>
+            <small>اسم المستخدم <span>admin2751212121</span></small></div>
+          </a> </li>
+        <li class="userlinks">
+          <ul class="dropdown-menu">
+            <li><a href="#">تعديل الملف الشخصي <i class="pull-left fa fa-pencil"></i></a></li>
+            <li><a href="#">نوع الحساب <i class="pull-left fa fa-cog"></i></a></li>
+            <li><a href="#">مساعدة <i class="pull-left fa fa-question-circle"></i></a></li>
+            <li class="divider"></li>
+            <li><a href="#" class="text-right">تسجيل خروج <i class="pull-left fa fa-lock"></i></a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</header>
+<div id="page-container"> 
+  <!-- BEGIN SIDEBAR -->
+  <nav id="page-leftbar" role="navigation"> 
+    <!-- BEGIN SIDEBAR MENU -->
+    <ul class="acc-menu" id="sidebar">
+      <li><a href="#"><i class="fa fa-home"></i> <span>الرئيسية</span></a></li>
+      <li class="active"><a href="#"><i class="fa fa-file-text"></i> <span>إدارة إستمارات كرب</span> <span class="badge badge-toyo">200</span></a></li>
+      <li><a href="#"><i class="fa fa-users"></i> <span>إدارة طالبي المنح</span> <span class="badge badge-alizarin">150</span></a> </li>
+      <li><a href="#"><i class="fa fa-signal"></i> <span>إدارة أرصدة الجمعيات</span> <span class="badge badge-orange">12</span></a> </li>
+      <li><a href="#"><i class="fa fa-bar-chart-o"></i> <span>متابعة التقارير</span><span class="badge badge-success">1</span></a> </li>
+      <li class="divider"></li>
+      <li><a href="#"><i class="fa fa-cogs"></i> <span>الوحدة المركزية</span> </a> </li>
+    </ul>
+    <!-- END SIDEBAR MENU --> 
+  </nav>
+  <div id="page-content">
+    <div id='wrap'>
+      <div id="page-heading">
+        <ol class="breadcrumb">
+          <li><a href="#">بوابة تفريج الكرب</a></li>
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#">إدارة إستمارات كرب</a></li>
+          <li class='active'>إنشاء إستمارة كربة</li>
+        </ol>
+        <h1>إنشاء إستمارة كربة</h1>
+        <div class="options dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <div class="btn-toolbar">
+            <button class="btn btn-default" id="daterangepicker2"> <i class="fa fa-calendar-o"></i> <span class="hidden-xs hidden-sm">4 فبراير 2015 - 15 ربيع الثاني 1436</span> <b class="caret"></b></button>
+          </div>
+          </a>
+          <div class="daterangepicker dropdown-menu opensleft">
+            <div class="ranges">
+              <ul>
+                <li>تاريخ اليوم</li>
+                <li>تاريخ آخر زيارة</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="panel panel-green">
+          <div class="panel-heading">
+            <h4>إنشاء إستمارة كربة</h4>
+          </div>
+          <div class="panel-body">
+            <div class="container">
+              <div class="row form-group">
+                <div class="col-xs-12">
+                  <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                    <li class="active"><a href="#step-1">
+                      <h4 class="list-group-item-heading">خطوة 1</h4>
+                      <p class="list-group-item-text">بيانات إستمارة المنحة</p>
+                      </a></li>
+                    <li class="disabled"><a href="#step-2">
+                      <h4 class="list-group-item-heading">خطوة 2</h4>
+                      <p class="list-group-item-text">مطابقة شروط المنحة</p>
+                      </a></li>
+                    <li class="disabled"><a href="#step-3">
+                      <h4 class="list-group-item-heading">خطوة 3</h4>
+                      <p class="list-group-item-text">إعتماد اللجنة الفرعية</p>
+                      </a></li>
+                    <li class="disabled"><a href="#step-4">
+                      <h4 class="list-group-item-heading">خطوة 4</h4>
+                      <p class="list-group-item-text">إعتماد اللجنة المركزية</p>
+                      </a></li>
+                    <li class="disabled"><a href="#step-5">
+                      <h4 class="list-group-item-heading">خطوة 5</h4>
+                      <p class="list-group-item-text">رصيد الجمعية</p>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row setup-content" id="step-1">
+                <div class="col-xs-12">
+                  <div class="col-md-12 well">
+                    <form action="" class="form-horizontal">
+                      <div class="col-md-12 clearfix">
+                        <h4 class="pull-right" style="margin:0 0 10px">بيانات الإستمارة الأساسية:</h4>
+                        <h5 class="pull-left" style="margin:0 0 10px">تاريخ إنشاء الطلب: <small>17 ربيع الثاني 1436</small></h5>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-md-4">
+                            <label class="control-label">اسم الباحث</label>
+                            <select class="form-control">
+                              <option value="">اختر مما يلي</option>
+                              <option value="">اختر مما يلي</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">رأي الباحث</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">رقم السجل المدني</label>
+                            <input type="number" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-md-4">
+                            <label class="control-label">الموعد الأقصى لتنفيذ الطلب</label>
+                            <div class="input-group">
+                              <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                              <input type="date" class="form-control" id="exampleInputAmount" placeholder="15">
+                              <div class="input-group-addon">15 يوم</div>
+                            </div>
+                            <span id="helpBlock" class="help-block"><small>موعد أقصى 15 يوم من تاريخ الطلب.</small></span> </div>
+                          <div class="col-md-4">
+                            <label class="control-label">اسم مقدم الطلب</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">مبلغ المنحة</label>
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="divider">
+                      <div class="col-md-12 clearfix">
+                        <h4 class="pull-right" style="margin:0 0 10px">بيانات المنحة:</h4>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-md-4">
+                            <label class="control-label">اسم صاحب الفاتورة</label>
+                            <input type="text" class="form-control">
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">رقم الإشتراك</label>
+                            <input type="number" class="form-control">
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">تاريخ صدور الفاتورة</label>
+                            <div class="input-group">
+                              <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                              <input type="date" class="form-control" id="exampleInputAmount">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-md-4">
+                            <label class="control-label">الفاتورة متراكمة</label>
+                            <select class="form-control">
+                              <option value="">اختر مما يلي</option>
+                              <option value="">اختر مما يلي</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">سبب عدم تسديد الفاتورة</label>
+                            <select class="form-control">
+                              <option value="">اختر مما يلي</option>
+                              <option value="">اختر مما يلي</option>
+                            </select>
+                          </div>
+                          <div class="col-md-4">
+                            <label class="control-label">تاريخ إنقطاع الخدمة</label>
+                            <div class="input-group">
+                              <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                              <input type="date" class="form-control" id="exampleInputAmount">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr class="divider">
+                      <div class="col-md-12 clearfix">
+                        <h4 class="pull-right" style="margin:0 0 10px">المرفقات الأساسية :</h4>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-md-4">
+                            <label class="control-label">الهوية الوطنية</label>
+                            <span class="btn btn-midnightblue fileinput-button"> <i class="fa fa-plus"></i> <span>إضافة</span>
+                            <input type="file" name="files[]" multiple>
+                            </span> <a href="#" class="btn btn-link">إستعراض</a> </div>
+                          <div class="col-md-4">
+                            <label class="control-label">تعريف موثق بالدخل</label>
+                            <span class="btn btn-midnightblue fileinput-button"> <i class="fa fa-plus"></i> <span>إضافة</span>
+                            <input type="file" name="files[]" multiple>
+                            </span> <a href="#" class="btn btn-link">إستعراض</a> </div>
+                          <div class="col-md-4">
+                            <label class="control-label">وثيقة إثبات مقر السكن</label>
+                            <span class="btn btn-midnightblue fileinput-button"> <i class="fa fa-plus"></i> <span>إضافة</span>
+                            <input type="file" name="files[]" multiple>
+                            </span> <a href="#" class="btn btn-link">إستعراض</a> </div>
+                        </div>
+                      </div>
+                      <hr class="divider">
+                      <div class="col-md-12 clearfix">
+                        <h4 class="pull-right" style="margin:0 0 10px">المرفقات الأخرى :</h4>
+                      </div>
+                      <div class="row">
+                        <div class="form-group">
+                          <div class="col-md-6">
+                            <label class="control-label">صورة المنزل <small>لتوضيح حالة الفقر</small></label>
+                            <span class="btn btn-midnightblue fileinput-button"> <i class="fa fa-plus"></i> <span>إضافة</span>
+                            <input type="file" name="files[]" multiple>
+                            </span> <a href="#" class="btn btn-link">إستعراض</a> </div>
+                          <div class="col-md-6">
+                            <label class="control-label">صورة أصل الفاتورة</label>
+                            <span class="btn btn-midnightblue fileinput-button"> <i class="fa fa-plus"></i> <span>إضافة</span>
+                            <input type="file" name="files[]" multiple>
+                            </span> <a href="#" class="btn btn-link">إستعراض</a> </div>
+                        </div>
+                      </div>
+                      <hr class="divider">
+                      <div class="text-left">
+                        <button class="btn btn-primary">حفظ كمسودة</button>
+                        <button class="btn btn-primary">حفظ وخروج</button>
+                        <button id="activate-step-2" class="btn btn-primary">حفظ</button>
+                        <button class="btn btn-default">إلغاء</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="row setup-content" id="step-2">
+                <div class="col-xs-12">
+                  <div class="col-md-12 well">
+                  
+                  
+                  
+                  
+                  <form action="" class="form-horizontal">
+                      <div class="container">
+                        <div class="row"> <div class="col-md-6"> <div class="row"><div class="col-md-12 clearfix">
+                          <h4 class="pull-right" style="margin:0 0 10px">الشروط العامة للمنحة:</h4>
+                          
+                          </div></div>
+                          
+                          
+                          <ul class="panel-tasks">
+                                <li class="item-success">
+                                    <label>
+                                        
+                                        <input type="checkbox" checked> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                    
+                                </li>
+                                <li class="item-success">
+                                    <label>
+                                        
+                                        <input type="checkbox" checked> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li class="item-success">
+                                   <label>
+                                        
+                                        <input type="checkbox" checked> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li class="item-success">
+                                   <label>
+                                        
+                                        <input type="checkbox" checked> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                     <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                
+                            </ul>
+                          
+                          
+                          
+                          
+                          
+                          </div>
+                          
+                          
+                          <div class="col-md-6"> <div class="row"><div class="col-md-12 clearfix">
+                          <h4 class="pull-right" style="margin:0 0 10px">شروط تخص نوع المنحة:</h4>
+                          
+                          </div></div>
+                         
+                          
+                          <ul class="panel-tasks">
+                                <li>
+                                    <label>
+                                        
+                                        <input type="checkbox" > 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                    
+                                </li>
+                                <li>
+                                    <label>
+                                        
+                                        <input type="checkbox" > 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                   <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                   <label>
+                                        
+                                        <input type="checkbox" > 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                <li>
+                                     <label>
+                                        
+                                        <input type="checkbox"> 
+                                      أن يكون المتقدم سعودي الجنسية
+                                      
+                                    </label>
+                                </li>
+                                
+                            </ul>
+                          
+                          
+                          </div>
+                          
+                          
+                          
+                          
+                          
+                          </div>
+                      </div>
+                      
+                      <hr class="divider">
+                      <div class="text-left">
+                        <button class="btn btn-primary">حفظ كمسودة</button>
+                        <button class="btn btn-primary">حفظ وخروج</button>
+                        <button id="activate-step-2" class="btn btn-primary">حفظ</button>
+                        <button class="btn btn-default">إلغاء</button>
+                      </div>
+                    </form>
+                  
+                  
+                  
+                  
+                  
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="row setup-content" id="step-3">
+                <div class="col-xs-12">
+                  <div class="col-md-12 well">
+                   
+                   
+                   
+                   
+                    <div class="text-left">
+                        <button class="btn btn-primary">حفظ كمسودة</button>
+                        <button class="btn btn-primary">حفظ وخروج</button>
+                        <button id="activate-step-3" class="btn btn-primary">حفظ</button>
+                        <button class="btn btn-default">إلغاء</button>
+                      </div>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container --> 
+  </div>
+  <!--wrap --> 
+</div>
+<!-- page-content -->
+
+<footer role="contentinfo">
+  <div class="clearfix">
+    <ul class="list-unstyled list-inline pull-right">
+      <li>الحقوق محفوظة لأوقاف محمد بن عبد العزيز الراجحي &copy; 2014  - تم التطوير بواسطة <a href="#">كيوفيجان</a></li>
+    </ul>
+    <button class="pull-left btn btn-inverse-alt btn-xs hidden-print" id="back-to-top"><i class="fa fa-arrow-up"></i></button>
+  </div>
+</footer>
+</div>
+<!-- page-container --> 
+
+<script type='text/javascript' src='js/jquery-1.10.2.min.js'></script> 
+<script type='text/javascript' src='js/jqueryui-1.10.3.min.js'></script> 
+<script type='text/javascript' src='js/bootstrap.min.js'></script> 
+<script type='text/javascript' src='js/enquire.js'></script> 
+<script type='text/javascript' src='js/jquery.cookie.js'></script> 
+<script type='text/javascript' src='js/jquery.nicescroll.min.js'></script> 
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script type='text/javascript' src='js/placeholdr.js'></script> 
+<script type='text/javascript' src='js/jquery.stepy.js'></script> 
+<script>
+
+$(document).ready(function() {
+    
+    var navListItems = $('ul.setup-panel li a'),
+        allWells = $('.setup-content');
+
+    allWells.hide();
+
+    navListItems.click(function(e)
+    {
+        e.preventDefault();
+        var $target = $($(this).attr('href')),
+            $item = $(this).closest('li');
+        
+        if (!$item.hasClass('disabled')) {
+            navListItems.closest('li').removeClass('active');
+            $item.addClass('active');
+            allWells.hide();
+            $target.show();
+        }
+    });
+    
+    $('ul.setup-panel li.active a').trigger('click');
+    
+    // DEMO ONLY //
+    $('#activate-step-2').on('click', function(e) {
+        $('ul.setup-panel li:eq(1)').removeClass('disabled');
+        $('ul.setup-panel li a[href="#step-2"]').trigger('click');
+        $(this).remove();
+    })    
+	   
+});
+
+
+
+
+</script> 
+<script type='text/javascript' src='js/application.js'></script>
+</body>
+</html>

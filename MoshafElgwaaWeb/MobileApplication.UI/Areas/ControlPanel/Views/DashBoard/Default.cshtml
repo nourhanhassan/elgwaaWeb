@@ -1,0 +1,40 @@
+﻿@using MobileApplication.UI.InfraStructure;
+
+@section NavigationBar{
+    @if (ViewBag.childName != null)
+    {
+
+        { Html.RenderPartial("_PagePath", new PagePath { PageTitle = @ViewBag.childName, ParentPath = "الرئيسية ", ParentURLs = "/ControlPanel/DashBoard/Default" }); }
+    }
+
+}
+
+
+@{
+    string[] cssClasseslist = new string[]{
+
+    "tiles-info","tiles-success","tiles-indigo","tiles-orange","tiles-brown","tiles-primary","tiles-midnightblue","tiles-warning","tiles-green","tiles-danger"
+    };
+    var i = 0;
+
+    foreach (var page in ViewBag.pages)
+    {
+        if (page.HasPermission || page.CU_Page1.Count != 0)
+        {
+
+
+            if (i == cssClasseslist.Length) { i = 0; }
+            <div class="col-md-3 col-xs-12 col-sm-6">
+                <a class="info-tiles @cssClasseslist[i] " href="/ControlPanel/@page.URL/Default">
+                    @*<div class="tiles-heading"> @page.Name </div>*@
+                    <div class="tiles-body-alt">
+                        <div class="text-center"><i class="@page.Icon"></i></div>
+                    </div>
+                    <div class="tiles-footer">@page.Name  </div>
+                </a>
+            </div>
+            i++;
+        }
+    }
+}
+

@@ -1,0 +1,114 @@
+﻿@model MobileApplication.UI.InfraStructure.ManageModel
+<script type="text/javascript">
+    app.controller('ManageUseController', ['$scope', '$controller', '$http', '$filter', '$timeout', '$resource', 'NgTableParams', function ($scope, $controller, $http, $filter, $timeout, $resource, NgTableParams) {
+        // Initialize the super class and extend it.
+        debugger;
+        $.extend(this, $controller('ManageController', { $scope: $scope }));
+
+        $scope.DeleteCallback = function ($index) {
+            $scope.tableParams.data.splice($index, 1);
+            $scope.$apply();
+        };
+
+        $scope.ManageUserRoles = function (UserObj) {
+            debugger;
+            var EditedUserName = UserObj.Name;
+            $scope.EditedUserID = UserObj.ID;
+            $("#editRolespanelheader").text(" تعديل صلاحيات المستخدم: " + EditedUserName);
+
+            var checkBoxLstRoles = document.getElementById('checklstUserRoles');
+            $("#checklstUserRoles tr").each(function (idx, obj) {
+                if (idx > 0) {
+                    $(this).remove();
+                }
+            });
+            $http({
+                method: 'POST',
+                url: '/ControlPanel/@Model.ControllerName/GetUserRoles',
+                data: UserObj
+            }).success(function (data, status, headers, config) {
+
+                //parse ajax request then appeand list item and check these items depending on the recieved flag
+
+                for (var i = 0; i < data.d.length ; i++) {
+                    var obj = data.d[i];
+                    if (obj.RoleID != 0) {
+
+                        var tableRow = checkBoxLstRoles.insertRow();
+                        tableRow.className = "checkbox block";
+
+                        var tableCell = tableRow.insertCell();
+
+                        var checkBoxRef = document.createElement('input');
+                        var labelRef = document.createElement('label');
+                        checkBoxRef.type = 'checkbox';
+                        labelRef.innerHTML = obj.RoleName;
+                        checkBoxRef.value = obj.RoleID;
+                        checkBoxRef.checked = obj.IsUserExist;
+                        tableCell.appendChild(checkBoxRef);
+                        tableCell.appendChild(labelRef);
+                    }
+                }
+            });
+
+            $("#RolesPopUp").modal("show");
+
+        }
+
+        $scope.SaveUserRoles = function () {
+            debugger;
+            var checkedRolesIDs = '';
+
+            //select check box list
+            var checkBoxLstRoles = document.getElementById('checklstUserRoles');
+            //get Role ids of all checked checkboxes
+            $("#checklstUserRoles input[type=checkbox]:checked").each(function (idx, obj) {
+
+                if (idx > 0) {
+                    checkedRolesIDs = checkedRolesIDs + "," + $(this).val();
+                } else {
+                    checkedRolesIDs = $(this).val();
+                }
+            });
+            if (checkedRolesIDs != '') {
+                $("#rfvUserRoles").hide();
+                $http({
+                    method: 'POST',
+                    url: '/ControlPanel/@Model.ControllerName/SaveUserRoles',
+                    data: JSON.stringify({ iUserID: $scope.EditedUserID, strRolesIds: checkedRolesIDs })
+                }).success(function (data, status, headers, config) {
+                    $scope.tableParams.reload();
+                    $("#RolesPopUp").modal("hide");
+                    ShowConfirmatiomMessage("تأكيد", "  تم الحفظ بنجاح ")
+                });
+
+            } else {
+                $("#rfvUserRoles").show();
+            }
+        }
+
+        $scope.viewChangePass = function (UID) {
+            $scope.EditedUserID = UID;
+            $("#txtPassword").val("");
+            $("#changePassModal").modal("show");
+        }
+
+        $scope.ChangeUserPassword = function () {
+            debugger;
+            var strNewPassword = $("#password_txtAddPassword").val();
+            var valid = $("#pwdControl").find($('#password_txtAddPassword')).prop("valid");
+            if (valid==true) {
+                $http({
+                    method: 'POST',
+                    url: '/ControlPanel/@Model.ControllerName/ChangeUserPassword',
+                    data: JSON.stringify({ iUserID: $scope.EditedUserID, newPassword: strNewPassword })
+                }).success(function (data, status, headers, config) {
+                    $scope.tableParams.reload();
+                    $("#changePassModal").modal("hide");
+                    ShowConfirmatiomMessage("تأكيد", "  تم الحفظ بنجاح ")
+                });
+            }
+        }
+    }]);
+
+</script>

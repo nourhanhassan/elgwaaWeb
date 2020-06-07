@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MobileApplication.DataModel.NotificationModel>
+@if (Model != null && Model.Count() > 0)
+{
+    @*<div class="col-md-12">*@
+    <ul class="timeline">
+        @foreach (var notif in Model)
+{
+
+    <li class="timeline-success">
+
+        <div class="timeline-icon"><i class="fa fa-envelope"></i></div>
+
+
+
+        <div class="timeline-body">
+            <div class="timeline-header">
+                <span class=" loadlogtime">@notif.CreateDate </span>
+
+            </div>
+            <div class="timeline-content">
+
+                <p>
+                    <a data-id="@notif.ID" href="@notif.Link" data-isSeen="@notif.IsSeen">
+                        @notif.Message
+                    </a>
+                </p>
+            </div>
+        </div>
+    </li>
+}
+        <div id="seperator"></div>
+    </ul>
+    @* </div>*@
+}
+<input type="hidden" value="@ViewBag.total" id="hiddenTotal" />

@@ -1,0 +1,32 @@
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll.config
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\bin\Debug\MobileApplication.Context.pdb
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\bin\Debug\EntityFramework.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\bin\Debug\EntityFramework.xml
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\obj\Debug\MobileApplication.Context.csprojResolveAssemblyReference.cache
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\obj\Debug\MobileApplication.Context.dll
+E:\New folder (2)\QVMobileApplication\MobileApplication.Context\obj\Debug\MobileApplication.Context.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll.config
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\EntityFramework.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\EntityFramework.xml
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.dll
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.pdb
+E:\New folder (2)\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.csprojResolveAssemblyReference.cache
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll.config
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\EntityFramework.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\EntityFramework.xml
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.dll
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.pdb
+E:\Mobile Projects\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.csprojResolveAssemblyReference.cache
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll.config
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\MobileApplication.Context.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\EntityFramework.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\bin\Debug\EntityFramework.xml
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.dll
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.pdb
+E:\projects\MobileApp2\Moshaf_Elgwaa\MoshafElgwaaWeb\MobileApplication.Context\obj\Debug\MobileApplication.Context.csprojResolveAssemblyReference.cache

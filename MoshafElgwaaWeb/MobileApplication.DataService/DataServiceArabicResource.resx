@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CancelShipment" xml:space="preserve">
+    <value>إلغاء الرحلة</value>
+  </data>
+  <data name="Car" xml:space="preserve">
+    <value> السيارة </value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="Dealer" xml:space="preserve">
+    <value> التاجر</value>
+  </data>
+  <data name="DealerStore" xml:space="preserve">
+    <value> متجر التاجر </value>
+  </data>
+  <data name="Driver" xml:space="preserve">
+    <value> السائق </value>
+  </data>
+  <data name="DriverCancel" xml:space="preserve">
+    <value>تم إلغاء الرحلة عن طريق السائق</value>
+  </data>
+  <data name="DriverDeliverdTheShipment" xml:space="preserve">
+    <value>تم توصيل شحنتك</value>
+  </data>
+  <data name="DriverDeliverdTheShipmentToThePoint" xml:space="preserve">
+    <value>لقد أتم السائق توصيل شحنتك إلي مكان التسليم المحدد</value>
+  </data>
+  <data name="DriverHasBeenAssigned" xml:space="preserve">
+    <value>لقد تم تعيين السائق</value>
+  </data>
+  <data name="DriverHasBeenAssignedForYourShipment" xml:space="preserve">
+    <value>تم تعيين سائق لتوصيل شحنتك</value>
+  </data>
+  <data name="DriverHasRecivedShipment" xml:space="preserve">
+    <value>تم استلام السائق لشحنتك</value>
+  </data>
+  <data name="DriverHasRecivedShipmentAndInWayNow" xml:space="preserve">
+    <value>لقد قام السائق باستلام شحنتك وفي طريقه للتوصيل لمكان التسليم المحدد</value>
+  </data>
+  <data name="DriverPreArrivalMassage" xml:space="preserve">
+    <value>اقترب السائق من الوصول الي النقطه المحدده </value>
+  </data>
+  <data name="DriverPreArrivalTitle" xml:space="preserve">
+    <value>اقترب السائق من الوصول </value>
+  </data>
+  <data name="Evining" xml:space="preserve">
+    <value> م </value>
+  </data>
+  <data name="FileLoad" xml:space="preserve">
+    <value> تحميل الملف </value>
+  </data>
+  <data name="ForDeliverYourShipment" xml:space="preserve">
+    <value>لاستلام شحنتك رقم سيارته</value>
+  </data>
+  <data name="ForgetPassword" xml:space="preserve">
+    <value>نسيت كلمة المرور</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value> من </value>
+  </data>
+  <data name="FromGroup" xml:space="preserve">
+    <value> من مجموعة </value>
+  </data>
+  <data name="FromGroups" xml:space="preserve">
+    <value> من المجموعات </value>
+  </data>
+  <data name="Goods" xml:space="preserve">
+    <value> البضائع </value>
+  </data>
+  <data name="HasAdded" xml:space="preserve">
+    <value> تم إضافة </value>
+  </data>
+  <data name="HasDeleted" xml:space="preserve">
+    <value> تم حذف </value>
+  </data>
+  <data name="HasDesignation" xml:space="preserve">
+    <value> تم تعيين </value>
+  </data>
+  <data name="ImageWidth" xml:space="preserve">
+    <value> عرض الصورة </value>
+  </data>
+  <data name="In" xml:space="preserve">
+    <value> فى </value>
+  </data>
+  <data name="ManageSettings" xml:space="preserve">
+    <value>إدارة الاعدادات</value>
+  </data>
+  <data name="MerchantCancel" xml:space="preserve">
+    <value>تم إلغاء الرحلة عن طريق التاجر</value>
+  </data>
+  <data name="Morning" xml:space="preserve">
+    <value> ص </value>
+  </data>
+  <data name="NewDeliveryRequest" xml:space="preserve">
+    <value> طلب توصيل جديد </value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>كلمة المرور الجديدة</value>
+  </data>
+  <data name="NewShipmentDeliveryRequest" xml:space="preserve">
+    <value> يوجد طلب توصيل شحنة </value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value> لا </value>
+  </data>
+  <data name="NoDriverFound" xml:space="preserve">
+    <value>لم يتم العثور على سائقين للشحنة الخاصة بك</value>
+  </data>
+  <data name="NoFileExist" xml:space="preserve">
+    <value> لا يوجد ملف </value>
+  </data>
+  <data name="NoSignInBefore" xml:space="preserve">
+    <value> لم يتم الدخول من قبل </value>
+  </data>
+  <data name="Reason" xml:space="preserve">
+    <value> بسبب </value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value> إلى </value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>  المستخدم  </value>
+  </data>
+  <data name="UserAdded" xml:space="preserve">
+    <value>  تم اضافه المستخدم  </value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value> نعم </value>
+  </data>
+</root>
