@@ -12,5 +12,6 @@ namespace MobileApplication.DataModel
         public string MaxUploadHeight { get; set; }
         public string MaxUploadWidth { get; set; }
 
+
     }
 }
