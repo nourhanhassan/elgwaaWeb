@@ -16,6 +16,7 @@ namespace MobileApplication.Controllers
 
             // return view
             return View("Views/Shared/LayoutReport.cshtml", new ReportModel { ReportPageUrl = reportPageUrl });
+			/////btanch test
         }
     }
 }
